@@ -18,8 +18,10 @@ Pod::Spec.new do |s|
 # 子目录结构
 
     s.subspec 'JJCToolsObject' do |ss|
-    ss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsObject/**/*.{h,m}'
+    ss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsObject/*.{h,m}'
     end
+
+
 
 
 end
