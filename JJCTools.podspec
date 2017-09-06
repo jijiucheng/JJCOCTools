@@ -12,13 +12,13 @@ Pod::Spec.new do |s|
     s.ios.deployment_target = '8.0'
     s.framework     = 'UIKit'
     s.requires_arc  = true
-    s.source_files  = 'JJCToolsDemo/JJCTools/.JJCTools.h'
+    s.source_files  = 'JJCToolsDemo/JJCTools/JJCTools.h'
 
 
 # 子目录结构
 
     s.subspec 'JJCToolsObject' do |ss|
-    ss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsObject/*'
+    ss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsObject/**/*.{h,m}'
     end
 
 
