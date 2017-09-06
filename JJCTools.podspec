@@ -12,6 +12,6 @@ s.platform      = :ios, '8.0'
 s.ios.deployment_target = '8.0'
 s.framework     = 'UIKit'
 s.requires_arc  = true
-s.source_files  = 'JJCToolsDemo/JJCTools/**/*.{h,m}'
+s.source_files  = 'JJCToolsDemo/JJCTools/**/*.'
 
 end
