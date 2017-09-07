@@ -11,6 +11,15 @@
 
 
 
+/*
+ 
+ 当前版本 v0.0.5
+ 2017.09.07
+ 
+ */
+
+
+
 /********************  JJCToolsObject  *******************/
 
 #import "JJCToolsObject+Plist.h"

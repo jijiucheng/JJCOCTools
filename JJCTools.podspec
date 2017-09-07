@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
     s.name          = 'JJCTools'
-    s.version       = '0.0.4'
+    s.version       = '0.0.5'
     s.license       = { :type => 'MIT', :file => 'LICENSE' }
     s.summary       = 'A Library for iOS to  get result fasterly with some methods.'
     s.homepage      = 'https://github.com/jijiucheng/JJCTools'
@@ -18,7 +18,8 @@ Pod::Spec.new do |s|
 # 子目录结构
 
     s.subspec 'JJCToolsObject' do |ss|
-    ss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsObject/**/*.{h,m}'
+        ss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsObject/**/*.{h,m}'
+        ss.public_header_files = 'JJCToolsDemo/JJCTools/JJCToolsObject/**/*.{h}'
     end
 
 
