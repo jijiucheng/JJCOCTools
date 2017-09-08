@@ -15,14 +15,29 @@ Pod::Spec.new do |s|
     s.source_files  = 'JJCToolsDemo/JJCTools/JJCTools.h'
 
 
-# 子目录结构
+# 一级子目录结构
 
     s.subspec 'JJCToolsObject' do |ss|
         ss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsObject/**/*.{h,m}'
         ss.public_header_files = 'JJCToolsDemo/JJCTools/JJCToolsObject/**/*.{h}'
     end
 
+    s.subspec 'JJCToolsCategory' do |ss|
+        ss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsCategory/**/*.{h,m}'
+        ss.public_header_files = 'JJCToolsDemo/JJCTools/JJCToolsCategory/**/*.{h}'
 
+        # 二级子目录结构
+
+        ss.subspec 'UITabBar' do |sss|
+            sss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsObject/UITabBar/**/*.{h,m}'
+            sss.public_header_files = 'JJCToolsDemo/JJCTools/JJCToolsObject/UITabBar/**/*.{h}'
+        end
+
+        ss.subspec 'UIView' do |sss|
+            sss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsObject/UIView/**/*.{h,m}'
+            sss.public_header_files = 'JJCToolsDemo/JJCTools/JJCToolsObject/UIView/**/*.{h}'
+        end
+    end
 
 
 end
