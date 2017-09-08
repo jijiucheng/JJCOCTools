@@ -11,19 +11,6 @@
 @implementation UIView (Frame)
 
 
-/********************  screenWidth、screenHeight  *******************/
-
-- (CGFloat)screenWidth {
-    
-    return [UIScreen mainScreen].bounds.size.width;
-}
-
-- (CGFloat)screenHeight {
-    
-    return [UIScreen mainScreen].bounds.size.height;
-}
-
-
 /********************  top、left、bottom、right  *******************/
 
 - (void)setTop:(CGFloat)top {

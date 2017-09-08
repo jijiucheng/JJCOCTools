@@ -33,12 +33,6 @@
 @interface UIView (Frame)
 
 
-/** 屏幕宽度 **/
-@property (nonatomic, assign) CGFloat screenWidth;
-/** 屏幕高度 **/
-@property (nonatomic, assign) CGFloat screenHeight;
-
-
 /** 距离顶部间距 y **/
 @property (nonatomic, assign) CGFloat top;
 /** 距离左侧间距 x **/
