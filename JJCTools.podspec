@@ -29,13 +29,13 @@ Pod::Spec.new do |s|
         # 二级子目录结构
 
         ss.subspec 'UITabBar' do |sss|
-            sss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsObject/UITabBar/**/*.{h,m}'
-            sss.public_header_files = 'JJCToolsDemo/JJCTools/JJCToolsObject/UITabBar/**/*.{h}'
+            sss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsCategory/UITabBar/**/*.{h,m}'
+            sss.public_header_files = 'JJCToolsDemo/JJCTools/JJCToolsCategory/UITabBar/**/*.{h}'
         end
 
         ss.subspec 'UIView' do |sss|
-            sss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsObject/UIView/**/*.{h,m}'
-            sss.public_header_files = 'JJCToolsDemo/JJCTools/JJCToolsObject/UIView/**/*.{h}'
+            sss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsCategory/UIView/**/*.{h,m}'
+            sss.public_header_files = 'JJCToolsDemo/JJCTools/JJCToolsCategory/UIView/**/*.{h}'
         end
     end
 
