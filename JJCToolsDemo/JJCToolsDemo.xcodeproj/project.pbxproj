@@ -15,6 +15,10 @@
 		41311AD21F5FE63F00BCC291 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41311AD01F5FE63F00BCC291 /* LaunchScreen.storyboard */; };
 		41311AE91F5FEB0200BCC291 /* JJCToolsObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 41311AE81F5FEB0200BCC291 /* JJCToolsObject.m */; };
 		41311AEC1F5FEB3000BCC291 /* JJCToolsObject+Plist.m in Sources */ = {isa = PBXBuildFile; fileRef = 41311AEB1F5FEB3000BCC291 /* JJCToolsObject+Plist.m */; };
+		4157D3321F623B6A00A330D1 /* UITabBar+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 4157D3311F623B6A00A330D1 /* UITabBar+Badge.m */; };
+		4157D3351F62405F00A330D1 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 4157D3341F62405F00A330D1 /* UIView+Frame.m */; };
+		4157D3381F6265E500A330D1 /* UIView+TapGestureBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 4157D3371F6265E500A330D1 /* UIView+TapGestureBlock.m */; };
+		4157D33B1F626A7500A330D1 /* UIView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4157D33A1F626A7500A330D1 /* UIView+Animation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +37,14 @@
 		41311AE81F5FEB0200BCC291 /* JJCToolsObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJCToolsObject.m; sourceTree = "<group>"; };
 		41311AEA1F5FEB3000BCC291 /* JJCToolsObject+Plist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JJCToolsObject+Plist.h"; sourceTree = "<group>"; };
 		41311AEB1F5FEB3000BCC291 /* JJCToolsObject+Plist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JJCToolsObject+Plist.m"; sourceTree = "<group>"; };
+		4157D3301F623B6A00A330D1 /* UITabBar+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+Badge.h"; sourceTree = "<group>"; };
+		4157D3311F623B6A00A330D1 /* UITabBar+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+Badge.m"; sourceTree = "<group>"; };
+		4157D3331F62405F00A330D1 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		4157D3341F62405F00A330D1 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		4157D3361F6265E500A330D1 /* UIView+TapGestureBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TapGestureBlock.h"; sourceTree = "<group>"; };
+		4157D3371F6265E500A330D1 /* UIView+TapGestureBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TapGestureBlock.m"; sourceTree = "<group>"; };
+		4157D3391F626A7500A330D1 /* UIView+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Animation.h"; sourceTree = "<group>"; };
+		4157D33A1F626A7500A330D1 /* UIView+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Animation.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				41311AE51F5FEA2B00BCC291 /* JJCTools.h */,
+				4157D32D1F62388700A330D1 /* JJCToolsCategory */,
 				41311AE61F5FEAB300BCC291 /* JJCToolsObject */,
 			);
 			path = JJCTools;
@@ -105,6 +118,37 @@
 				41311AEB1F5FEB3000BCC291 /* JJCToolsObject+Plist.m */,
 			);
 			path = JJCToolsObject;
+			sourceTree = "<group>";
+		};
+		4157D32D1F62388700A330D1 /* JJCToolsCategory */ = {
+			isa = PBXGroup;
+			children = (
+				4157D32E1F623B3A00A330D1 /* UITabBar */,
+				4157D32F1F623B3A00A330D1 /* UIView */,
+			);
+			path = JJCToolsCategory;
+			sourceTree = "<group>";
+		};
+		4157D32E1F623B3A00A330D1 /* UITabBar */ = {
+			isa = PBXGroup;
+			children = (
+				4157D3301F623B6A00A330D1 /* UITabBar+Badge.h */,
+				4157D3311F623B6A00A330D1 /* UITabBar+Badge.m */,
+			);
+			path = UITabBar;
+			sourceTree = "<group>";
+		};
+		4157D32F1F623B3A00A330D1 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				4157D3331F62405F00A330D1 /* UIView+Frame.h */,
+				4157D3341F62405F00A330D1 /* UIView+Frame.m */,
+				4157D3391F626A7500A330D1 /* UIView+Animation.h */,
+				4157D33A1F626A7500A330D1 /* UIView+Animation.m */,
+				4157D3361F6265E500A330D1 /* UIView+TapGestureBlock.h */,
+				4157D3371F6265E500A330D1 /* UIView+TapGestureBlock.m */,
+			);
+			path = UIView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,9 +224,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				41311AEC1F5FEB3000BCC291 /* JJCToolsObject+Plist.m in Sources */,
+				4157D3321F623B6A00A330D1 /* UITabBar+Badge.m in Sources */,
 				41311ACA1F5FE63F00BCC291 /* ViewController.m in Sources */,
+				4157D33B1F626A7500A330D1 /* UIView+Animation.m in Sources */,
+				4157D3351F62405F00A330D1 /* UIView+Frame.m in Sources */,
 				41311AC71F5FE63F00BCC291 /* AppDelegate.m in Sources */,
 				41311AE91F5FEB0200BCC291 /* JJCToolsObject.m in Sources */,
+				4157D3381F6265E500A330D1 /* UIView+TapGestureBlock.m in Sources */,
 				41311AC41F5FE63F00BCC291 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +392,7 @@
 				41311AD81F5FE63F00BCC291 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
