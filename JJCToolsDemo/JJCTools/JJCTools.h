@@ -13,8 +13,10 @@
 
 /*
  
- 当前版本 v0.0.5
- 2017.09.07
+ JJCTools
+ 2017.09.08
+ 
+ 当前版本：v0.0.6
  
  */
 
@@ -26,6 +28,23 @@
 
 
 
+/********************  JJCToolsCategory  *******************/
+
+#import "UITabBar+Badge.h"
+
+#import "UIView+Animation.h"
+#import "UIView+Frame.h"
+#import "UIView+TapGestureBlock.h"
+
+
+
+
+
 
 
 #endif /* JJCTools_h */
+
+
+
+
+
