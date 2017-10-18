@@ -22,7 +22,7 @@ static const void *UIView_key_tapGestureBlock = &UIView_key_tapGestureBlock;
  @param target target
  @param action action
  */
-- (void)addTapGestureWithTarget:(nullable id)target action:(SEL _Nullable )action {
+- (void)jjc_addTapGestureWithTarget:(nullable id)target action:(SEL _Nullable )action {
     
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:target action:action];
     [self addGestureRecognizer:tapGesture];
@@ -34,7 +34,7 @@ static const void *UIView_key_tapGestureBlock = &UIView_key_tapGestureBlock;
  
  @param block block
  */
-- (void)addTapGestureWithBlock:(void(^_Nullable)(void))block {
+- (void)jjc_addTapGestureWithBlock:(void(^_Nullable)(void))block {
     
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestureAction)];
     [self addGestureRecognizer:tapGesture];

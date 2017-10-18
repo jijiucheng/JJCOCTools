@@ -14,18 +14,24 @@
 /*
  
  JJCTools
- 2017.09.08
+ 2017.10.18
  
- 当前版本：v0.0.7
+ 当前版本：v0.0.8
  
  */
 
 
 
+/********************  JJCToolsDefine  *******************/
+
+#import "JJCToolsDefine.h"
+
+
 /********************  JJCToolsObject  *******************/
 
+#import "JJCToolsObject.h"
 #import "JJCToolsObject+Plist.h"
-
+#import "JJCToolsObject+BaseAPI.h"
 
 
 /********************  JJCToolsCategory  *******************/

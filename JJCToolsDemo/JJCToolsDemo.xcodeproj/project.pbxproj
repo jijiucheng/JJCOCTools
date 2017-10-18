@@ -19,6 +19,7 @@
 		4157D3351F62405F00A330D1 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 4157D3341F62405F00A330D1 /* UIView+Frame.m */; };
 		4157D3381F6265E500A330D1 /* UIView+TapGestureBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 4157D3371F6265E500A330D1 /* UIView+TapGestureBlock.m */; };
 		4157D33B1F626A7500A330D1 /* UIView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4157D33A1F626A7500A330D1 /* UIView+Animation.m */; };
+		41FA3AC41F97391700116BBF /* JJCToolsObject+BaseAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 41FA3AC31F97391700116BBF /* JJCToolsObject+BaseAPI.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,9 @@
 		4157D3371F6265E500A330D1 /* UIView+TapGestureBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TapGestureBlock.m"; sourceTree = "<group>"; };
 		4157D3391F626A7500A330D1 /* UIView+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Animation.h"; sourceTree = "<group>"; };
 		4157D33A1F626A7500A330D1 /* UIView+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Animation.m"; sourceTree = "<group>"; };
+		41FA3AC21F97391700116BBF /* JJCToolsObject+BaseAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JJCToolsObject+BaseAPI.h"; sourceTree = "<group>"; };
+		41FA3AC31F97391700116BBF /* JJCToolsObject+BaseAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JJCToolsObject+BaseAPI.m"; sourceTree = "<group>"; };
+		41FA3AC61F973BCE00116BBF /* JJCToolsDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJCToolsDefine.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				41311AE51F5FEA2B00BCC291 /* JJCTools.h */,
+				41FA3AC51F973B8800116BBF /* JJCToolsDefine */,
 				4157D32D1F62388700A330D1 /* JJCToolsCategory */,
 				41311AE61F5FEAB300BCC291 /* JJCToolsObject */,
 			);
@@ -114,6 +119,8 @@
 			children = (
 				41311AE71F5FEB0200BCC291 /* JJCToolsObject.h */,
 				41311AE81F5FEB0200BCC291 /* JJCToolsObject.m */,
+				41FA3AC21F97391700116BBF /* JJCToolsObject+BaseAPI.h */,
+				41FA3AC31F97391700116BBF /* JJCToolsObject+BaseAPI.m */,
 				41311AEA1F5FEB3000BCC291 /* JJCToolsObject+Plist.h */,
 				41311AEB1F5FEB3000BCC291 /* JJCToolsObject+Plist.m */,
 			);
@@ -149,6 +156,14 @@
 				4157D3371F6265E500A330D1 /* UIView+TapGestureBlock.m */,
 			);
 			path = UIView;
+			sourceTree = "<group>";
+		};
+		41FA3AC51F973B8800116BBF /* JJCToolsDefine */ = {
+			isa = PBXGroup;
+			children = (
+				41FA3AC61F973BCE00116BBF /* JJCToolsDefine.h */,
+			);
+			path = JJCToolsDefine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +240,7 @@
 			files = (
 				41311AEC1F5FEB3000BCC291 /* JJCToolsObject+Plist.m in Sources */,
 				4157D3321F623B6A00A330D1 /* UITabBar+Badge.m in Sources */,
+				41FA3AC41F97391700116BBF /* JJCToolsObject+BaseAPI.m in Sources */,
 				41311ACA1F5FE63F00BCC291 /* ViewController.m in Sources */,
 				4157D33B1F626A7500A330D1 /* UIView+Animation.m in Sources */,
 				4157D3351F62405F00A330D1 /* UIView+Frame.m in Sources */,

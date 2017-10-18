@@ -38,7 +38,7 @@
  
  默认：maxSize = 1.0f; minSize = 0.7f; durationPerBeat = 2.0f;
  */
-- (void)addAnimationWithHeartAnimation;
+- (void)jjc_addAnimationWithHeartAnimation;
 
 
 /**
@@ -48,7 +48,7 @@
  @param minSize             最小尺寸
  @param durationPerBeat     单次时间
  */
-- (void)addAnimationWithHeartAnimationWithMaxSize:(CGFloat)maxSize minSize:(CGFloat)minSize durationPerBeat:(CGFloat)durationPerBeat;
+- (void)jjc_addAnimationWithHeartAnimationWithMaxSize:(CGFloat)maxSize minSize:(CGFloat)minSize durationPerBeat:(CGFloat)durationPerBeat;
 
 
 

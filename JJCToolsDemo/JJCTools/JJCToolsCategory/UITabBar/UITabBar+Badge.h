@@ -36,7 +36,7 @@
 
  @param index 要显示的小红点
  */
-- (void)showBadgeOnItemIndex:(NSInteger)index;
+- (void)jjc_showBadgeOnItemIndex:(NSInteger)index;
 
 
 /**
@@ -44,7 +44,7 @@
 
  @param index 要隐藏的小红点
  */
-- (void)hideBadgeOnItemIndex:(NSInteger)index;
+- (void)jjc_hideBadgeOnItemIndex:(NSInteger)index;
 
 
 @end
