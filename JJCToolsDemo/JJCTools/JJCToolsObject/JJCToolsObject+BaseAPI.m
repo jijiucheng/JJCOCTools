@@ -324,7 +324,7 @@
 
 
 #pragma mark --------------------
-#pragma mark --------------------  数字转换相关  --------------------
+#pragma mark --------------------  数字、汉字转换相关  --------------------
 
 /** 将阿拉伯数字转换成中文数字 **/
 + (NSString *)jjc_base_turnArabicNumToChineseNumWithArabicNum:(NSInteger)arabicNum {
@@ -376,6 +376,26 @@
 }
 
 
+/** 将中文转换成首字母(不仅限于中文汉字，可以是数字等)；isUppercase 是否首字母大写【多用于用户名首字母排序】 **/
++ (NSString *)jjc_base_turnFirstCharacterWithChineseString:(NSString *)chineseString isUppercase:(BOOL)isUppercase {
+    
+    // 将中文字符转换成可变字符串
+    NSMutableString *mutableString = [NSMutableString stringWithString:chineseString];
+    // 转换成带声调的拼音
+    CFStringTransform((CFMutableStringRef)mutableString, NULL, kCFStringTransformMandarinLatin, NO);
+    // 转换成不带声调的拼音
+    CFStringTransform((CFMutableStringRef)mutableString, NULL, kCFStringTransformStripDiacritics, NO);
+    // 转换成首字母大写
+    NSString *pinYin = [mutableString capitalizedString];
+    // 判断是否转换成首字母小写并返回该字母
+    if (isUppercase) {
+        return [pinYin substringToIndex:1];
+    } else {
+        return [[pinYin lowercaseString] substringToIndex:1];
+    }
+}
+
+
 #pragma mark --------------------
 #pragma mark --------------------  文本输入显示相关  --------------------
 
@@ -408,110 +428,7 @@
 }
 
 
-/** 判断当前语言环境是否是中文 **/
-+ (BOOL)jjc_base_isChineseLanguageWithCurrentLanguage {
-    
-    NSArray *languages = [NSLocale preferredLanguages];
-    NSString *currentLanguage = [languages objectAtIndex:0];
-    if ([currentLanguage isEqualToString:@"zh-Hans-CN"] || [currentLanguage isEqualToString:@"zh-Hans"] || [currentLanguage isEqualToString:@"zh-Hant-CN"] || [currentLanguage isEqualToString:@"zh-Hant"]) {
-        return YES;
-    }
-    return NO;
-}
 
-
-/** 判断是否是正确的手机号码 **/
-+ (BOOL)jjc_base_isRightPhoneNumber:(NSString *)PhoneNumber {
-    
-    /**
-     * 手机号码
-     * 移动：134[0-8],135,136,137,138,139,150,151,157,158,159,182,187,188
-     * 联通：130,131,132,152,155,156,185,186
-     * 电信：133,1349,153,180,189
-     */
-    NSString * MOBILE = @"^((13[0-9])|(14[0-9])|(15[^4,\\D])|(18[0-9])|(17[0-9]))\\d{8}$";
-    /**
-     10         * 中国移动：China Mobile
-     11         * 134[0-8],135,136,137,138,139,150,151,157,158,159,182,187,188
-     12         */
-    NSString * CM = @"^1(34[0-8]|(3[5-9]|5[017-9]|8[278])\\d)\\d{7}$";
-    /**
-     15         * 中国联通：China Unicom
-     16         * 130,131,132,152,155,156,185,186
-     17         */
-    NSString * CU = @"^1(3[0-2]|5[256]|8[56])\\d{8}$";
-    /**
-     20         * 中国电信：China Telecom
-     21         * 133,1349,153,180,189
-     22         */
-    NSString * CT = @"^1((33|53|8[09]|77)[0-9]|349)\\d{7}$";
-    /**
-     25         * 大陆地区固话及小灵通
-     26         * 区号：010,020,021,022,023,024,025,027,028,029
-     27         * 号码：七位或八位
-     28         */
-    // NSString * PHS = @"^0(10|2[0-5789]|\\d{3})\\d{7,8}$";
-    
-    NSPredicate *regextestmobile = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", MOBILE];
-    NSPredicate *regextestcm = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CM];
-    NSPredicate *regextestcu = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CU];
-    NSPredicate *regextestct = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CT];
-    
-    if (([regextestmobile evaluateWithObject:PhoneNumber] == YES)
-        || ([regextestcm evaluateWithObject:PhoneNumber] == YES)
-        || ([regextestct evaluateWithObject:PhoneNumber] == YES)
-        || ([regextestcu evaluateWithObject:PhoneNumber] == YES))
-    {
-        return YES;
-    } else {
-        return NO;
-    }
-}
-
-
-/** 限制表情输入【UITextView】 **/
-+ (void)jjc_base_limitTextEmojiWithTextView:(UITextView *)textView {
-    
-    [textView.text enumerateSubstringsInRange:NSMakeRange(0, textView.text.length)
-                                      options:NSStringEnumerationByComposedCharacterSequences
-                                   usingBlock:^(NSString * _Nullable substring, NSRange substringRange, NSRange enclosingRange, BOOL * _Nonnull stop) {
-        if (substring.length > 1){
-            textView.text = [textView.text stringByReplacingOccurrencesOfString:substring withString:@""];
-            return ;
-        }
-    }];
-}
-
-
-/** 判断字符串是否包含表情 **/
-+ (BOOL)jjc_base_isIncludeEmojiWithString:(NSString *)string {
-    
-    __block BOOL returnValue = NO;
-    
-    [string enumerateSubstringsInRange:NSMakeRange(0, [string length])
-                               options:NSStringEnumerationByComposedCharacterSequences
-                            usingBlock:^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop) {
-                                
-                                const unichar high = [substring characterAtIndex: 0];
-                                
-                                // Surrogate pair (U+1D000-1F9FF)
-                                if (0xD800 <= high && high <= 0xDBFF) {
-                                    const unichar low = [substring characterAtIndex: 1];
-                                    const int codepoint = ((high - 0xD800) * 0x400) + (low - 0xDC00) + 0x10000;
-                                    
-                                    if (0x1D000 <= codepoint && codepoint <= 0x1F9FF){
-                                        returnValue = YES;
-                                    }
-                                    // Not surrogate pair (U+2100-27BF)
-                                } else {
-                                    if (0x2100 <= high && high <= 0x27BF){
-                                        returnValue = YES;
-                                    }
-                                }
-                            }];
-    
-    return returnValue;
-}
 
 
 

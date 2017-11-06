@@ -84,10 +84,12 @@
 + (UIImage *)imageByScalingProportionallyWithImage:(UIImage*)image targetSize:(CGSize)targetSize;
 
 
-/********************  数字转换相关  *******************/
+/********************  数字、汉字转换相关  *******************/
 
 /** 将阿拉伯数字转换成中文数字 **/
 + (NSString *)jjc_base_turnArabicNumToChineseNumWithArabicNum:(NSInteger)arabicNum;
+/** 将中文转换成首字母(不仅限于中文汉字，可以是数字等)；isUppercase 是否首字母大写【多用于用户名首字母排序】 **/
++ (NSString *)jjc_base_turnFirstCharacterWithChineseString:(NSString *)chineseString isUppercase:(BOOL)isUppercase;
 
 
 /********************  文本输入显示相关  *******************/
@@ -97,15 +99,8 @@
 /** 过滤 HTML 标签 **/
 + (NSString *)jjc_base_removeHTMLCharacterWithHTMLString:(NSString *)htmlString;
 
-/** 判断当前语言环境是否是中文 **/
-+ (BOOL)jjc_base_isChineseLanguageWithCurrentLanguage;
-/** 判断是否是正确的手机号码 **/
-+ (BOOL)jjc_base_isRightPhoneNumber:(NSString *)PhoneNumber;
 
-/** 限制表情输入【UITextView】 **/
-+ (void)jjc_base_limitTextEmojiWithTextView:(UITextView *)textView;
-/** 判断字符串是否包含表情 **/
-+ (BOOL)jjc_base_isIncludeEmojiWithString:(NSString *)string;
+
 
 
 

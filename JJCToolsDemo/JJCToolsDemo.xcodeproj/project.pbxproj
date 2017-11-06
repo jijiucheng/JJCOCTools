@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		410037051FB05504000C89AA /* JJCToolsObject+RulesAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 410037041FB05504000C89AA /* JJCToolsObject+RulesAPI.m */; };
+		410037081FB05811000C89AA /* JJCToolsObject+PlistAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 410037071FB05811000C89AA /* JJCToolsObject+PlistAPI.m */; };
 		41311AC41F5FE63F00BCC291 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 41311AC31F5FE63F00BCC291 /* main.m */; };
 		41311AC71F5FE63F00BCC291 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 41311AC61F5FE63F00BCC291 /* AppDelegate.m */; };
 		41311ACA1F5FE63F00BCC291 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41311AC91F5FE63F00BCC291 /* ViewController.m */; };
@@ -14,7 +16,6 @@
 		41311ACF1F5FE63F00BCC291 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41311ACE1F5FE63F00BCC291 /* Assets.xcassets */; };
 		41311AD21F5FE63F00BCC291 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41311AD01F5FE63F00BCC291 /* LaunchScreen.storyboard */; };
 		41311AE91F5FEB0200BCC291 /* JJCToolsObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 41311AE81F5FEB0200BCC291 /* JJCToolsObject.m */; };
-		41311AEC1F5FEB3000BCC291 /* JJCToolsObject+Plist.m in Sources */ = {isa = PBXBuildFile; fileRef = 41311AEB1F5FEB3000BCC291 /* JJCToolsObject+Plist.m */; };
 		4157D3321F623B6A00A330D1 /* UITabBar+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 4157D3311F623B6A00A330D1 /* UITabBar+Badge.m */; };
 		4157D3351F62405F00A330D1 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 4157D3341F62405F00A330D1 /* UIView+Frame.m */; };
 		4157D3381F6265E500A330D1 /* UIView+TapGestureBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 4157D3371F6265E500A330D1 /* UIView+TapGestureBlock.m */; };
@@ -23,6 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		410037031FB05504000C89AA /* JJCToolsObject+RulesAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JJCToolsObject+RulesAPI.h"; sourceTree = "<group>"; };
+		410037041FB05504000C89AA /* JJCToolsObject+RulesAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JJCToolsObject+RulesAPI.m"; sourceTree = "<group>"; };
+		410037061FB05811000C89AA /* JJCToolsObject+PlistAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JJCToolsObject+PlistAPI.h"; sourceTree = "<group>"; };
+		410037071FB05811000C89AA /* JJCToolsObject+PlistAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JJCToolsObject+PlistAPI.m"; sourceTree = "<group>"; };
 		41311ABF1F5FE63F00BCC291 /* JJCToolsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JJCToolsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41311AC31F5FE63F00BCC291 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		41311AC51F5FE63F00BCC291 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -36,8 +41,6 @@
 		41311AE51F5FEA2B00BCC291 /* JJCTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJCTools.h; sourceTree = "<group>"; };
 		41311AE71F5FEB0200BCC291 /* JJCToolsObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJCToolsObject.h; sourceTree = "<group>"; };
 		41311AE81F5FEB0200BCC291 /* JJCToolsObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJCToolsObject.m; sourceTree = "<group>"; };
-		41311AEA1F5FEB3000BCC291 /* JJCToolsObject+Plist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JJCToolsObject+Plist.h"; sourceTree = "<group>"; };
-		41311AEB1F5FEB3000BCC291 /* JJCToolsObject+Plist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JJCToolsObject+Plist.m"; sourceTree = "<group>"; };
 		4157D3301F623B6A00A330D1 /* UITabBar+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+Badge.h"; sourceTree = "<group>"; };
 		4157D3311F623B6A00A330D1 /* UITabBar+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+Badge.m"; sourceTree = "<group>"; };
 		4157D3331F62405F00A330D1 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
@@ -121,8 +124,10 @@
 				41311AE81F5FEB0200BCC291 /* JJCToolsObject.m */,
 				41FA3AC21F97391700116BBF /* JJCToolsObject+BaseAPI.h */,
 				41FA3AC31F97391700116BBF /* JJCToolsObject+BaseAPI.m */,
-				41311AEA1F5FEB3000BCC291 /* JJCToolsObject+Plist.h */,
-				41311AEB1F5FEB3000BCC291 /* JJCToolsObject+Plist.m */,
+				410037031FB05504000C89AA /* JJCToolsObject+RulesAPI.h */,
+				410037041FB05504000C89AA /* JJCToolsObject+RulesAPI.m */,
+				410037061FB05811000C89AA /* JJCToolsObject+PlistAPI.h */,
+				410037071FB05811000C89AA /* JJCToolsObject+PlistAPI.m */,
 			);
 			path = JJCToolsObject;
 			sourceTree = "<group>";
@@ -238,15 +243,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41311AEC1F5FEB3000BCC291 /* JJCToolsObject+Plist.m in Sources */,
 				4157D3321F623B6A00A330D1 /* UITabBar+Badge.m in Sources */,
 				41FA3AC41F97391700116BBF /* JJCToolsObject+BaseAPI.m in Sources */,
 				41311ACA1F5FE63F00BCC291 /* ViewController.m in Sources */,
+				410037081FB05811000C89AA /* JJCToolsObject+PlistAPI.m in Sources */,
 				4157D33B1F626A7500A330D1 /* UIView+Animation.m in Sources */,
 				4157D3351F62405F00A330D1 /* UIView+Frame.m in Sources */,
 				41311AC71F5FE63F00BCC291 /* AppDelegate.m in Sources */,
 				41311AE91F5FEB0200BCC291 /* JJCToolsObject.m in Sources */,
 				4157D3381F6265E500A330D1 /* UIView+TapGestureBlock.m in Sources */,
+				410037051FB05504000C89AA /* JJCToolsObject+RulesAPI.m in Sources */,
 				41311AC41F5FE63F00BCC291 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

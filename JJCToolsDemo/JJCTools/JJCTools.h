@@ -30,8 +30,9 @@
 /********************  JJCToolsObject  *******************/
 
 #import "JJCToolsObject.h"
-#import "JJCToolsObject+Plist.h"
 #import "JJCToolsObject+BaseAPI.h"
+#import "JJCToolsObject+RulesAPI.h"
+#import "JJCToolsObject+PlistAPI.h"
 
 
 /********************  JJCToolsCategory  *******************/

@@ -1,14 +1,14 @@
 //
-//  JJCToolsObject+Plist.m
+//  JJCToolsObject+PlistAPI.m
 //  JJCToolsDemo
 //
-//  Created by 苜蓿鬼仙 on 2017/9/6.
+//  Created by 苜蓿鬼仙 on 2017/11/6.
 //  Copyright © 2017年 苜蓿鬼仙. All rights reserved.
 //
 
-#import "JJCToolsObject+Plist.h"
+#import "JJCToolsObject+PlistAPI.h"
 
-@implementation JJCToolsObject (Plist)
+@implementation JJCToolsObject (PlistAPI)
 
 
 /**
@@ -84,3 +84,5 @@
 
 
 @end
+
+
