@@ -35,6 +35,7 @@
 
 /** 判断当前语言环境是否是中文 **/
 + (BOOL)jjc_base_isChineseLanguageWithCurrentLanguage;
+
 /** 判断是否是正确的手机号码 **/
 + (BOOL)jjc_base_isRightPhoneNumber:(NSString *)PhoneNumber;
 /** 判断是否是正确的邮箱【正则表达式】 **/
