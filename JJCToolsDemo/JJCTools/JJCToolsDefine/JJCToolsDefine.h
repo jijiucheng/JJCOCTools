@@ -83,7 +83,7 @@
 
 /** 其他数据 **/
 #define K_KeyWindow         [[UIApplication sharedApplication] keyWindow]
-#define K_UserDefaults  [NSUserDefaults standardUserDefaults]
+#define K_UserDefaults      [NSUserDefaults standardUserDefaults]
 
 
 /** 打印日志 **/
