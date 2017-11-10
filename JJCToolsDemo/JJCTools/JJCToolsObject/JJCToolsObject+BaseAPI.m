@@ -14,7 +14,9 @@
 #pragma mark --------------------
 #pragma mark --------------------  快捷存取沙盒数据  --------------------
 
-/** 快捷存沙盒数据 **/
+/**
+ 快捷存沙盒数据
+ */
 + (void)jjc_base_saveValue:(id)value forKey:(NSString *)key {
     
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
@@ -27,14 +29,20 @@
     [userDefaults synchronize];  // 写入磁盘
 }
 
-/** 快捷取沙盒数据 **/
+
+/**
+ 快捷取沙盒数据
+ */
 + (id)jjc_base_getValueForKey:(NSString *)key {
     
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     return [userDefaults objectForKey:key];
 }
 
-/** 快捷删除沙盒字段 **/
+
+/**
+ 快捷删除沙盒字段
+ */
 + (void)jjc_base_removeValueForKey:(NSString *)key {
     
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
@@ -43,10 +51,14 @@
 }
 
 
+
+
 #pragma mark --------------------
 #pragma mark --------------------  获取文字尺寸  --------------------
 
-/** 根据 宽度 获取文字的 Size【非系统字体】 **/
+/**
+ 根据 宽度 获取文字的 Size【非系统字体】
+ */
 + (CGSize)jjc_base_getContentSize:(NSString *)content Font:(UIFont *)font ContentWidth:(CGFloat)contentWidth {
     
     CGSize contentSize = [content boundingRectWithSize:CGSizeMake(contentWidth, MAXFLOAT)  // 用于计算文本绘制时占据的矩形块
@@ -56,7 +68,10 @@
     return contentSize;
 }
 
-/** 根据 高度 获取文字的 Size【非系统字体】 **/
+
+/**
+ 根据 高度 获取文字的 Size【非系统字体】
+ */
 + (CGSize)jjc_base_getContentSize:(NSString *)content Font:(UIFont *)font ContentHeight:(CGFloat)contentHeight {
     
     CGSize contentSize = [content boundingRectWithSize:CGSizeMake(MAXFLOAT, contentHeight)
@@ -66,7 +81,10 @@
     return contentSize;
 }
 
-/** 根据 宽度 获取文字的 高度 【非系统字体】 **/
+
+/**
+ 根据 宽度 获取文字的 高度 【非系统字体】
+ */
 + (CGFloat)jjc_base_getContentHeight:(NSString *)content Font:(UIFont *)font ContentWidth:(CGFloat)contentWidth {
     
     CGSize contentSize = [content boundingRectWithSize:CGSizeMake(contentWidth, MAXFLOAT)
@@ -76,7 +94,10 @@
     return contentSize.height;
 }
 
-/** 根据 高度 获取文字的 宽度 【非系统字体】 **/
+
+/**
+ 根据 高度 获取文字的 宽度 【非系统字体】
+ */
 + (CGFloat)jjc_base_getContentWidth:(NSString *)content Font:(UIFont *)font ContentHeight:(CGFloat)contentHeight {
     
     CGSize contentSize = [content boundingRectWithSize:CGSizeMake(MAXFLOAT, contentHeight)
@@ -86,35 +107,51 @@
     return contentSize.width;
 }
 
-/** 根据 宽度 获取文字的 Size【系统字体】 **/
+
+/**
+ 根据 宽度 获取文字的 Size【系统字体】
+ */
 + (CGSize)jjc_base_getContentSize:(NSString *)content FontFloat:(CGFloat)fontFloat ContentWidth:(CGFloat)contentWidth {
     
     return [self jjc_base_getContentSize:content Font:[UIFont systemFontOfSize:fontFloat] ContentWidth:contentWidth];
 }
 
-/** 根据 高度 获取文字的 Size【系统字体】 **/
+
+/**
+ 根据 高度 获取文字的 Size【系统字体】
+ */
 + (CGSize)jjc_base_getContentSize:(NSString *)content FontFloat:(CGFloat)fontFloat ContentHeight:(CGFloat)contentHeight {
     
     return [self jjc_base_getContentSize:content Font:[UIFont systemFontOfSize:fontFloat] ContentHeight:contentHeight];
 }
 
-/** 根据 宽度 获取文字的 高度 【系统字体】 **/
+
+/**
+ 根据 宽度 获取文字的 高度 【系统字体】
+ */
 + (CGFloat)jjc_base_getContentHeight:(NSString *)content FontFloat:(CGFloat)fontFloat ContentWidth:(CGFloat)contentWidth {
     
     return [self jjc_base_getContentHeight:content Font:[UIFont systemFontOfSize:fontFloat] ContentWidth:contentWidth];
 }
 
-/** 根据 高度 获取文字的 宽度 【系统字体】 **/
+
+/**
+ 根据 高度 获取文字的 宽度 【系统字体】
+ */
 + (CGFloat)jjc_base_getContentWidth:(NSString *)content FontFloat:(CGFloat)fontFloat ContentHeight:(CGFloat)contentHeight {
     
     return [self jjc_base_getContentWidth:content Font:[UIFont systemFontOfSize:fontFloat] ContentHeight:contentHeight];
 }
 
 
+
+
 #pragma mark --------------------
 #pragma mark --------------------  获取时间相关  --------------------
 
-/** 获取当前时间 **/
+/**
+ 获取当前时间
+ */
 + (NSString *)jjc_base_getCurrentTime {
     
     NSDate *currentDate = [NSDate date];
@@ -124,7 +161,10 @@
     return [formatter stringFromDate:currentDate];
 }
 
-/** 将 时间戳 转换成通用时间格式 @"yyyy-MM-dd HH:mm:ss" 或 @"2017年10月18日 18:00:00" **/
+
+/**
+ 将 时间戳 转换成通用时间格式 @"yyyy-MM-dd HH:mm:ss" 或 @"2017年10月18日 18:00:00"
+ */
 + (NSString *)jjc_base_turnStandardTimeWithTimeStampString:(NSString *)timeStampString isChinese:(BOOL)isChinese {
     
     NSDate *date = nil;
@@ -148,7 +188,9 @@
 }
 
 
-/** 将 通用时间格式 @"yyyy-MM-dd HH:mm:ss" 转换成 时间戳 **/
+/**
+ 将 通用时间格式 @"yyyy-MM-dd HH:mm:ss" 转换成 时间戳
+ */
 + (long long)jjc_base_turnTimeStampStringByStandardTimeString:(NSString *)standardTimeString {
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
@@ -161,7 +203,9 @@
 }
 
 
-/** 将 通用时间格式 @"yyyy-MM-dd HH:mm:ss" 转换成 NSDae 类型 **/
+/**
+ 将 通用时间格式 @"yyyy-MM-dd HH:mm:ss" 转换成 NSDae 类型
+ */
 + (NSDate *)jjc_base_turnFormateDateTimeByStandardTimeString:(NSString *)standardTimeString {
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
@@ -173,7 +217,9 @@
 }
 
 
-/** 将 通用时间格式 @"yyyy-MM-dd HH:mm:ss" 转换成 时间差 **/
+/**
+ 将 通用时间格式 @"yyyy-MM-dd HH:mm:ss" 转换成 时间差
+ */
 + (NSString *)jjc_base_turnTimeDifferenceByStandardTimeString:(NSString *)standardTimeString {
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
@@ -216,10 +262,14 @@
 }
 
 
+
+
 #pragma mark --------------------
 #pragma mark --------------------  获取颜色图片相关  --------------------
 
-/** 将颜色转换成图片 **/
+/**
+ 将颜色转换成图片
+ */
 + (UIImage *)jjc_base_turnImageWithColor:(UIColor *)color {
     
     CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
@@ -236,7 +286,9 @@
 }
 
 
-/** 设置拍照相册截取压缩头像 **/
+/**
+ 设置拍照相册截取压缩头像
+ */
 + (UIImage *)jjc_base_createThumbImage:(UIImage *)image Boundary:(CGFloat)boundary {
     
     CGSize imageSize = image.size;
@@ -267,7 +319,9 @@
 }
 
 
-/** 压缩图片 **/
+/**
+ 压缩图片
+ */
 + (UIImage *)imageByScalingProportionallyWithImage:(UIImage*)image targetSize:(CGSize)targetSize {
     
     UIImage *sourceImage   = image;
@@ -326,7 +380,9 @@
 #pragma mark --------------------
 #pragma mark --------------------  数字、汉字转换相关  --------------------
 
-/** 将阿拉伯数字转换成中文数字 **/
+/**
+ 将阿拉伯数字转换成中文数字
+ */
 + (NSString *)jjc_base_turnArabicNumToChineseNumWithArabicNum:(NSInteger)arabicNum {
     
     NSString *arabicNumStr = [NSString stringWithFormat:@"%ld", (long)arabicNum];
@@ -376,7 +432,9 @@
 }
 
 
-/** 将中文转换成首字母(不仅限于中文汉字，可以是数字等)；isUppercase 是否首字母大写【多用于用户名首字母排序】 **/
+/**
+ 将中文转换成首字母(不仅限于中文汉字，可以是数字等)；isUppercase 是否首字母大写【多用于用户名首字母排序】
+ */
 + (NSString *)jjc_base_turnFirstCharacterWithChineseString:(NSString *)chineseString isUppercase:(BOOL)isUppercase {
     
     // 将中文字符转换成可变字符串
@@ -396,10 +454,14 @@
 }
 
 
+
+
 #pragma mark --------------------
 #pragma mark --------------------  文本输入显示相关  --------------------
 
-/** UILable显示带标签的字符串 **/
+/**
+ UILable显示带标签的字符串
+ */
 + (NSAttributedString *)jjc_base_getLabelWithHTMLString:(NSString *)htmlString {
     
     NSAttributedString *attributedString = [[NSAttributedString alloc] initWithData:[htmlString dataUsingEncoding:NSUnicodeStringEncoding] options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType} documentAttributes:nil error:nil];
@@ -408,7 +470,9 @@
 }
 
 
-/** 过滤 HTML 标签 **/
+/**
+ 过滤 HTML 标签
+ */
 + (NSString *)jjc_base_removeHTMLCharacterWithHTMLString:(NSString *)htmlString {
     
     NSScanner *theScanner;

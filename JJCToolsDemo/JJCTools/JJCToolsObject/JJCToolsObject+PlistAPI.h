@@ -6,6 +6,28 @@
 //  Copyright © 2017年 苜蓿鬼仙. All rights reserved.
 //
 
+
+
+
+/********************  说明  *******************/
+/*
+ 
+ 
+ JJCToolsObject+PlistAPI
+ 创建：2017.11.06
+ 更新：2017.11.10
+ 
+ 
+ 1、该扩展主要用于获取系统属性及 Plist 文件属性；
+ 
+ 
+ */
+/********************  说明  *******************/
+
+
+
+
+
 #import "JJCToolsObject.h"
 
 @interface JJCToolsObject (PlistAPI)

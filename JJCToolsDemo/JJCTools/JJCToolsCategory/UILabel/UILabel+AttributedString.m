@@ -11,6 +11,13 @@
 @implementation UILabel (AttributedString)
 
 
+/**
+ 调整 Label 文本间距
+ 
+ @param text            文本内容
+ @param lineSpace       上下行间距
+ @param characterSpace  左右字体间距
+ */
 - (void)jjc_label_setText:(NSString *)text lineSpace:(CGFloat)lineSpace characterSpace:(CGFloat)characterSpace {
     
     if (lineSpace < 0.01 || characterSpace < 0.01 || !text || [text description].length == 0) {

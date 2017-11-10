@@ -11,7 +11,9 @@
 @implementation JJCToolsObject (RulesAPI)
 
 
-/** 判断当前语言环境是否是中文 **/
+/**
+ 判断当前语言环境是否是中文
+ */
 + (BOOL)jjc_rules_isChineseLanguageWithCurrentLanguage {
     
     NSArray *languages = [NSLocale preferredLanguages];
@@ -23,7 +25,9 @@
 }
 
 
-/** 判断是否是正确的手机号码 **/
+/**
+ 判断是否是正确的手机号码
+ */
 + (BOOL)jjc_rules_isRightPhoneNumber:(NSString *)PhoneNumber {
     
     /**
@@ -72,7 +76,9 @@
 }
 
 
-/** 判断是否是正确的邮箱【正则表达式】 **/
+/**
+ 判断是否是正确的邮箱【正则表达式】
+ */
 + (BOOL)jjc_rules_isRightEmail:(NSString *)emailString {
     
     // 邮箱正则
@@ -88,7 +94,9 @@
 }
 
 
-/** 判断是否是纯字母【正则表达式】 **/
+/**
+ 判断是否是纯字母【正则表达式】
+ */
 + (BOOL)jjc_rules_isOnlyLetterWithString:(NSString *)string {
     
     // 纯字母正则
@@ -104,7 +112,9 @@
 }
 
 
-/** 判断是否是纯数字【正则表达式】 **/
+/**
+ 判断是否是纯数字【正则表达式】
+ */
 + (BOOL)jjc_rules_isOnlyNumberWithString:(NSString *)string {
     
     // 纯数字正则
@@ -120,7 +130,11 @@
 }
 
 
-/** 判断是否只有字母和数字【正则表达式】；isConcurrence 是否同时存在 **/
+/**
+ 判断是否只有字母和数字【正则表达式】
+ 
+ @param isConcurrence  是否同时存在
+ */
 + (BOOL)jjc_rules_isOnlyLetterOrNumberWithString:(NSString *)string isConcurrence:(BOOL)isConcurrence {
     
     // 字母数字规则设置
@@ -142,7 +156,9 @@
 }
 
 
-/** 限制表情输入【UITextView】 **/
+/**
+ 限制表情输入【UITextView】
+ */
 + (void)jjc_rules_limitTextEmojiWithTextView:(UITextView *)textView {
     
     [textView.text enumerateSubstringsInRange:NSMakeRange(0, textView.text.length)
@@ -156,7 +172,9 @@
 }
 
 
-/** 判断字符串是否包含表情 **/
+/**
+ 判断字符串是否包含表情
+ */
 + (BOOL)jjc_rules_isIncludeEmojiWithString:(NSString *)string {
     
     __block BOOL returnValue = NO;
