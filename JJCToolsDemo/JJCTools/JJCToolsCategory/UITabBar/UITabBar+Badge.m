@@ -23,7 +23,7 @@
  
  @param index 要显示的小红点
  */
-- (void)jjc_showBadgeOnItemIndex:(NSInteger)index {
+- (void)jjc_tabBar_showBadgeOnItemIndex:(NSInteger)index {
     
     // 移除之前的小红点
     [self removeBadgeOnItemIndex:index];
@@ -60,7 +60,7 @@
  
  @param index 要隐藏的小红点
  */
-- (void)jjc_hideBadgeOnItemIndex:(NSInteger)index {
+- (void)jjc_tabBar_hideBadgeOnItemIndex:(NSInteger)index {
     
     // 移除小红点
     [self removeBadgeOnItemIndex:index];

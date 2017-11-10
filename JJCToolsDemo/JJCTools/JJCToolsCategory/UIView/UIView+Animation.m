@@ -19,7 +19,7 @@
  
  默认：maxSize = 1.0f; minSize = 0.7f; durationPerBeat = 2.0f;
  */
-- (void)jjc_addAnimationWithHeartAnimation {
+- (void)jjc_view_addAnimationWithHeartAnimation {
     
     [[self class] heartbeatView:self maxSize:1.0f minSize:0.7f durationPerBeat:2.0f];
 }
@@ -32,7 +32,7 @@
  @param minSize             最小尺寸
  @param durationPerBeat     单次时间
  */
-- (void)jjc_addAnimationWithHeartAnimationWithMaxSize:(CGFloat)maxSize minSize:(CGFloat)minSize durationPerBeat:(CGFloat)durationPerBeat {
+- (void)jjc_view_addAnimationWithHeartAnimationWithMaxSize:(CGFloat)maxSize minSize:(CGFloat)minSize durationPerBeat:(CGFloat)durationPerBeat {
     
     [[self class] heartbeatView:self maxSize:maxSize minSize:minSize durationPerBeat:durationPerBeat];
 }

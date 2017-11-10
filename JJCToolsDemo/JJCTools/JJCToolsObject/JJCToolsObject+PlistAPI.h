@@ -16,7 +16,7 @@
  
  备注：CFBundleIcons.CFBundlePrimaryIcon.CFBundleIconFiles
  */
-+ (NSString *)jjc_getAppIconImageString;
++ (NSString *)jjc_plist_getAppIconImageString;
 
 
 /**
@@ -24,7 +24,7 @@
  
  备注：CFBundleDisplayName
  */
-+ (NSString *)jjc_getAppBundleDisplayNameString;
++ (NSString *)jjc_plist_getAppBundleDisplayNameString;
 
 
 /**
@@ -32,7 +32,7 @@
  
  备注：CFBundleName
  */
-+ (NSString *)jjc_getAppBundleNameString;
++ (NSString *)jjc_plist_getAppBundleNameString;
 
 
 /**
@@ -40,7 +40,7 @@
  
  备注：CFBundleShortVersionString
  */
-+ (NSString *)jjc_getAppBundleShortVersionString;
++ (NSString *)jjc_plist_getAppBundleShortVersionString;
 
 
 /**
@@ -48,7 +48,7 @@
  
  备注：CFBundleVersion
  */
-+ (NSString *)jjc_getAppBundleVersionString;
++ (NSString *)jjc_plist_getAppBundleVersionString;
 
 
 /**
@@ -56,7 +56,7 @@
  
  备注：CFBundleIdentifier
  */
-+ (NSString *)jjc_getAppBundleIdentifierString;
++ (NSString *)jjc_plist_getAppBundleIdentifierString;
 
 
 @end

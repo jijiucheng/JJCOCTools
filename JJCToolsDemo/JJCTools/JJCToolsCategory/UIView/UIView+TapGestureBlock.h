@@ -38,7 +38,7 @@
  @param target target
  @param action action
  */
-- (void)jjc_addTapGestureWithTarget:(nullable id)target action:(SEL _Nullable )action;
+- (void)jjc_view_addTapGestureWithTarget:(nullable id)target action:(SEL _Nullable )action;
 
 
 /**
@@ -46,7 +46,7 @@
 
  @param block block
  */
-- (void)jjc_addTapGestureWithBlock:(void(^_Nullable)(void))block;
+- (void)jjc_view_addTapGestureWithBlock:(void(^_Nullable)(void))block;
 
 
 @end

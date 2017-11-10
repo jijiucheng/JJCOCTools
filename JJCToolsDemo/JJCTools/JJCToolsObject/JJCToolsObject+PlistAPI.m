@@ -16,7 +16,7 @@
  
  备注：CFBundleIcons.CFBundlePrimaryIcon.CFBundleIconFiles
  */
-+ (NSString *)jjc_getAppIconImageString {
++ (NSString *)jjc_plist_getAppIconImageString {
     
     NSString *appIconImageString = [[[[NSBundle mainBundle] infoDictionary] valueForKeyPath:@"CFBundleIcons.CFBundlePrimaryIcon.CFBundleIconFiles"] lastObject];
     return appIconImageString;
@@ -28,7 +28,7 @@
  
  备注：CFBundleDisplayName
  */
-+ (NSString *)jjc_getAppBundleDisplayNameString {
++ (NSString *)jjc_plist_getAppBundleDisplayNameString {
     
     NSString *displayNameString = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"];
     return displayNameString;
@@ -40,7 +40,7 @@
  
  备注：CFBundleName
  */
-+ (NSString *)jjc_getAppBundleNameString {
++ (NSString *)jjc_plist_getAppBundleNameString {
     
     NSString *bundleNameString = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleName"];
     return bundleNameString;
@@ -52,7 +52,7 @@
  
  备注：CFBundleShortVersionString
  */
-+ (NSString *)jjc_getAppBundleShortVersionString {
++ (NSString *)jjc_plist_getAppBundleShortVersionString {
     
     NSString *shortVersionString = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
     return shortVersionString;
@@ -64,7 +64,7 @@
  
  备注：CFBundleVersion
  */
-+ (NSString *)jjc_getAppBundleVersionString {
++ (NSString *)jjc_plist_getAppBundleVersionString {
     
     NSString *bundleVersionString = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
     return bundleVersionString;
@@ -76,7 +76,7 @@
  
  备注：CFBundleIdentifier
  */
-+ (NSString *)jjc_getAppBundleIdentifierString {
++ (NSString *)jjc_plist_getAppBundleIdentifierString {
     
     NSString *bundleIdentifierString = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleIdentifier"];
     return bundleIdentifierString;
