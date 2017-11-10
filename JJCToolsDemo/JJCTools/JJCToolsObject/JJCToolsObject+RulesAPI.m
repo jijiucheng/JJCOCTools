@@ -12,7 +12,7 @@
 
 
 /** 判断当前语言环境是否是中文 **/
-+ (BOOL)jjc_rule_isChineseLanguageWithCurrentLanguage {
++ (BOOL)jjc_rules_isChineseLanguageWithCurrentLanguage {
     
     NSArray *languages = [NSLocale preferredLanguages];
     NSString *currentLanguage = [languages objectAtIndex:0];
@@ -24,7 +24,7 @@
 
 
 /** 判断是否是正确的手机号码 **/
-+ (BOOL)jjc_rule_isRightPhoneNumber:(NSString *)PhoneNumber {
++ (BOOL)jjc_rules_isRightPhoneNumber:(NSString *)PhoneNumber {
     
     /**
      * 手机号码
@@ -73,7 +73,7 @@
 
 
 /** 判断是否是正确的邮箱【正则表达式】 **/
-+ (BOOL)jjc_rule_isRightEmail:(NSString *)emailString {
++ (BOOL)jjc_rules_isRightEmail:(NSString *)emailString {
     
     // 邮箱正则
     NSString *emailRule = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
@@ -89,7 +89,7 @@
 
 
 /** 判断是否是纯字母【正则表达式】 **/
-+ (BOOL)jjc_rule_isOnlyLetterWithString:(NSString *)string {
++ (BOOL)jjc_rules_isOnlyLetterWithString:(NSString *)string {
     
     // 纯字母正则
     NSString *letterRule = @"[a-zA-Z]";
@@ -105,7 +105,7 @@
 
 
 /** 判断是否是纯数字【正则表达式】 **/
-+ (BOOL)jjc_rule_isOnlyNumberWithString:(NSString *)string {
++ (BOOL)jjc_rules_isOnlyNumberWithString:(NSString *)string {
     
     // 纯数字正则
     NSString *numberRule = @"[0-9]";
@@ -121,7 +121,7 @@
 
 
 /** 判断是否只有字母和数字【正则表达式】；isConcurrence 是否同时存在 **/
-+ (BOOL)jjc_rule_isOnlyLetterOrNumberWithString:(NSString *)string isConcurrence:(BOOL)isConcurrence {
++ (BOOL)jjc_rules_isOnlyLetterOrNumberWithString:(NSString *)string isConcurrence:(BOOL)isConcurrence {
     
     // 字母数字规则设置
     NSString *letterOrNumberRule;
@@ -143,7 +143,7 @@
 
 
 /** 限制表情输入【UITextView】 **/
-+ (void)jjc_rule_limitTextEmojiWithTextView:(UITextView *)textView {
++ (void)jjc_rules_limitTextEmojiWithTextView:(UITextView *)textView {
     
     [textView.text enumerateSubstringsInRange:NSMakeRange(0, textView.text.length)
                                       options:NSStringEnumerationByComposedCharacterSequences
@@ -157,7 +157,7 @@
 
 
 /** 判断字符串是否包含表情 **/
-+ (BOOL)jjc_rule_isIncludeEmojiWithString:(NSString *)string {
++ (BOOL)jjc_rules_isIncludeEmojiWithString:(NSString *)string {
     
     __block BOOL returnValue = NO;
     
