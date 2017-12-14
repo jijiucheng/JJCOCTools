@@ -10,10 +10,10 @@ Pod::Spec.new do |s|
     s.source        = { :git => 'https://github.com/jijiucheng/JJCTools.git', :tag => s.version }
     s.platform      = :ios, '8.0'
     s.ios.deployment_target = '8.0'
-    s.framework     = 'UIKit'
     s.requires_arc  = true
     s.source_files  = 'JJCToolsDemo/JJCTools/JJCTools.h'
     s.resource      = 'JJCToolsDemo/JJCTools/JJCToolsSource/JJCTools.bundle'
+
 
 
 # 一级子目录结构
@@ -44,6 +44,52 @@ Pod::Spec.new do |s|
             sss.public_header_files = 'JJCToolsDemo/JJCTools/JJCToolsCategory/UIView/**/*.{h}'
         end
     end
+
+
+
+# 依赖第三方库文件
+
+
+
+# 依赖系统静态库文件
+
+    s.framework     = 'UIKit', 'Foundation', 'QuartzCore', 'CoreText', 'CoreGraphics'
+
+
+
+# PCH
+
+    pch_PS = <<-EOS
+
+        // 图片、xib
+
+        #define JJCBundleName [NSBundle bundleWithURL:[[NSBundle bundleForClass:self.class] URLForResource:@"JJCTools" withExtension:@"bundle"]]
+        #define JJCBundleImageNamed(A) [UIImage imageNamed:A inBundle:[NSBundle bundleWithURL:JJCBundleName] compatibleWithTraitCollection:nil]
+
+
+        // 国际化字符串
+
+        #define JJCLocalizedString(key, comment)\
+        ({\
+        NSString *language = [NSLocale preferredLanguages].firstObject;\
+        if ([language hasPrefix:@"en"]) {\
+        language = @"en";\
+        } else if ([language hasPrefix:@"zh"]) {\
+        language = @"zh-Hans";\
+        } else {\
+        language = @"en";\
+        }\
+        NSBundle *bundle = [NSBundle bundleWithPath:[JJCBundleName pathForResource:language ofType:@"lproj"]];\
+        [bundle localizedStringForKey:key value:@"" table:nil];\
+        })
+
+
+    EOS
+
+    s.prefix_header_contents = pch_PS
+
+
+
 
 
 end

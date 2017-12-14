@@ -48,6 +48,7 @@
 		4138FEB51FE25EAF00EBAA83 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		4138FEB61FE25EAF00EBAA83 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		4138FEDB1FE26D1200EBAA83 /* JJCTools.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = JJCTools.bundle; sourceTree = "<group>"; };
+		4138FEF71FE278C700EBAA83 /* JJCToolsLibDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJCToolsLibDefine.h; sourceTree = "<group>"; };
 		413A42F51FB54F290064E721 /* UILabel+AttributedString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+AttributedString.h"; sourceTree = "<group>"; };
 		413A42F61FB54F290064E721 /* UILabel+AttributedString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+AttributedString.m"; sourceTree = "<group>"; };
 		4157D3301F623B6A00A330D1 /* UITabBar+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+Badge.h"; sourceTree = "<group>"; };
@@ -197,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				41FA3AC61F973BCE00116BBF /* JJCToolsDefine.h */,
+				4138FEF71FE278C700EBAA83 /* JJCToolsLibDefine.h */,
 			);
 			path = JJCToolsDefine;
 			sourceTree = "<group>";
