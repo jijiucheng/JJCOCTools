@@ -57,36 +57,36 @@ Pod::Spec.new do |s|
 
 
 
-## PCH
-#
-#    pch_PS = <<-EOS
-#
-#       // 图片、xib
-#
-#        #define JJCBundleName [NSBundle bundleWithURL:[[NSBundle bundleForClass:self.class] URLForResource:@"JJCTools" withExtension:@"bundle"]]
-#        #define JJCBundleImageNamed(A) [UIImage imageNamed:A inBundle:[NSBundle bundleWithURL:JJCBundleName] compatibleWithTraitCollection:nil]
-#
-#
-#       // 国际化字符串
-#
-#        #define JJCLocalizedString(key, comment)\
-#        ({\
-#        NSString *language = [NSLocale preferredLanguages].firstObject;\
-#        if ([language hasPrefix:@"en"]) {\
-#        language = @"en";\
-#        } else if ([language hasPrefix:@"zh"]) {\
-#        language = @"zh-Hans";\
-#        } else {\
-#        language = @"en";\
-#        }\
-#        NSBundle *bundle = [NSBundle bundleWithPath:[JJCBundleName pathForResource:language ofType:@"lproj"]];\
-#        [bundle localizedStringForKey:key value:@"" table:nil];\
-#        })
-#
-#
-#    EOS
-#
-#    s.prefix_header_contents = pch_PS
+# PCH
+
+    pch_PS = <<-EOS
+
+       // 图片、xib
+
+        #define JJCBundleName [NSBundle bundleWithURL:[[NSBundle bundleForClass:self.class] URLForResource:@"JJCTools" withExtension:@"bundle"]]
+        #define JJCBundleImageNamed(A) [UIImage imageNamed:A inBundle:[NSBundle bundleWithURL:JJCBundleName] compatibleWithTraitCollection:nil]
+
+
+       // 国际化字符串
+
+        #define JJCLocalizedString(key, comment)\
+        ({\
+        NSString *language = [NSLocale preferredLanguages].firstObject;\
+        if ([language hasPrefix:@"en"]) {\
+        language = @"en";\
+        } else if ([language hasPrefix:@"zh"]) {\
+        language = @"zh-Hans";\
+        } else {\
+        language = @"en";\
+        }\
+        NSBundle *bundle = [NSBundle bundleWithPath:[JJCBundleName pathForResource:language ofType:@"lproj"]];\
+        [bundle localizedStringForKey:key value:@"" table:nil];\
+        })
+
+
+    EOS
+
+    s.prefix_header_contents = pch_PS
 
 
 
