@@ -16,6 +16,8 @@
 		41311ACF1F5FE63F00BCC291 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41311ACE1F5FE63F00BCC291 /* Assets.xcassets */; };
 		41311AD21F5FE63F00BCC291 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41311AD01F5FE63F00BCC291 /* LaunchScreen.storyboard */; };
 		41311AE91F5FEB0200BCC291 /* JJCToolsObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 41311AE81F5FEB0200BCC291 /* JJCToolsObject.m */; };
+		4138FEB11FE259CC00EBAA83 /* JJCToolsObject+AlertAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4138FEB01FE259CC00EBAA83 /* JJCToolsObject+AlertAPI.m */; };
+		4138FEB91FE25EFA00EBAA83 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4138FEBB1FE25EFA00EBAA83 /* Localizable.strings */; };
 		4157D3321F623B6A00A330D1 /* UITabBar+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 4157D3311F623B6A00A330D1 /* UITabBar+Badge.m */; };
 		4157D3351F62405F00A330D1 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 4157D3341F62405F00A330D1 /* UIView+Frame.m */; };
 		4157D3381F6265E500A330D1 /* UIView+TapGestureBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 4157D3371F6265E500A330D1 /* UIView+TapGestureBlock.m */; };
@@ -41,6 +43,12 @@
 		41311AE51F5FEA2B00BCC291 /* JJCTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJCTools.h; sourceTree = "<group>"; };
 		41311AE71F5FEB0200BCC291 /* JJCToolsObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJCToolsObject.h; sourceTree = "<group>"; };
 		41311AE81F5FEB0200BCC291 /* JJCToolsObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJCToolsObject.m; sourceTree = "<group>"; };
+		4138FEAF1FE259CC00EBAA83 /* JJCToolsObject+AlertAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JJCToolsObject+AlertAPI.h"; sourceTree = "<group>"; };
+		4138FEB01FE259CC00EBAA83 /* JJCToolsObject+AlertAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JJCToolsObject+AlertAPI.m"; sourceTree = "<group>"; };
+		4138FEB51FE25EAF00EBAA83 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		4138FEB61FE25EAF00EBAA83 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		4138FEBA1FE25EFA00EBAA83 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		4138FEBC1FE25EFC00EBAA83 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		413A42F51FB54F290064E721 /* UILabel+AttributedString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+AttributedString.h"; sourceTree = "<group>"; };
 		413A42F61FB54F290064E721 /* UILabel+AttributedString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+AttributedString.m"; sourceTree = "<group>"; };
 		4157D3301F623B6A00A330D1 /* UITabBar+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+Badge.h"; sourceTree = "<group>"; };
@@ -115,6 +123,7 @@
 				41FA3AC51F973B8800116BBF /* JJCToolsDefine */,
 				4157D32D1F62388700A330D1 /* JJCToolsCategory */,
 				41311AE61F5FEAB300BCC291 /* JJCToolsObject */,
+				4138FEB21FE25DF900EBAA83 /* JJCToolsSource */,
 			);
 			path = JJCTools;
 			sourceTree = "<group>";
@@ -130,8 +139,34 @@
 				410037041FB05504000C89AA /* JJCToolsObject+RulesAPI.m */,
 				410037061FB05811000C89AA /* JJCToolsObject+PlistAPI.h */,
 				410037071FB05811000C89AA /* JJCToolsObject+PlistAPI.m */,
+				4138FEAF1FE259CC00EBAA83 /* JJCToolsObject+AlertAPI.h */,
+				4138FEB01FE259CC00EBAA83 /* JJCToolsObject+AlertAPI.m */,
 			);
 			path = JJCToolsObject;
+			sourceTree = "<group>";
+		};
+		4138FEB21FE25DF900EBAA83 /* JJCToolsSource */ = {
+			isa = PBXGroup;
+			children = (
+				4138FEB41FE25E2B00EBAA83 /* Images */,
+				4138FEB31FE25E1D00EBAA83 /* Strings */,
+			);
+			path = JJCToolsSource;
+			sourceTree = "<group>";
+		};
+		4138FEB31FE25E1D00EBAA83 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				4138FEBB1FE25EFA00EBAA83 /* Localizable.strings */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		4138FEB41FE25E2B00EBAA83 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		413A42F41FB54F290064E721 /* UILabel */ = {
@@ -243,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41311AD21F5FE63F00BCC291 /* LaunchScreen.storyboard in Resources */,
+				4138FEB91FE25EFA00EBAA83 /* Localizable.strings in Resources */,
 				41311ACF1F5FE63F00BCC291 /* Assets.xcassets in Resources */,
 				41311ACD1F5FE63F00BCC291 /* Main.storyboard in Resources */,
 			);
@@ -259,6 +295,7 @@
 				41FA3AC41F97391700116BBF /* JJCToolsObject+BaseAPI.m in Sources */,
 				41311ACA1F5FE63F00BCC291 /* ViewController.m in Sources */,
 				410037081FB05811000C89AA /* JJCToolsObject+PlistAPI.m in Sources */,
+				4138FEB11FE259CC00EBAA83 /* JJCToolsObject+AlertAPI.m in Sources */,
 				4157D33B1F626A7500A330D1 /* UIView+Animation.m in Sources */,
 				4157D3351F62405F00A330D1 /* UIView+Frame.m in Sources */,
 				41311AC71F5FE63F00BCC291 /* AppDelegate.m in Sources */,
@@ -276,6 +313,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				41311ACC1F5FE63F00BCC291 /* Base */,
+				4138FEB51FE25EAF00EBAA83 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -284,8 +322,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				41311AD11F5FE63F00BCC291 /* Base */,
+				4138FEB61FE25EAF00EBAA83 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		4138FEBB1FE25EFA00EBAA83 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4138FEBA1FE25EFA00EBAA83 /* zh-Hans */,
+				4138FEBC1FE25EFC00EBAA83 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -295,6 +343,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -343,6 +392,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
