@@ -13,14 +13,7 @@ Pod::Spec.new do |s|
     s.framework     = 'UIKit'
     s.requires_arc  = true
     s.source_files  = 'JJCToolsDemo/JJCTools/JJCTools.h'
-
-
-# 资源、本地化语言、图片等
-
-    s.resource_bundles = {
-        'JJCTools' => ['JJCToolsDemo/JJCTools/JJCToolsSource/Images/**/*.{png,jpg}',
-                       'JJCToolsDemo/JJCTools/JJCToolsSource/Strings/**/*.strings']
-    }
+    s.resource      = 'JJCToolsDemo/JJCTools/JJCToolsSource/JJCTools.bundle'
 
 
 # 一级子目录结构
@@ -54,16 +47,6 @@ Pod::Spec.new do |s|
 
 
     s.subspec 'JJCToolsSource' do |ss|
-
-        # 二级子目录结构
-
-        ss.subspec 'Strings' do |sss|
-            sss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsSource/Strings/**/*.strings'
-        end
-
-        ss.subspec 'Images' do |sss|
-            sss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsSource/Images/**/*.{png,jpg}'
-        end
     end
 
 end
