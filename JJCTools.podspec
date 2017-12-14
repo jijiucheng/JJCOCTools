@@ -46,8 +46,4 @@ Pod::Spec.new do |s|
     end
 
 
-    s.subspec 'JJCToolsSource' do |ss|
-        ss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsSource/*.bundle'
-    end
-
 end
