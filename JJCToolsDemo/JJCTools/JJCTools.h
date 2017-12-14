@@ -26,6 +26,7 @@
 /********************  JJCToolsDefine  *******************/
 
 #import "JJCToolsDefine.h"
+#import "JJCToolsLibDefine.h"
 
 
 /********************  JJCToolsObject  *******************/
