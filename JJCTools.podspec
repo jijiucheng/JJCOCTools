@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
     s.framework     = 'UIKit'
     s.requires_arc  = true
     s.source_files  = 'JJCToolsDemo/JJCTools/JJCTools.h'
-    s.resource      = 'JJCToolsDemo/JJCTools/JJCToolsSource/Strings/JJCTools.bundle'
+    s.resource      = 'JJCToolsDemo/JJCTools/JJCToolsSource/JJCTools.bundle'
 
 
 # 一级子目录结构
