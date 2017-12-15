@@ -24,12 +24,6 @@ Pod::Spec.new do |s|
     end
 
 
-    s.subspec 'JJCToolsObject' do |ss|
-        ss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsObject/**/*.{h,m}'
-        ss.public_header_files = 'JJCToolsDemo/JJCTools/JJCToolsObject/**/*.{h}'
-    end
-
-
     s.subspec 'JJCToolsCategory' do |ss|
 
         # 二级子目录结构
@@ -53,6 +47,12 @@ Pod::Spec.new do |s|
             sss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsCategory/NSBundle/**/*.{h,m}'
             sss.public_header_files = 'JJCToolsDemo/JJCTools/JJCToolsCategory/NSBundle/**/*.{h}'
         end
+    end
+
+
+    s.subspec 'JJCToolsObject' do |ss|
+        ss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsObject/**/*.{h,m}'
+        ss.public_header_files = 'JJCToolsDemo/JJCTools/JJCToolsObject/**/*.{h}'
     end
 
 
