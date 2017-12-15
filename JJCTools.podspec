@@ -19,8 +19,8 @@ Pod::Spec.new do |s|
 # 一级子目录结构
 
     s.subspec 'JJCToolsDefine' do |ss|
-        ss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsDefine/**/*.{h,m}'
         ss.public_header_files = 'JJCToolsDemo/JJCTools/JJCToolsDefine/**/*.{h}'
+        ss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsDefine/**/*.{h,m}'
     end
 
 
@@ -29,30 +29,30 @@ Pod::Spec.new do |s|
         # 二级子目录结构
 
         ss.subspec 'UITabBar' do |sss|
-            sss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsCategory/UITabBar/**/*.{h,m}'
             sss.public_header_files = 'JJCToolsDemo/JJCTools/JJCToolsCategory/UITabBar/**/*.{h}'
+            sss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsCategory/UITabBar/**/*.{h,m}'
         end
 
         ss.subspec 'UIView' do |sss|
-            sss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsCategory/UIView/**/*.{h,m}'
             sss.public_header_files = 'JJCToolsDemo/JJCTools/JJCToolsCategory/UIView/**/*.{h}'
+            sss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsCategory/UIView/**/*.{h,m}'
         end
 
         ss.subspec 'UILabel' do |sss|
-            sss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsCategory/UILabel/**/*.{h,m}'
             sss.public_header_files = 'JJCToolsDemo/JJCTools/JJCToolsCategory/UILabel/**/*.{h}'
+            sss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsCategory/UILabel/**/*.{h,m}'
         end
 
         ss.subspec 'NSBundle' do |sss|
-            sss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsCategory/NSBundle/**/*.{h,m}'
             sss.public_header_files = 'JJCToolsDemo/JJCTools/JJCToolsCategory/NSBundle/**/*.{h}'
+            sss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsCategory/NSBundle/**/*.{h,m}'
         end
     end
 
 
     s.subspec 'JJCToolsObject' do |ss|
-        ss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsObject/**/*.{h,m}'
         ss.public_header_files = 'JJCToolsDemo/JJCTools/JJCToolsObject/**/*.{h}'
+        ss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsObject/**/*.{h,m}'
     end
 
 

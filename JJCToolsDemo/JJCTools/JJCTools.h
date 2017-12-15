@@ -28,15 +28,6 @@
 #import "JJCToolsDefine.h"
 
 
-/********************  JJCToolsObject  *******************/
-
-#import "JJCToolsObject.h"
-#import "JJCToolsObject+BaseAPI.h"
-#import "JJCToolsObject+RulesAPI.h"
-#import "JJCToolsObject+PlistAPI.h"
-#import "JJCToolsObject+AlertAPI.h"
-
-
 /********************  JJCToolsCategory  *******************/
 
 #import "UITabBar+Badge.h"
@@ -48,6 +39,18 @@
 #import "UILabel+AttributedString.h"
 
 #import "NSBundle+JJCToolsResource.h"
+
+
+/********************  JJCToolsObject  *******************/
+
+#import "JJCToolsObject.h"
+#import "JJCToolsObject+BaseAPI.h"
+#import "JJCToolsObject+RulesAPI.h"
+#import "JJCToolsObject+PlistAPI.h"
+#import "JJCToolsObject+AlertAPI.h"
+
+
+
 
 
 
