@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  JJCToolsDemo
+
+  Created by 苜蓿鬼仙 on 14/12/2017.
+  Copyright © 2017 苜蓿鬼仙. All rights reserved.
+*/
+
+
+
+
+
+/*
+ 
+ 本地语言文件 - 繁体中文
+ 创建：2017.12.15
+ 更新：2017.12.15
+ 
+ */
+
+
+
+/***************************  2017.12.15  ***************************/
+
+"JJCTools_Tips"      = "溫馨提示";
+"JJCTools_Cancel"    = "取消";
+"JJCTools_Confirm"   = "確定";

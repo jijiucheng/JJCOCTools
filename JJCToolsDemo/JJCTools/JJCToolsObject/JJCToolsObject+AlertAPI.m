@@ -7,6 +7,8 @@
 //
 
 #import "JJCToolsObject+AlertAPI.h"
+#import "NSBundle+JJCToolsResource.h"
+
 
 @implementation JJCToolsObject (AlertAPI)
 
@@ -24,7 +26,7 @@
  */
 + (void)jjc_alert_showAlertViewWithMessage:(NSString *)message leftString:(NSString *)leftString rightString:(NSString *)rightString actionBlock:(void (^)(BOOL isRight))actionBlock {
     
-    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Tips", nil) message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:[NSBundle jjc_bundle_getLocalizedStringForKey:@"JJCTools_Tips"] message:message preferredStyle:UIAlertControllerStyleAlert];
     
     if (leftString.length > 0) {
         UIAlertAction *leftAction = [UIAlertAction actionWithTitle:leftString style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
@@ -52,7 +54,7 @@
  */
 + (void)jjc_alert_showAlertViewWithMessage:(NSString *)message enSureString:(NSString *)enSureString {
     
-    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Tips", nil) message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:[NSBundle jjc_bundle_getLocalizedStringForKey:@"JJCTools_Tips"] message:message preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:enSureString style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         
@@ -69,7 +71,7 @@
  */
 + (void)jjc_alert_showAlertViewWithMessage:(NSString *)message {
     
-    [self jjc_alert_showAlertViewWithMessage:message enSureString:NSLocalizedString(@"Confirm", nil)];
+    [self jjc_alert_showAlertViewWithMessage:message enSureString:[NSBundle jjc_bundle_getLocalizedStringForKey:@"JJCTools_Confirm"]];
 }
 
 

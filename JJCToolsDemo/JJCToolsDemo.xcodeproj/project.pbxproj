@@ -18,6 +18,7 @@
 		41311AE91F5FEB0200BCC291 /* JJCToolsObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 41311AE81F5FEB0200BCC291 /* JJCToolsObject.m */; };
 		4138FEB11FE259CC00EBAA83 /* JJCToolsObject+AlertAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4138FEB01FE259CC00EBAA83 /* JJCToolsObject+AlertAPI.m */; };
 		4138FEDC1FE26D1200EBAA83 /* JJCTools.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4138FEDB1FE26D1200EBAA83 /* JJCTools.bundle */; };
+		4138FEFC1FE3605100EBAA83 /* NSBundle+JJCToolsResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4138FEFB1FE3605100EBAA83 /* NSBundle+JJCToolsResource.m */; };
 		4157D3321F623B6A00A330D1 /* UITabBar+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 4157D3311F623B6A00A330D1 /* UITabBar+Badge.m */; };
 		4157D3351F62405F00A330D1 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 4157D3341F62405F00A330D1 /* UIView+Frame.m */; };
 		4157D3381F6265E500A330D1 /* UIView+TapGestureBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 4157D3371F6265E500A330D1 /* UIView+TapGestureBlock.m */; };
@@ -48,6 +49,8 @@
 		4138FEB51FE25EAF00EBAA83 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		4138FEB61FE25EAF00EBAA83 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		4138FEDB1FE26D1200EBAA83 /* JJCTools.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = JJCTools.bundle; sourceTree = "<group>"; };
+		4138FEFA1FE3605100EBAA83 /* NSBundle+JJCToolsResource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSBundle+JJCToolsResource.h"; sourceTree = "<group>"; };
+		4138FEFB1FE3605100EBAA83 /* NSBundle+JJCToolsResource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+JJCToolsResource.m"; sourceTree = "<group>"; };
 		413A42F51FB54F290064E721 /* UILabel+AttributedString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+AttributedString.h"; sourceTree = "<group>"; };
 		413A42F61FB54F290064E721 /* UILabel+AttributedString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+AttributedString.m"; sourceTree = "<group>"; };
 		4157D3301F623B6A00A330D1 /* UITabBar+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+Badge.h"; sourceTree = "<group>"; };
@@ -122,7 +125,7 @@
 				41FA3AC51F973B8800116BBF /* JJCToolsDefine */,
 				4157D32D1F62388700A330D1 /* JJCToolsCategory */,
 				41311AE61F5FEAB300BCC291 /* JJCToolsObject */,
-				4138FEDA1FE26CEB00EBAA83 /* JJCToolsSource */,
+				4138FEDA1FE26CEB00EBAA83 /* JJCToolsResource */,
 			);
 			path = JJCTools;
 			sourceTree = "<group>";
@@ -144,12 +147,21 @@
 			path = JJCToolsObject;
 			sourceTree = "<group>";
 		};
-		4138FEDA1FE26CEB00EBAA83 /* JJCToolsSource */ = {
+		4138FEDA1FE26CEB00EBAA83 /* JJCToolsResource */ = {
 			isa = PBXGroup;
 			children = (
 				4138FEDB1FE26D1200EBAA83 /* JJCTools.bundle */,
 			);
-			path = JJCToolsSource;
+			path = JJCToolsResource;
+			sourceTree = "<group>";
+		};
+		4138FEF91FE35F0D00EBAA83 /* NSBundle */ = {
+			isa = PBXGroup;
+			children = (
+				4138FEFA1FE3605100EBAA83 /* NSBundle+JJCToolsResource.h */,
+				4138FEFB1FE3605100EBAA83 /* NSBundle+JJCToolsResource.m */,
+			);
+			path = NSBundle;
 			sourceTree = "<group>";
 		};
 		413A42F41FB54F290064E721 /* UILabel */ = {
@@ -167,6 +179,7 @@
 				4157D32E1F623B3A00A330D1 /* UITabBar */,
 				4157D32F1F623B3A00A330D1 /* UIView */,
 				413A42F41FB54F290064E721 /* UILabel */,
+				4138FEF91FE35F0D00EBAA83 /* NSBundle */,
 			);
 			path = JJCToolsCategory;
 			sourceTree = "<group>";
@@ -283,6 +296,7 @@
 				4157D3351F62405F00A330D1 /* UIView+Frame.m in Sources */,
 				41311AC71F5FE63F00BCC291 /* AppDelegate.m in Sources */,
 				41311AE91F5FEB0200BCC291 /* JJCToolsObject.m in Sources */,
+				4138FEFC1FE3605100EBAA83 /* NSBundle+JJCToolsResource.m in Sources */,
 				4157D3381F6265E500A330D1 /* UIView+TapGestureBlock.m in Sources */,
 				410037051FB05504000C89AA /* JJCToolsObject+RulesAPI.m in Sources */,
 				41311AC41F5FE63F00BCC291 /* main.m in Sources */,

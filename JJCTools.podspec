@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
     s.name          = 'JJCTools'
-    s.version       = '0.1.2'
+    s.version       = '0.1.3'
     s.license       = { :type => 'MIT', :file => 'LICENSE' }
     s.summary       = 'A Library for iOS to  get result fasterly with some methods.'
     s.homepage      = 'https://github.com/jijiucheng/JJCTools'
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
     s.ios.deployment_target = '8.0'
     s.requires_arc  = true
     s.source_files  = 'JJCToolsDemo/JJCTools/JJCTools.h'
-    s.resource      = 'JJCToolsDemo/JJCTools/JJCToolsSource/JJCTools.bundle'
+    s.resource      = 'JJCToolsDemo/JJCTools/JJCToolsResource/JJCTools.bundle'
 
 
 
@@ -43,6 +43,16 @@ Pod::Spec.new do |s|
             sss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsCategory/UIView/**/*.{h,m}'
             sss.public_header_files = 'JJCToolsDemo/JJCTools/JJCToolsCategory/UIView/**/*.{h}'
         end
+
+        ss.subspec 'UILabel' do |sss|
+            sss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsCategory/UILabel/**/*.{h,m}'
+            sss.public_header_files = 'JJCToolsDemo/JJCTools/JJCToolsCategory/UILabel/**/*.{h}'
+        end
+
+        ss.subspec 'NSBundle' do |sss|
+            sss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsCategory/NSBundle/**/*.{h,m}'
+            sss.public_header_files = 'JJCToolsDemo/JJCTools/JJCToolsCategory/NSBundle/**/*.{h}'
+        end
     end
 
 
@@ -54,39 +64,6 @@ Pod::Spec.new do |s|
 # 依赖系统静态库文件
 
     s.framework     = 'UIKit', 'Foundation', 'QuartzCore', 'CoreText', 'CoreGraphics'
-
-
-
-# PCH
-
-    pch_PS = <<-EOS
-
-       // 图片、xib
-
-        #define JJCBundleName [NSBundle bundleWithURL:[[NSBundle bundleForClass:self.class] URLForResource:@"JJCTools" withExtension:@"bundle"]]
-        #define JJCBundleImageNamed(A) [UIImage imageNamed:A inBundle:[NSBundle bundleWithURL:JJCBundleName] compatibleWithTraitCollection:nil]
-
-
-       // 国际化字符串
-
-        #define JJCLocalizedString(key, comment)\
-        ({\
-        NSString *language = [NSLocale preferredLanguages].firstObject;\
-        if ([language hasPrefix:@"en"]) {\
-        language = @"en";\
-        } else if ([language hasPrefix:@"zh"]) {\
-        language = @"zh-Hans";\
-        } else {\
-        language = @"en";\
-        }\
-        NSBundle *bundle = [NSBundle bundleWithPath:[JJCBundleName pathForResource:language ofType:@"lproj"]];\
-        [bundle localizedStringForKey:key value:@"" table:nil];\
-        })
-
-
-    EOS
-
-    s.prefix_header_contents = pch_PS
 
 
 

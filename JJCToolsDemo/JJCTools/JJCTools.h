@@ -15,9 +15,9 @@
  
  JJCTools
  创建：2017.09.06
- 更新：2017.11.10
+ 更新：2017.12.15
  
- 当前版本：v0.1.0
+ 当前版本：v0.1.3
  
  */
 
@@ -26,7 +26,6 @@
 /********************  JJCToolsDefine  *******************/
 
 #import "JJCToolsDefine.h"
-#import "JJCToolsLibDefine.h"
 
 
 /********************  JJCToolsObject  *******************/
@@ -35,6 +34,7 @@
 #import "JJCToolsObject+BaseAPI.h"
 #import "JJCToolsObject+RulesAPI.h"
 #import "JJCToolsObject+PlistAPI.h"
+#import "JJCToolsObject+AlertAPI.h"
 
 
 /********************  JJCToolsCategory  *******************/
@@ -45,8 +45,9 @@
 #import "UIView+Frame.h"
 #import "UIView+TapGestureBlock.h"
 
+#import "UILabel+AttributedString.h"
 
-
+#import "NSBundle+JJCToolsResource.h"
 
 
 
