@@ -15,7 +15,7 @@
  
  JJCToolsObject+BaseAPI
  创建：2017.10.18
- 更新：2017.11.10
+ 更新：2017.12.18
  
  
  1、该扩展主要用于快捷设置一些基础共用方法
@@ -181,6 +181,15 @@
  */
 + (NSString *)jjc_base_removeHTMLCharacterWithHTMLString:(NSString *)htmlString;
 
+
+
+
+/***************************  获取当前状态  ***************************/
+
+/**
+ 获取当前视图控制器 UIViewController
+ */
++ (UIViewController *)jjc_base_getCurrentViewController;
 
 
 

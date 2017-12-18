@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
     s.name          = 'JJCTools'
-    s.version       = '0.1.1'
+    s.version       = '0.1.2'
     s.license       = { :type => 'MIT', :file => 'LICENSE' }
     s.summary       = 'A Library for iOS to  get result fasterly with some methods.'
     s.homepage      = 'https://github.com/jijiucheng/JJCTools'
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
     s.ios.deployment_target = '8.0'
     s.requires_arc  = true
     s.source_files  = 'JJCToolsDemo/JJCTools/JJCTools.h'
-    s.resource      = 'JJCToolsDemo/JJCTools/JJCToolsResource/JJCTools.bundle'
+    s.resource_bundles = {'JJCTools' => ['JJCToolsDemo/JJCTools/JJCToolsResource/Images/**/*{png,jpg}', 'JJCToolsDemo/JJCTools/JJCToolsResource/Strings/*.lproj']}
 
 
 

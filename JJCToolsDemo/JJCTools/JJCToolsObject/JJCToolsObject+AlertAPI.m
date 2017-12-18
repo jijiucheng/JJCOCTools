@@ -8,6 +8,7 @@
 
 #import "JJCToolsObject+AlertAPI.h"
 
+#import "JJCToolsObject+BaseAPI.h"
 #import "NSBundle+JJCToolsResource.h"
 
 
@@ -43,7 +44,7 @@
         [alertVC addAction:rightAction];
     }
     
-    UIViewController *rootVC = [[[UIApplication sharedApplication] keyWindow] rootViewController];
+    UIViewController *rootVC = [self jjc_base_getCurrentViewController];
     [rootVC presentViewController:alertVC animated:YES completion:nil];
 }
 
@@ -63,7 +64,7 @@
     
     [alertVC addAction:confirmAction];
     
-    UIViewController *rootVC = [[[UIApplication sharedApplication] keyWindow] rootViewController];
+    UIViewController *rootVC = [self jjc_base_getCurrentViewController];
     [rootVC presentViewController:alertVC animated:YES completion:nil];
 }
 

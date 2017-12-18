@@ -494,6 +494,48 @@
 
 
 
+#pragma mark --------------------
+#pragma mark --------------------  获取当前状态  --------------------
+
+/**
+ 获取当前视图控制器 UIViewController
+ */
++ (UIViewController *)jjc_base_getCurrentViewController {
+    
+    // 定义一个变量存放当前屏幕显示的 viewController
+    UIViewController *currentVC = nil;
+    // 得到当前应用程序的主窗口（需要在 viewDidLoad 加载完成才会有值）
+    UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
+    
+    // windowLevel 是在 Z轴 方向上的窗口位置，默认值是 UIWindowLevelNormal
+    if (keyWindow.windowLevel != UIWindowLevelNormal) {
+        // 获取应用程序所有的窗口
+        NSArray *windows = [[UIApplication sharedApplication] windows];
+        for (UIWindow *window in windows) {
+            // 找到程序的默认窗口（正在显示的窗口）
+            if (window.windowLevel == UIWindowLevelNormal) {
+                // 将关键窗口赋值为默认窗口
+                keyWindow = window;
+                break;
+            }
+        }
+    }
+    
+    // 获取窗口的当前显示视图
+    UIView *frontView = [[keyWindow subviews] objectAtIndex:0];
+    
+    // 获取视图的下一个响应者，UIView 视图调用这个方法的返回值为 UIViewController 或它的父视图
+    id nextResponder = [frontView nextResponder];
+    
+    // 判断显示视图的下一个响应者是否为一个 UIViewController 的类对象
+    if ([nextResponder isKindOfClass:[UIViewController class]]) {
+        currentVC = nextResponder;
+    } else {
+        currentVC = keyWindow.rootViewController;
+    }
+    
+    return currentVC;
+}
 
 
 
