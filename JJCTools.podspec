@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
     s.ios.deployment_target = '8.0'
     s.requires_arc  = true
     s.source_files  = 'JJCToolsDemo/JJCTools/JJCTools.h'
-    s.resource_bundles = {'JJCTools' => ['JJCToolsDemo/JJCTools/JJCToolsResource/Images/**/*{png,jpg}', 'JJCToolsDemo/JJCTools/JJCToolsResource/Strings/*.lproj']}
+    s.resource      = 'JJCToolsDemo/JJCTools/JJCToolsResource/JJCTools.bundle'
 
 
 
