@@ -98,4 +98,30 @@
 
 
 
+
+/***************************  以下为快捷版  ***************************/
+
+/**
+ 快速获取 本地图片资源【png格式】
+ 
+ @param imageName 图片名称
+ */
++ (UIImage *)jjc_ImageName:(NSString *)imageName {
+    
+    return [self jjc_bundle_getImageName:imageName];
+}
+
+
+/**
+ 快速获取 本地语言话字符串【无注释版】
+ 
+ @param key 本地语言字符串
+ */
++ (NSString *)jjc_LocalKey:(NSString *)key {
+    
+    return [self jjc_bundle_getLocalizedStringForKey:key];
+}
+
+
+
 @end

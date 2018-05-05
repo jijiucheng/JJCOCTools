@@ -16,7 +16,7 @@
  
  JJCToolsDefine
  创建：2017.10.18
- 更新：2017.11.10
+ 更新：2018.05.05
  
  
  1、该扩展主要用于收录一些基本常用的 宏定义
@@ -35,9 +35,9 @@
 
 
 /** 屏幕尺寸 **/
-#define K_MainScreen_W          ([UIScreen mainScreen].bounds.size.width)
-#define K_MainScreen_H          ([UIScreen mainScreen].bounds.size.height)
-#define K_MainScreen_SizeScale  ([UIScreen mainScreen].bounds.size.width / 375.0f)  // 以 iPhone8 作为基准
+#define K_Screen_W          ([UIScreen mainScreen].bounds.size.width)
+#define K_Screen_H          ([UIScreen mainScreen].bounds.size.height)
+#define K_Screen_Scale      ([UIScreen mainScreen].bounds.size.width / 375.0f)  // 以 iPhone8 作为基准
 
 
 /** 判断系统是否是iOS8及其以上系统 **/
@@ -53,11 +53,11 @@
 
 
 /** 固定控件区域尺寸 **/
-#define K_Status_H              (K_iPhoneX ? 44.0f:20.0f)                   // 状态栏
-#define K_NavBar_H              (44.0f)                                     // 导航栏
-#define K_TabBar_H              (K_iPhoneX ? 83.0f:49.0f)                   // tabBar 栏
-#define K_VC_StatusNav_H        (K_Status_H + K_NavBar_H)                   // 状态栏 + 导航栏 高度
-#define K_VC_View_H             (K_MainScreen_H - K_Status_H - K_NavBar_H)  // 正常子级 ViewController.view 高度
+#define K_Status_H           (K_iPhoneX ? 44.0f:20.0f)                   // 状态栏
+#define K_NavBar_H           (44.0f)                                     // 导航栏
+#define K_TabBar_H           (K_iPhoneX ? 83.0f:49.0f)                   // tabBar 栏
+#define K_StatusNav_H        (K_Status_H + K_NavBar_H)                   // 状态栏 + 导航栏 高度
+#define K_View_H             (K_MainScreen_H - K_Status_H - K_NavBar_H)  // 正常子级 ViewController.view 高度
 
 
 /** 基础间距尺寸 **/
@@ -98,6 +98,7 @@
 
 /** 自定义相关输入输出 **/
 #define K_StringFormat(format, ...)   [NSString stringWithFormat:format, ##__VA_ARGS__]
+#define K_LocalString(String)         NSLocalizedString(String, nil)
 
 
 /** 获取沙盒相关路径 **/
@@ -117,9 +118,13 @@
 
 
 /** 获取本地图片资源 **/
-#define K_ImageName(_name_, _type_)   [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:_name_ ofType:_type_]]
-#define K_ImageName_PNG(_name_)       [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:_name_ ofType:@"png"]]
-#define K_URL(_url_)                  [NSURL URLWithString:[NSString stringWithFormat:@"%@", _url_]]
+// 直接从系统文件中取，不缓存（适用大文件且使用不频繁）
+#define K_ImageName_F(_name_, _type_)   [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:_name_ ofType:_type_]]
+#define K_ImageName_F_PNG(_name_)       [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:_name_ ofType:@"png"]]
+// 先查找缓存，否则从文件系统中取（适用适用频繁文件）【该方法默认只加载PNG格式，如果需要加载其他格式，请在文件名中加入文件格式后缀，如"abc.jpg"】
+#define K_ImageName(_name_)             [UIImage imageNamed:_name_]
+
+#define K_URL(_url_)                    [NSURL URLWithString:[NSString stringWithFormat:@"%@", _url_]]
 
 
 /** 自定义弹框 **/
