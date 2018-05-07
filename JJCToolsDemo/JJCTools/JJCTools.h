@@ -15,9 +15,9 @@
  
  JJCTools
  创建：2017.09.06
- 更新：2018.05.05
+ 更新：2018.05.07
  
- 当前版本：v0.1.3
+ 当前版本：v0.1.4
  
  */
 
@@ -26,6 +26,7 @@
 /********************  JJCToolsDefine  *******************/
 
 #import "JJCToolsDefine.h"
+#import "JJCToolsSingleton.h"
 
 
 /********************  JJCToolsCategory  *******************/

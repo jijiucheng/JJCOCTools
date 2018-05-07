@@ -51,6 +51,35 @@
 }
 
 
+/**
+ 快捷存沙盒数据（归档方式）
+ */
++ (void)jjc_base_saveObject:(id)object forKey:(NSString *)key {
+    
+    if ([object respondsToSelector:@selector(encodeWithCoder:)] == NO) {
+        NSLog(@"----\n Error save object to NSUserDefault. Object must respond to encodeWithCoder: message.");
+        return;
+    }
+    
+    NSData *encodedObject = [NSKeyedArchiver archivedDataWithRootObject:object];
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:encodedObject forKey:key];
+    [userDefaults synchronize];
+}
+
+/**
+ 快捷取沙盒数据（归档方式）
+ */
++ (id)jjc_Base_getObjectForKey:(NSString *)key {
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSData *encodedObject = [userDefaults objectForKey:key];
+    
+    id object = [NSKeyedUnarchiver unarchiveObjectWithData:encodedObject];
+    return object;
+}
+
 
 
 #pragma mark --------------------

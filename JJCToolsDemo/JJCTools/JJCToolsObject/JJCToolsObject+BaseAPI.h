@@ -15,7 +15,7 @@
  
  JJCToolsObject+BaseAPI
  创建：2017.10.18
- 更新：2017.12.18
+ 更新：2018.05.07
  
  
  1、该扩展主要用于快捷设置一些基础共用方法
@@ -49,6 +49,16 @@
  快捷删除沙盒字段
  */
 + (void)jjc_base_removeValueForKey:(NSString *)key;
+
+/**
+ 快捷存沙盒数据（归档方式）
+ */
++ (void)jjc_base_saveObject:(id)object forKey:(NSString *)key;
+
+/**
+ 快捷取沙盒数据（归档方式）
+ */
++ (id)jjc_Base_getObjectForKey:(NSString *)key;
 
 
 

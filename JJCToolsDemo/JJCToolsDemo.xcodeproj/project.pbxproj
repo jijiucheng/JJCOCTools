@@ -61,6 +61,7 @@
 		4157D33A1F626A7500A330D1 /* UIView+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Animation.m"; sourceTree = "<group>"; };
 		41A267B11FE3B4B200D81666 /* NSBundle+JJCToolsResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+JJCToolsResource.h"; sourceTree = "<group>"; };
 		41A267B21FE3B4B200D81666 /* NSBundle+JJCToolsResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+JJCToolsResource.m"; sourceTree = "<group>"; };
+		41F6635020A04C7100598C51 /* JJCToolsSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJCToolsSingleton.h; sourceTree = "<group>"; };
 		41FA3AC21F97391700116BBF /* JJCToolsObject+BaseAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JJCToolsObject+BaseAPI.h"; sourceTree = "<group>"; };
 		41FA3AC31F97391700116BBF /* JJCToolsObject+BaseAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JJCToolsObject+BaseAPI.m"; sourceTree = "<group>"; };
 		41FA3AC61F973BCE00116BBF /* JJCToolsDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJCToolsDefine.h; sourceTree = "<group>"; };
@@ -210,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				41FA3AC61F973BCE00116BBF /* JJCToolsDefine.h */,
+				41F6635020A04C7100598C51 /* JJCToolsSingleton.h */,
 			);
 			path = JJCToolsDefine;
 			sourceTree = "<group>";
