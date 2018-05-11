@@ -22,6 +22,7 @@
 		4157D3351F62405F00A330D1 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 4157D3341F62405F00A330D1 /* UIView+Frame.m */; };
 		4157D3381F6265E500A330D1 /* UIView+TapGestureBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 4157D3371F6265E500A330D1 /* UIView+TapGestureBlock.m */; };
 		4157D33B1F626A7500A330D1 /* UIView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4157D33A1F626A7500A330D1 /* UIView+Animation.m */; };
+		4182C41920A54B280000F32C /* UIButton+ActionBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 4182C41820A54B280000F32C /* UIButton+ActionBlock.m */; };
 		41A267B31FE3B4B200D81666 /* NSBundle+JJCToolsResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A267B21FE3B4B200D81666 /* NSBundle+JJCToolsResource.m */; };
 		41FA3AC41F97391700116BBF /* JJCToolsObject+BaseAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 41FA3AC31F97391700116BBF /* JJCToolsObject+BaseAPI.m */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,8 @@
 		4157D3371F6265E500A330D1 /* UIView+TapGestureBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TapGestureBlock.m"; sourceTree = "<group>"; };
 		4157D3391F626A7500A330D1 /* UIView+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Animation.h"; sourceTree = "<group>"; };
 		4157D33A1F626A7500A330D1 /* UIView+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Animation.m"; sourceTree = "<group>"; };
+		4182C41720A54B280000F32C /* UIButton+ActionBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+ActionBlock.h"; sourceTree = "<group>"; };
+		4182C41820A54B280000F32C /* UIButton+ActionBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ActionBlock.m"; sourceTree = "<group>"; };
 		41A267B11FE3B4B200D81666 /* NSBundle+JJCToolsResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+JJCToolsResource.h"; sourceTree = "<group>"; };
 		41A267B21FE3B4B200D81666 /* NSBundle+JJCToolsResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+JJCToolsResource.m"; sourceTree = "<group>"; };
 		41F6635020A04C7100598C51 /* JJCToolsSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJCToolsSingleton.h; sourceTree = "<group>"; };
@@ -168,6 +171,11 @@
 		4157D32D1F62388700A330D1 /* JJCToolsCategory */ = {
 			isa = PBXGroup;
 			children = (
+				4182C41220A54A950000F32C /* UIButton */,
+				4182C40F20A54A950000F32C /* UIImageView */,
+				4182C41020A54A950000F32C /* UITextField */,
+				4182C41120A54A950000F32C /* UITextView */,
+				4182C41320A54A950000F32C /* UIViewController */,
 				41A267AD1FE3B0C600D81666 /* NSBundle */,
 				4157D32E1F623B3A00A330D1 /* UITabBar */,
 				4157D32F1F623B3A00A330D1 /* UIView */,
@@ -196,6 +204,43 @@
 				4157D3371F6265E500A330D1 /* UIView+TapGestureBlock.m */,
 			);
 			path = UIView;
+			sourceTree = "<group>";
+		};
+		4182C40F20A54A950000F32C /* UIImageView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIImageView;
+			sourceTree = "<group>";
+		};
+		4182C41020A54A950000F32C /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UITextField;
+			sourceTree = "<group>";
+		};
+		4182C41120A54A950000F32C /* UITextView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UITextView;
+			sourceTree = "<group>";
+		};
+		4182C41220A54A950000F32C /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				4182C41720A54B280000F32C /* UIButton+ActionBlock.h */,
+				4182C41820A54B280000F32C /* UIButton+ActionBlock.m */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		4182C41320A54A950000F32C /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIViewController;
 			sourceTree = "<group>";
 		};
 		41A267AD1FE3B0C600D81666 /* NSBundle */ = {
@@ -295,6 +340,7 @@
 				410037081FB05811000C89AA /* JJCToolsObject+PlistAPI.m in Sources */,
 				4138FEB11FE259CC00EBAA83 /* JJCToolsObject+AlertAPI.m in Sources */,
 				4157D33B1F626A7500A330D1 /* UIView+Animation.m in Sources */,
+				4182C41920A54B280000F32C /* UIButton+ActionBlock.m in Sources */,
 				4157D3351F62405F00A330D1 /* UIView+Frame.m in Sources */,
 				41311AC71F5FE63F00BCC291 /* AppDelegate.m in Sources */,
 				41311AE91F5FEB0200BCC291 /* JJCToolsObject.m in Sources */,

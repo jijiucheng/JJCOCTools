@@ -15,7 +15,7 @@
  
  JJCToolsObject+BaseAPI
  创建：2017.10.18
- 更新：2018.05.07
+ 更新：2018.05.10
  
  
  1、该扩展主要用于快捷设置一些基础共用方法
@@ -28,6 +28,22 @@
 
 
 #import "JJCToolsObject.h"
+
+
+
+/**
+ 月份转换类型
+ */
+typedef NS_ENUM(NSInteger, JJCMonthTurnType) {
+    JJCMonthTurnTypeEnFullName = 0,     // 英文全称(December)
+    JJCMonthTurnTypeEnShortPName,       // 英文简写(Dec.)
+    JJCMonthTurnTypeEnShortName,        // 英文简写(Dec)
+    JJCMonthTurnTypeChFullName,         // 中文全称(十二月)
+    JJCMonthTurnTypeChFolkName,         // 中文农历(涂月)
+    JJCMonthTurnTypeChOtherName         // 中文它称(腊月)
+};
+
+
 
 @interface JJCToolsObject (BaseAPI)
 
@@ -58,7 +74,7 @@
 /**
  快捷取沙盒数据（归档方式）
  */
-+ (id)jjc_Base_getObjectForKey:(NSString *)key;
++ (id)jjc_base_getObjectForKey:(NSString *)key;
 
 
 
@@ -171,6 +187,14 @@
 + (NSString *)jjc_base_turnArabicNumToChineseNumWithArabicNum:(NSInteger)arabicNum;
 
 /**
+ 月份转换，将阿拉伯数字月份，转换成英文状态或中文状态
+ 
+ @param arabicNum       传入的阿拉伯数字月份
+ @param monthTurnType   所需要转换的月份类型
+ */
++ (NSString *)jjc_base_turnMonthWithArabicNum:(NSInteger)arabicNum monthTurnType:(JJCMonthTurnType)monthTurnType;
+
+/**
  将中文转换成首字母(不仅限于中文汉字，可以是数字等)；isUppercase 是否首字母大写【多用于用户名首字母排序】
  */
 + (NSString *)jjc_base_turnFirstCharacterWithChineseString:(NSString *)chineseString isUppercase:(BOOL)isUppercase;
@@ -201,6 +225,21 @@
  */
 + (UIViewController *)jjc_base_getCurrentViewController;
 
+
+
+
+/***************************  获取坐标  ***************************/
+
+/**
+ 根据圆心坐标、直径、角度计算圆上的坐标
+ x1=x+r*cos(角度值*PI/180)
+ y1=y-r*sin(角度值*PI/180)
+ 
+ @param center      圆圈在IOS视图中的中心坐标，即该圆视图的center属性
+ @param angle       角度值，是0～360之间的值，角度是逆时针转的，从x轴中心(0,0)往右是0度角（或360度角），往左是180度角，往上是90度角，往下是270度角
+ @param radius      圆周半径
+ */
++ (CGPoint)jjc_base_getCircleCoordinateWithCenter:(CGPoint)center radius:(CGFloat)radius angle:(CGFloat)angle;
 
 
 

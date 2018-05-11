@@ -16,7 +16,7 @@
  
  JJCToolsDefine
  创建：2017.10.18
- 更新：2018.05.05
+ 更新：2018.05.08
  
  
  1、该扩展主要用于收录一些基本常用的 宏定义
@@ -140,6 +140,53 @@
 #define K_ShowHUD_Error(_message_) [MBProgressHUD showError:_message_]
 
 
+/** 圆角切割 **/
+//  圆角
+#define K_ViewBorderRadius(view, radius)\
+[view.layer setCornerRadius:(radius)];\
+[view.layer setMasksToBounds:YES];
+//  圆角和边框
+#define K_ViewBorderRadiusColor(view, radius, width, color)\
+[view.layer setCornerRadius:(radius)];\
+[view.layer setMasksToBounds:YES];\
+[view.layer setBorderWidth:(width)];\
+[view.layer setBorderColor:[color CGColor]];
+
+
+/** 强弱引用宏定义 **/
+// 弱引用
+#ifndef K_Weakify
+#if DEBUG
+#if __has_feature(objc_arc)
+#define K_Weakify(object) autoreleasepool{} __weak __typeof__(object) weak##_##object = object;
+#else
+#define K_Weakify(object) autoreleasepool{} __block __typeof__(object) block##_##object = object;
+#endif
+#else
+#if __has_feature(objc_arc)
+#define K_Weakify(object) try{} @finally{} {} __weak __typeof__(object) weak##_##object = object;
+#else
+#define K_Weakify(object) try{} @finally{} {} __block __typeof__(object) block##_##object = object;
+#endif
+#endif
+#endif
+
+// 强引用
+#ifndef K_Strongify
+#if DEBUG
+#if __has_feature(objc_arc)
+#define K_Strongify(object) autoreleasepool{} __typeof__(object) object = weak##_##object;
+#else
+#define K_Strongify(object) autoreleasepool{} __typeof__(object) object = block##_##object;
+#endif
+#else
+#if __has_feature(objc_arc)
+#define K_Strongify(object) try{} @finally{} __typeof__(object) object = weak##_##object;
+#else
+#define K_Strongify(object) try{} @finally{} __typeof__(object) object = block##_##object;
+#endif
+#endif
+#endif
 
 
 

@@ -71,7 +71,7 @@
 /**
  快捷取沙盒数据（归档方式）
  */
-+ (id)jjc_Base_getObjectForKey:(NSString *)key {
++ (id)jjc_base_getObjectForKey:(NSString *)key {
     
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSData *encodedObject = [userDefaults objectForKey:key];
@@ -462,6 +462,57 @@
 
 
 /**
+ 月份转换，将阿拉伯数字月份，转换成英文状态或中文状态
+ 
+ @param arabicNum       传入的阿拉伯数字月份
+ @param monthTurnType   所需要转换的月份类型
+ */
++ (NSString *)jjc_base_turnMonthWithArabicNum:(NSInteger)arabicNum monthTurnType:(JJCMonthTurnType)monthTurnType {
+    
+    if (arabicNum < 1 || arabicNum > 12) {
+        NSLog(@"【JJCTools * jjc_base_turnMonthWithArabicNum】Error: The parameter is illegal.");
+        return nil;
+    }
+    
+    NSArray *enFullArray = @[@"January", @"February", @"March", @"April", @"May", @"June", @"July", @"Aguest", @"September", @"October", @"November", @"December"];
+    NSArray *enShortPArray = @[@"Jan.", @"Feb.", @"Mar.", @"Apr.", @"May.", @"June.", @"July.", @"Aug.", @"Sept.", @"Oct.", @"Nov.", @"Dec."];
+    NSArray *enShortArray = @[@"Jan", @"Feb", @"Mar", @"Apr", @"May", @"June", @"July", @"Aug", @"Sept", @"Oct", @"Nov", @"Dec"];
+    NSArray *chFullArray = @[@"一月", @"二月", @"三月", @"四月", @"五月", @"六月", @"七月", @"八月", @"", @"", @"", @""];
+    NSArray *chFolkArray = @[@"华月", @"如月", @"寐月", @"清和月", @"皋月", @"旦月", @"凉月", @"桂月", @"玄月", @"良月", @"葭月", @"涂月"];
+    NSArray *chOtherArray = @[@"元月", @"二月", @"三月", @"四月", @"五月", @"六月", @"七月", @"桂月", @"九月", @"十月", @"冬月", @"腊月"];
+    
+    switch (monthTurnType) {
+        case JJCMonthTurnTypeEnFullName: {
+            return enFullArray[arabicNum];
+        }
+            break;
+        case JJCMonthTurnTypeEnShortPName: {
+            return enShortPArray[arabicNum];
+        }
+            break;
+        case JJCMonthTurnTypeEnShortName: {
+            return enShortArray[arabicNum];
+        }
+            break;
+        case JJCMonthTurnTypeChFullName: {
+            return chFullArray[arabicNum];
+        }
+            break;
+        case JJCMonthTurnTypeChFolkName: {
+            return chFolkArray[arabicNum];
+        }
+            break;
+        case JJCMonthTurnTypeChOtherName: {
+            return chOtherArray[arabicNum];
+        }
+            break;
+        default:
+            break;
+    }
+}
+
+
+/**
  将中文转换成首字母(不仅限于中文汉字，可以是数字等)；isUppercase 是否首字母大写【多用于用户名首字母排序】
  */
 + (NSString *)jjc_base_turnFirstCharacterWithChineseString:(NSString *)chineseString isUppercase:(BOOL)isUppercase {
@@ -564,6 +615,29 @@
     }
     
     return currentVC;
+}
+
+
+
+
+#pragma mark --------------------
+#pragma mark --------------------  获取坐标  --------------------
+
+/**
+ 根据圆心坐标、直径、角度计算圆上的坐标
+ x1=x+r*cos(角度值*PI/180)
+ y1=y-r*sin(角度值*PI/180)
+ 
+ @param center      圆圈在IOS视图中的中心坐标，即该圆视图的center属性
+ @param angle       角度值，是0～360之间的值，角度是逆时针转的，从x轴中心(0,0)往右是0度角（或360度角），往左是180度角，往上是90度角，往下是270度角
+ @param radius      圆周半径
+ */
++ (CGPoint)jjc_base_getCircleCoordinateWithCenter:(CGPoint)center radius:(CGFloat)radius angle:(CGFloat)angle {
+    
+    CGFloat x = radius * cosf(angle * M_PI / 180);
+    CGFloat y = radius * sinf(angle * M_PI / 180);
+    
+    return CGPointMake(center.x+x, center.y-y);
 }
 
 
