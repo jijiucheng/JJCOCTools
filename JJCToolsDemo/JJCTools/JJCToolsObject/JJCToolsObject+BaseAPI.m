@@ -641,6 +641,48 @@
 }
 
 
+/**
+ 转换坐标（根据圆心、半径、触点计算圆上坐标）
+ 注：这里要注意 有时拖拽按钮不在圆上，但是只要算出拖拽点与圆心的连线和水平方向的夹角的余弦值，再乘上半径，就是我们想要的值
+ 
+ @param center     圆心坐标
+ @param radius     圆半径
+ @param touchPoint 手指触点
+ @return           圆周上坐标
+ */
++ (CGPoint)jjc_base_getCircleCoordinateWithCenter:(CGPoint)center radius:(CGFloat)radius touchPoint:(CGPoint)touchPoint {
+    
+    // 拖拽点(实际)坐标到圆心的距离的平方 勾股定理
+    CGFloat squareDis = (center.x-touchPoint.x)*(center.x-touchPoint.x) + (center.y-touchPoint.y)*(center.y-touchPoint.y);
+    
+    // 拖拽点坐标到圆心的距离
+    // 注意拖拽点与圆心重合的情况 这时squareDis趋近或等于0 作为分母会crash
+    CGFloat distance = MAX(0.1, fabs(sqrt(squareDis)));
+    
+    // 拖拽点与圆心的连线 与水平方向夹角的余弦值
+    CGFloat cosX = fabs(center.x - touchPoint.x) / distance;
+    
+    // 拖拽点(虚拟)在圆上到圆心的X值, y值
+    CGFloat centerX = cosX * radius;
+    CGFloat centerY = sqrt(radius*radius - centerX*centerX);
+    
+    // 算出在父视图上的实际X值、Y值
+    if (touchPoint.x > center.x) { // 拖拽点在圆心右边
+        centerX = center.x + centerX;
+    } else { // 拖拽点在圆心左边
+        centerX = center.x - centerX;
+    }
+    
+    if(touchPoint.y > center.y) { // 拖拽点在圆心下边
+        centerY = center.y + centerY;
+    } else { // 拖拽点在圆心上边
+        centerY = center.y - centerY;
+    }
+    
+    return CGPointMake(centerX, centerY);
+}
+
+
 
 
 @end

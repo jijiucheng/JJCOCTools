@@ -241,6 +241,16 @@ typedef NS_ENUM(NSInteger, JJCMonthTurnType) {
  */
 + (CGPoint)jjc_base_getCircleCoordinateWithCenter:(CGPoint)center radius:(CGFloat)radius angle:(CGFloat)angle;
 
+/**
+ 转换坐标（根据圆心、半径、触点计算圆上坐标）
+ 注：这里要注意 有时拖拽按钮不在圆上，但是只要算出拖拽点与圆心的连线和水平方向的夹角的余弦值，再乘上半径，就是我们想要的值
+ 
+ @param center     圆心坐标
+ @param radius     圆半径
+ @param touchPoint 手指触点
+ @return           圆周上坐标
+ */
++ (CGPoint)jjc_base_getCircleCoordinateWithCenter:(CGPoint)center radius:(CGFloat)radius touchPoint:(CGPoint)touchPoint;
 
 
 
