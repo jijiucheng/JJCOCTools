@@ -18,6 +18,9 @@
 		41311AE91F5FEB0200BCC291 /* JJCToolsObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 41311AE81F5FEB0200BCC291 /* JJCToolsObject.m */; };
 		4138FEB11FE259CC00EBAA83 /* JJCToolsObject+AlertAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4138FEB01FE259CC00EBAA83 /* JJCToolsObject+AlertAPI.m */; };
 		4138FEDC1FE26D1200EBAA83 /* JJCTools.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4138FEDB1FE26D1200EBAA83 /* JJCTools.bundle */; };
+		4155727E20AAC98700B6045A /* UIViewController+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 4155727D20AAC98700B6045A /* UIViewController+HUD.m */; };
+		4155728120AACD2100B6045A /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 4155728020AACD2100B6045A /* MBProgressHUD.m */; };
+		4155728520AAD30400B6045A /* MBProgressHUD+JJC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4155728420AAD30400B6045A /* MBProgressHUD+JJC.m */; };
 		4157D3321F623B6A00A330D1 /* UITabBar+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 4157D3311F623B6A00A330D1 /* UITabBar+Badge.m */; };
 		4157D3351F62405F00A330D1 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 4157D3341F62405F00A330D1 /* UIView+Frame.m */; };
 		4157D3381F6265E500A330D1 /* UIView+TapGestureBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 4157D3371F6265E500A330D1 /* UIView+TapGestureBlock.m */; };
@@ -52,6 +55,12 @@
 		4138FEDB1FE26D1200EBAA83 /* JJCTools.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = JJCTools.bundle; sourceTree = "<group>"; };
 		413A42F51FB54F290064E721 /* UILabel+AttributedString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+AttributedString.h"; sourceTree = "<group>"; };
 		413A42F61FB54F290064E721 /* UILabel+AttributedString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+AttributedString.m"; sourceTree = "<group>"; };
+		4155727C20AAC98700B6045A /* UIViewController+HUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HUD.h"; sourceTree = "<group>"; };
+		4155727D20AAC98700B6045A /* UIViewController+HUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HUD.m"; sourceTree = "<group>"; };
+		4155727F20AACD2100B6045A /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		4155728020AACD2100B6045A /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		4155728320AAD30400B6045A /* MBProgressHUD+JJC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+JJC.h"; sourceTree = "<group>"; };
+		4155728420AAD30400B6045A /* MBProgressHUD+JJC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+JJC.m"; sourceTree = "<group>"; };
 		4157D3301F623B6A00A330D1 /* UITabBar+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+Badge.h"; sourceTree = "<group>"; };
 		4157D3311F623B6A00A330D1 /* UITabBar+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+Badge.m"; sourceTree = "<group>"; };
 		4157D3331F62405F00A330D1 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
@@ -105,6 +114,8 @@
 				41311AC61F5FE63F00BCC291 /* AppDelegate.m */,
 				41311AC81F5FE63F00BCC291 /* ViewController.h */,
 				41311AC91F5FE63F00BCC291 /* ViewController.m */,
+				4155727F20AACD2100B6045A /* MBProgressHUD.h */,
+				4155728020AACD2100B6045A /* MBProgressHUD.m */,
 				41311ACB1F5FE63F00BCC291 /* Main.storyboard */,
 				41311ACE1F5FE63F00BCC291 /* Assets.xcassets */,
 				41311AD01F5FE63F00BCC291 /* LaunchScreen.storyboard */,
@@ -168,9 +179,19 @@
 			path = UILabel;
 			sourceTree = "<group>";
 		};
+		4155728220AAD2EB00B6045A /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				4155728320AAD30400B6045A /* MBProgressHUD+JJC.h */,
+				4155728420AAD30400B6045A /* MBProgressHUD+JJC.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
 		4157D32D1F62388700A330D1 /* JJCToolsCategory */ = {
 			isa = PBXGroup;
 			children = (
+				4155728220AAD2EB00B6045A /* MBProgressHUD */,
 				4182C41220A54A950000F32C /* UIButton */,
 				4182C40F20A54A950000F32C /* UIImageView */,
 				4182C41020A54A950000F32C /* UITextField */,
@@ -239,6 +260,8 @@
 		4182C41320A54A950000F32C /* UIViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4155727C20AAC98700B6045A /* UIViewController+HUD.h */,
+				4155727D20AAC98700B6045A /* UIViewController+HUD.m */,
 			);
 			path = UIViewController;
 			sourceTree = "<group>";
@@ -334,6 +357,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4155727E20AAC98700B6045A /* UIViewController+HUD.m in Sources */,
 				4157D3321F623B6A00A330D1 /* UITabBar+Badge.m in Sources */,
 				41FA3AC41F97391700116BBF /* JJCToolsObject+BaseAPI.m in Sources */,
 				41311ACA1F5FE63F00BCC291 /* ViewController.m in Sources */,
@@ -343,11 +367,13 @@
 				4182C41920A54B280000F32C /* UIButton+ActionBlock.m in Sources */,
 				4157D3351F62405F00A330D1 /* UIView+Frame.m in Sources */,
 				41311AC71F5FE63F00BCC291 /* AppDelegate.m in Sources */,
+				4155728520AAD30400B6045A /* MBProgressHUD+JJC.m in Sources */,
 				41311AE91F5FEB0200BCC291 /* JJCToolsObject.m in Sources */,
 				41A267B31FE3B4B200D81666 /* NSBundle+JJCToolsResource.m in Sources */,
 				4157D3381F6265E500A330D1 /* UIView+TapGestureBlock.m in Sources */,
 				410037051FB05504000C89AA /* JJCToolsObject+RulesAPI.m in Sources */,
 				41311AC41F5FE63F00BCC291 /* main.m in Sources */,
+				4155728120AACD2100B6045A /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

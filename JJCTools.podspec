@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
     s.name          = 'JJCTools'
-    s.version       = '0.1.5'
+    s.version       = '0.1.6'
     s.license       = { :type => 'MIT', :file => 'LICENSE' }
     s.summary       = 'A Library for iOS to  get result fasterly with some methods.'
     s.homepage      = 'https://github.com/jijiucheng/JJCTools'
@@ -40,7 +40,7 @@ Pod::Spec.new do |s|
 
 
 # 依赖第三方库文件
-
+    s.dependency 'MBProgressHUD'
 
 
 # 依赖系统静态库文件
