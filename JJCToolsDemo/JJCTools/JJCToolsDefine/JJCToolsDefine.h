@@ -133,11 +133,15 @@
 [alert show]; \
 
 // MBProgressHUD 消息提示
-#define K_ShowHUD_Message(_message_) [MBProgressHUD showOnlyMessage:_message_]
+#define K_ShowHUD_Message(_message_)     [MBProgressHUD showOnlyMessage:_message_]
+#define K_JJC_ShowHUD_Message(_message_) [MBProgressHUD jjc_hud_showMessage:_message_];
+#define K_JJC_ShowHUD_OnlyMsg(_message_) [MBProgressHUD jjc_hud_showOnlyMessage:_message_];
 // MBProgressHUD 成功提示
-#define K_ShowHUD_Success(_message_) [MBProgressHUD showSuccess:_message_]
+#define K_ShowHUD_Success(_message_)     [MBProgressHUD showSuccess:_message_]
+#define K_JJC_ShowHUD_Success(_message_) [MBProgressHUD jjc_hud_showSuccess:_message_];
 // MBProgressHUD 失败提示
-#define K_ShowHUD_Error(_message_) [MBProgressHUD showError:_message_]
+#define K_ShowHUD_Error(_message_)       [MBProgressHUD showError:_message_]
+#define K_JJC_ShowHUD_Error(_message_)   [MBProgressHUD jjc_hud_showError:_message_];
 
 
 /** 圆角切割 **/
