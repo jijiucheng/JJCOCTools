@@ -15,7 +15,7 @@
  
  JJCTools
  创建：2017.09.06
- 更新：2018.05.15
+ 更新：2018.06.01
  
  当前版本：v0.1.6
  
@@ -36,6 +36,8 @@
 #import "UIView+Animation.h"
 #import "UIView+Frame.h"
 #import "UIView+TapGestureBlock.h"
+
+#import "UIImage+Clip.h"
 
 #import "MBProgressHUD+JJC.h"
 

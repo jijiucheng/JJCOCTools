@@ -18,6 +18,7 @@
 		41311AE91F5FEB0200BCC291 /* JJCToolsObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 41311AE81F5FEB0200BCC291 /* JJCToolsObject.m */; };
 		4138FEB11FE259CC00EBAA83 /* JJCToolsObject+AlertAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4138FEB01FE259CC00EBAA83 /* JJCToolsObject+AlertAPI.m */; };
 		4138FEDC1FE26D1200EBAA83 /* JJCTools.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4138FEDB1FE26D1200EBAA83 /* JJCTools.bundle */; };
+		4152F39820C1A312005D04DA /* UIImage+Clip.m in Sources */ = {isa = PBXBuildFile; fileRef = 4152F39720C1A312005D04DA /* UIImage+Clip.m */; };
 		4155727E20AAC98700B6045A /* UIViewController+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 4155727D20AAC98700B6045A /* UIViewController+HUD.m */; };
 		4155728120AACD2100B6045A /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 4155728020AACD2100B6045A /* MBProgressHUD.m */; };
 		4155728520AAD30400B6045A /* MBProgressHUD+JJC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4155728420AAD30400B6045A /* MBProgressHUD+JJC.m */; };
@@ -55,6 +56,8 @@
 		4138FEDB1FE26D1200EBAA83 /* JJCTools.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = JJCTools.bundle; sourceTree = "<group>"; };
 		413A42F51FB54F290064E721 /* UILabel+AttributedString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+AttributedString.h"; sourceTree = "<group>"; };
 		413A42F61FB54F290064E721 /* UILabel+AttributedString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+AttributedString.m"; sourceTree = "<group>"; };
+		4152F39620C1A312005D04DA /* UIImage+Clip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Clip.h"; sourceTree = "<group>"; };
+		4152F39720C1A312005D04DA /* UIImage+Clip.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Clip.m"; sourceTree = "<group>"; };
 		4155727C20AAC98700B6045A /* UIViewController+HUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HUD.h"; sourceTree = "<group>"; };
 		4155727D20AAC98700B6045A /* UIViewController+HUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HUD.m"; sourceTree = "<group>"; };
 		4155727F20AACD2100B6045A /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
@@ -193,7 +196,7 @@
 			children = (
 				4155728220AAD2EB00B6045A /* MBProgressHUD */,
 				4182C41220A54A950000F32C /* UIButton */,
-				4182C40F20A54A950000F32C /* UIImageView */,
+				4182C40F20A54A950000F32C /* UIImage */,
 				4182C41020A54A950000F32C /* UITextField */,
 				4182C41120A54A950000F32C /* UITextView */,
 				4182C41320A54A950000F32C /* UIViewController */,
@@ -227,11 +230,13 @@
 			path = UIView;
 			sourceTree = "<group>";
 		};
-		4182C40F20A54A950000F32C /* UIImageView */ = {
+		4182C40F20A54A950000F32C /* UIImage */ = {
 			isa = PBXGroup;
 			children = (
+				4152F39620C1A312005D04DA /* UIImage+Clip.h */,
+				4152F39720C1A312005D04DA /* UIImage+Clip.m */,
 			);
-			path = UIImageView;
+			path = UIImage;
 			sourceTree = "<group>";
 		};
 		4182C41020A54A950000F32C /* UITextField */ = {
@@ -366,6 +371,7 @@
 				4157D33B1F626A7500A330D1 /* UIView+Animation.m in Sources */,
 				4182C41920A54B280000F32C /* UIButton+ActionBlock.m in Sources */,
 				4157D3351F62405F00A330D1 /* UIView+Frame.m in Sources */,
+				4152F39820C1A312005D04DA /* UIImage+Clip.m in Sources */,
 				41311AC71F5FE63F00BCC291 /* AppDelegate.m in Sources */,
 				4155728520AAD30400B6045A /* MBProgressHUD+JJC.m in Sources */,
 				41311AE91F5FEB0200BCC291 /* JJCToolsObject.m in Sources */,
