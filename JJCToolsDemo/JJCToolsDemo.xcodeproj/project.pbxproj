@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		410037051FB05504000C89AA /* JJCToolsObject+RulesAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 410037041FB05504000C89AA /* JJCToolsObject+RulesAPI.m */; };
 		410037081FB05811000C89AA /* JJCToolsObject+PlistAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 410037071FB05811000C89AA /* JJCToolsObject+PlistAPI.m */; };
+		4121C5AB20C7D98E00309AF3 /* UIImage+Convert.m in Sources */ = {isa = PBXBuildFile; fileRef = 4121C5AA20C7D98E00309AF3 /* UIImage+Convert.m */; };
+		4121C5AE20C7E40700309AF3 /* UIView+Clip.m in Sources */ = {isa = PBXBuildFile; fileRef = 4121C5AD20C7E40700309AF3 /* UIView+Clip.m */; };
 		41311AC41F5FE63F00BCC291 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 41311AC31F5FE63F00BCC291 /* main.m */; };
 		41311AC71F5FE63F00BCC291 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 41311AC61F5FE63F00BCC291 /* AppDelegate.m */; };
 		41311ACA1F5FE63F00BCC291 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41311AC91F5FE63F00BCC291 /* ViewController.m */; };
@@ -36,6 +38,11 @@
 		410037041FB05504000C89AA /* JJCToolsObject+RulesAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JJCToolsObject+RulesAPI.m"; sourceTree = "<group>"; };
 		410037061FB05811000C89AA /* JJCToolsObject+PlistAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JJCToolsObject+PlistAPI.h"; sourceTree = "<group>"; };
 		410037071FB05811000C89AA /* JJCToolsObject+PlistAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JJCToolsObject+PlistAPI.m"; sourceTree = "<group>"; };
+		4121C5A920C7D98E00309AF3 /* UIImage+Convert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Convert.h"; sourceTree = "<group>"; };
+		4121C5AA20C7D98E00309AF3 /* UIImage+Convert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Convert.m"; sourceTree = "<group>"; };
+		4121C5AC20C7E40700309AF3 /* UIView+Clip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Clip.h"; sourceTree = "<group>"; };
+		4121C5AD20C7E40700309AF3 /* UIView+Clip.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Clip.m"; sourceTree = "<group>"; };
+		4121C5B020C7E61C00309AF3 /* JJCToolsEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJCToolsEnum.h; sourceTree = "<group>"; };
 		41311ABF1F5FE63F00BCC291 /* JJCToolsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JJCToolsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41311AC31F5FE63F00BCC291 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		41311AC51F5FE63F00BCC291 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -226,6 +233,8 @@
 				4157D33A1F626A7500A330D1 /* UIView+Animation.m */,
 				4157D3361F6265E500A330D1 /* UIView+TapGestureBlock.h */,
 				4157D3371F6265E500A330D1 /* UIView+TapGestureBlock.m */,
+				4121C5AC20C7E40700309AF3 /* UIView+Clip.h */,
+				4121C5AD20C7E40700309AF3 /* UIView+Clip.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -235,6 +244,8 @@
 			children = (
 				4152F39620C1A312005D04DA /* UIImage+Clip.h */,
 				4152F39720C1A312005D04DA /* UIImage+Clip.m */,
+				4121C5A920C7D98E00309AF3 /* UIImage+Convert.h */,
+				4121C5AA20C7D98E00309AF3 /* UIImage+Convert.m */,
 			);
 			path = UIImage;
 			sourceTree = "<group>";
@@ -285,6 +296,7 @@
 			children = (
 				41FA3AC61F973BCE00116BBF /* JJCToolsDefine.h */,
 				41F6635020A04C7100598C51 /* JJCToolsSingleton.h */,
+				4121C5B020C7E61C00309AF3 /* JJCToolsEnum.h */,
 			);
 			path = JJCToolsDefine;
 			sourceTree = "<group>";
@@ -366,8 +378,10 @@
 				4157D3321F623B6A00A330D1 /* UITabBar+Badge.m in Sources */,
 				41FA3AC41F97391700116BBF /* JJCToolsObject+BaseAPI.m in Sources */,
 				41311ACA1F5FE63F00BCC291 /* ViewController.m in Sources */,
+				4121C5AE20C7E40700309AF3 /* UIView+Clip.m in Sources */,
 				410037081FB05811000C89AA /* JJCToolsObject+PlistAPI.m in Sources */,
 				4138FEB11FE259CC00EBAA83 /* JJCToolsObject+AlertAPI.m in Sources */,
+				4121C5AB20C7D98E00309AF3 /* UIImage+Convert.m in Sources */,
 				4157D33B1F626A7500A330D1 /* UIView+Animation.m in Sources */,
 				4182C41920A54B280000F32C /* UIButton+ActionBlock.m in Sources */,
 				4157D3351F62405F00A330D1 /* UIView+Frame.m in Sources */,

@@ -15,10 +15,10 @@
  
  UIImage+Clip
  创建：2018.06.01
- 更新：2018.06.01
+ 更新：2018.06.06
  
  
- 1、该扩展主要用于给 UIImage 进行裁剪处理；
+ 1、该扩展主要用于给 UIImage 进行裁剪、截屏处理；
  
  
  */
@@ -39,6 +39,48 @@
  @return 返回裁剪后的图片
  */
 + (UIImage *)jjc_image_clipRoundWithImageName:(NSString *)imageName borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor;
+
+
+/**
+ 裁剪图片（不带边框圆形）
+ 
+ @param imageName   所要裁剪图片名称
+ @return 返回裁剪后的图片
+ */
++ (UIImage *)jjc_image_clipRoundWithImageName:(NSString *)imageName;
+
+
+/**
+ 截屏（根据控制器进行整体截屏）
+ 
+ @param viewController 指定控制器
+ @return 截屏后的图片
+ */
++ (UIImage *)jjc_image_getScreenCaptureWithViewController:(UIViewController *)viewController;
+
+
+/**
+ 截屏（根据指定区域Frame进行截取）
+
+ @param viewController 指定控制器
+ @param viewFrame      指定区域 View 的 Frame
+ @param cornerRadius   圆角角度
+ @return 截屏后的图片
+ */
++ (UIImage *)jjc_image_getScreenCaptureWithViewController:(UIViewController *)viewController viewFrame:(CGRect)viewFrame cornerRadius:(CGFloat)cornerRadius;
+
+
+/**
+ 截屏（截取指定View）
+
+ @param view 指定View
+ @return 截屏后的图片
+ */
++ (UIImage *)jjc_image_getScreenCaptureWithView:(UIView *)view;
+
+
+
+
 
 
 @end

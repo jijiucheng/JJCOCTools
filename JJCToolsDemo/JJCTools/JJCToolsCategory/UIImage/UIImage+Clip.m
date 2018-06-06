@@ -60,6 +60,87 @@
 }
 
 
+/**
+ 裁剪图片（不带边框圆形）
+ 
+ @param imageName   所要裁剪图片名称
+ @return 返回裁剪后的图片
+ */
++ (UIImage *)jjc_image_clipRoundWithImageName:(NSString *)imageName {
+    
+    return [self jjc_image_clipRoundWithImageName:imageName borderWidth:0 borderColor:nil];
+}
+
+
+/**
+ 截屏（根据控制器进行整体截屏）
+ 
+ @param viewController 指定控制器
+ @return 截屏后的图片
+ */
++ (UIImage *)jjc_image_getScreenCaptureWithViewController:(UIViewController *)viewController {
+    
+    // 1、开启位图上下文，与屏幕尺寸一样大小
+    UIGraphicsBeginImageContextWithOptions(viewController.view.bounds.size, NO, 0);
+    // 2、获取当前位图上下文
+    CGContextRef contextRef = UIGraphicsGetCurrentContext();
+    // 3、把控制器的 View 绘制到上下文中（UIView绘图只能通过渲染的方式，因为UIView上显示的东西实际上是通过其 Layer 显示的）
+    [viewController.view.layer renderInContext:contextRef];
+    // 4、从上下文中生成一张图片
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    // 5、关闭上下文
+    UIGraphicsEndImageContext();
+    
+    return newImage;
+}
+
+
+/**
+ 截屏（根据指定区域Frame进行截取）
+ 
+ @param viewController 指定控制器
+ @param viewFrame      指定区域 View 的 Frame
+ @param cornerRadius   圆角角度
+ @return 截屏后的图片
+ */
++ (UIImage *)jjc_image_getScreenCaptureWithViewController:(UIViewController *)viewController viewFrame:(CGRect)viewFrame cornerRadius:(CGFloat)cornerRadius {
+    
+    UIImage *image = [self jjc_image_getScreenCaptureWithViewController:viewController];
+    
+    UIGraphicsBeginImageContextWithOptions(viewFrame.size, NO, 0);
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:viewFrame cornerRadius:cornerRadius];
+    [path addClip];
+    [image drawAtPoint:CGPointMake(viewFrame.origin.x, viewFrame.origin.y)];
+    
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return newImage;
+}
+
+
+/**
+ 截屏（截取指定View）
+ 
+ @param view 指定View
+ @return 截屏后的图片
+ */
++ (UIImage *)jjc_image_getScreenCaptureWithView:(UIView *)view {
+    
+    UIGraphicsBeginImageContextWithOptions(view.bounds.size, NO, 0);
+    CGContextRef contextRef = UIGraphicsGetCurrentContext();
+    [view.layer renderInContext:contextRef];
+    
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return newImage;
+}
+
+
+
+
+
 @end
 
 
