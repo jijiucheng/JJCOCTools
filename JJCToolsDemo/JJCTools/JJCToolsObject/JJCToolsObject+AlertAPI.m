@@ -48,6 +48,25 @@
     [rootVC presentViewController:alertVC animated:YES completion:nil];
 }
 
+
+/**
+ AlertControler 快捷显示提示语（包含按钮事件处理）
+ 
+ @param message      提示语
+ @param enSureString 自定义确定按钮
+ @param actionBlock  按钮点击事件
+ */
++ (void)jjc_alert_showAlertViewWithMessage:(NSString *)message enSureString:(NSString *)enSureString actionBlock:(void (^)(void))actionBlock {
+    
+    [self jjc_alert_showAlertViewWithMessage:message leftString:nil rightString:enSureString actionBlock:^(BOOL isRight) {
+        
+        if (isRight) {
+            actionBlock();
+        }
+    }];
+}
+
+
 /**
  AlertControler 快捷显示提示语
  
@@ -56,16 +75,23 @@
  */
 + (void)jjc_alert_showAlertViewWithMessage:(NSString *)message enSureString:(NSString *)enSureString {
     
-    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:[NSBundle jjc_bundle_getLocalizedStringForKey:@"JJCTools_Tips"] message:message preferredStyle:UIAlertControllerStyleAlert];
+    [self jjc_alert_showAlertViewWithMessage:message leftString:nil rightString:enSureString actionBlock:nil];
+}
+
+/**
+ AlertControler 快捷显示提示语  确定（包含按钮事件处理）
+ 
+ @param message      提示语
+ @param actionBlock  按钮点击事件
+ */
++ (void)jjc_alert_showAlertViewWithMessage:(NSString *)message actionBlock:(void (^)(void))actionBlock {
     
-    UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:enSureString style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    [self jjc_alert_showAlertViewWithMessage:message leftString:nil rightString:[NSBundle jjc_bundle_getLocalizedStringForKey:@"JJCTools_Confirm"] actionBlock:^(BOOL isRight) {
         
+        if (isRight) {
+            actionBlock();
+        }
     }];
-    
-    [alertVC addAction:confirmAction];
-    
-    UIViewController *rootVC = [self jjc_base_getCurrentViewController];
-    [rootVC presentViewController:alertVC animated:YES completion:nil];
 }
 
 /**
@@ -73,7 +99,7 @@
  */
 + (void)jjc_alert_showAlertViewWithMessage:(NSString *)message {
     
-    [self jjc_alert_showAlertViewWithMessage:message enSureString:[NSBundle jjc_bundle_getLocalizedStringForKey:@"JJCTools_Confirm"]];
+    [self jjc_alert_showAlertViewWithMessage:message actionBlock:nil];
 }
 
 

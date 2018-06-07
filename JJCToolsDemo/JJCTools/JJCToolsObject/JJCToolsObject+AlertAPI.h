@@ -39,13 +39,22 @@
 
 /**
  AlertControler 快捷显示提示语（包含按钮事件处理）
-
+ 
  @param message     提示语
  @param leftString  左侧按钮标题
  @param rightString 右侧按钮标题
  @param actionBlock 按钮点击事件
  */
 + (void)jjc_alert_showAlertViewWithMessage:(NSString *)message leftString:(NSString *)leftString rightString:(NSString *)rightString actionBlock:(void (^)(BOOL isRight))actionBlock;
+
+/**
+ AlertControler 快捷显示提示语（包含按钮事件处理）
+ 
+ @param message      提示语
+ @param enSureString 自定义确定按钮
+ @param actionBlock  按钮点击事件
+ */
++ (void)jjc_alert_showAlertViewWithMessage:(NSString *)message enSureString:(NSString *)enSureString actionBlock:(void (^)(void))actionBlock;
 
 /**
  AlertControler 快捷显示提示语
@@ -56,9 +65,19 @@
 + (void)jjc_alert_showAlertViewWithMessage:(NSString *)message enSureString:(NSString *)enSureString;
 
 /**
+ AlertControler 快捷显示提示语  确定（包含按钮事件处理）
+ 
+ @param message      提示语
+ @param actionBlock  按钮点击事件
+ */
++ (void)jjc_alert_showAlertViewWithMessage:(NSString *)message actionBlock:(void (^)(void))actionBlock;
+
+/**
  AlertControler 快捷显示提示语  确定
  */
 + (void)jjc_alert_showAlertViewWithMessage:(NSString *)message;
+
+
 
 
 
