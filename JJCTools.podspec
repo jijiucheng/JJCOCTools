@@ -39,6 +39,12 @@ Pod::Spec.new do |s|
     end
 
 
+    s.subspec 'JJCToolsOthers' do |ss|
+        ss.public_header_files = 'JJCToolsDemo/JJCTools/JJCToolsOthers/**/*.{h}'
+        ss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsOthers/**/*.{h,m}'
+    end
+
+
 
 # 依赖第三方库文件
     s.dependency 'MBProgressHUD'
