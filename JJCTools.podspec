@@ -27,6 +27,7 @@ Pod::Spec.new do |s|
     s.subspec 'JJCToolsCategory' do |ss|
         ss.public_header_files = 'JJCToolsDemo/JJCTools/JJCToolsCategory/**/*.{h}'
         ss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsCategory/**/*.{h,m}'
+        ss.dependency 'JJCTools/JJCToolsDefine'
     end
 
 

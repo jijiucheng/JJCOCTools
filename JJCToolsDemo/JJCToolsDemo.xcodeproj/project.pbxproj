@@ -42,7 +42,7 @@
 		4121C5AA20C7D98E00309AF3 /* UIImage+Convert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Convert.m"; sourceTree = "<group>"; };
 		4121C5AC20C7E40700309AF3 /* UIView+Clip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Clip.h"; sourceTree = "<group>"; };
 		4121C5AD20C7E40700309AF3 /* UIView+Clip.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Clip.m"; sourceTree = "<group>"; };
-		4121C5B020C7E61C00309AF3 /* JJCToolsEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJCToolsEnum.h; sourceTree = "<group>"; };
+		4121C5B420C8D7F900309AF3 /* JJCToolsEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJCToolsEnum.h; sourceTree = "<group>"; };
 		41311ABF1F5FE63F00BCC291 /* JJCToolsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JJCToolsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41311AC31F5FE63F00BCC291 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		41311AC51F5FE63F00BCC291 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -296,7 +296,7 @@
 			children = (
 				41FA3AC61F973BCE00116BBF /* JJCToolsDefine.h */,
 				41F6635020A04C7100598C51 /* JJCToolsSingleton.h */,
-				4121C5B020C7E61C00309AF3 /* JJCToolsEnum.h */,
+				4121C5B420C8D7F900309AF3 /* JJCToolsEnum.h */,
 			);
 			path = JJCToolsDefine;
 			sourceTree = "<group>";
