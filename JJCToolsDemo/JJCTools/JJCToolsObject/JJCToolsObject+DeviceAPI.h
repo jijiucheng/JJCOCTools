@@ -88,6 +88,20 @@
 + (NSString *)jjc_device_getNetworkInterfaceAddress;
 
 
+/**
+ 获取当前设备所连接网络的  MAC 地址
+ 
+ Key：BSSID
+ */
++ (NSString *)jjc_device_getNetworkMACAddress;
+
+
+/**
+ 获取当前设备所连接网络的  WIFI 名称
+ 
+ Key：SSID
+ */
++ (NSString *)jjc_device_getNetworkWIFIName;
 
 
 

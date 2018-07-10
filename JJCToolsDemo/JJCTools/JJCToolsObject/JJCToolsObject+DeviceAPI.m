@@ -145,6 +145,46 @@ typedef NS_ENUM(NSInteger, JJCToolsDeviceAPIType) {
 }
 
 
+/**
+ 获取当前设备所连接网络的  MAC 地址
+ 
+ Key：BSSID
+ */
++ (NSString *)jjc_device_getNetworkMACAddress {
+    
+    id info = [self jjc_device_getNetworkInfo];
+    if (info && [info isKindOfClass:[NSDictionary class]]) {
+        NSDictionary *infoDic = (NSDictionary *)info;
+        if (infoDic.count > 0) {
+            NSString *macAddress = [infoDic objectForKey:@"BSSID"];
+            return macAddress;
+        }
+    }
+    
+    return nil;
+}
+
+
+/**
+ 获取当前设备所连接网络的  WIFI 名称
+ 
+ Key：SSID
+ */
++ (NSString *)jjc_device_getNetworkWIFIName {
+    
+    id info = [self jjc_device_getNetworkInfo];
+    if (info && [info isKindOfClass:[NSDictionary class]]) {
+        NSDictionary *infoDic = (NSDictionary *)info;
+        if (infoDic.count > 0) {
+            NSString *macAddress = [infoDic objectForKey:@"SSID"];
+            return macAddress;
+        }
+    }
+    
+    return nil;
+}
+
+
 
 
 #pragma mark --------------------
