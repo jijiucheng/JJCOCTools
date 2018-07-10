@@ -1,12 +1,12 @@
 //
-//  JJCToolsObject+NetworkAPI.m
+//  JJCToolsObject+DeviceAPI.m
 //  JJCToolsDemo
 //
 //  Created by 苜蓿鬼仙 on 2018/7/10.
 //  Copyright © 2018 苜蓿鬼仙. All rights reserved.
 //
 
-#import "JJCToolsObject+NetworkAPI.h"
+#import "JJCToolsObject+DeviceAPI.h"
 
 #import <SystemConfiguration/CaptiveNetwork.h>
 
@@ -18,23 +18,22 @@
 #import <arpa/inet.h>
 
 
-typedef NS_ENUM(NSInteger, JJCToolsNetworkAPIType) {
-    JJCToolsNetworkAPITypeIPAddress = 0,        // IP 地址
-    JJCToolsNetworkAPITypeBroadcastAddress,     // 广播地址（局域网IP地址、路由地址）
-    JJCToolsNetworkAPITypeNetmaskAddress,       // 子网掩码地址
-    JJCToolsNetworkAPITypeInterfaceAddress      // 端口地址
+
+typedef NS_ENUM(NSInteger, JJCToolsDeviceAPIType) {
+    JJCToolsDeviceAPITypeIPAddress = 0,        // IP 地址
+    JJCToolsDeviceAPITypeBroadcastAddress,     // 广播地址（局域网IP地址、路由地址）
+    JJCToolsDeviceAPITypeNetmaskAddress,       // 子网掩码地址
+    JJCToolsDeviceAPITypeInterfaceAddress      // 端口地址
 };
 
 
-
-
-@implementation JJCToolsObject (NetworkAPI)
+@implementation JJCToolsObject (DeviceAPI)
 
 
 /**
  获取当前设备所连接网络的  详细信息
  */
-+ (NSString *)jjc_network_getDeviceIfaddrsInfoWithNetworkAPIType:(JJCToolsNetworkAPIType)networkAPIType {
++ (NSString *)jjc_device_getNetworkIfaddrsInfoWithNetworkAPIType:(JJCToolsDeviceAPIType)deviceAPIType {
     
     NSString *address = @"error";
     struct ifaddrs *interfaces = NULL;
@@ -59,23 +58,23 @@ typedef NS_ENUM(NSInteger, JJCToolsNetworkAPIType) {
                     // Get NSString from C String //ifa_addr
                     //ifa->ifa_dstaddr is the broadcast address, which explains the "255's"
                     
-                    switch (networkAPIType) {
-                        case JJCToolsNetworkAPITypeIPAddress: {
+                    switch (deviceAPIType) {
+                        case JJCToolsDeviceAPITypeIPAddress: {
                             /** IP 地址 **/
                             address = [NSString stringWithUTF8String:inet_ntoa(((struct sockaddr_in *)temp_addr->ifa_addr)->sin_addr)];
                         }
                             break;
-                        case JJCToolsNetworkAPITypeBroadcastAddress: {
+                        case JJCToolsDeviceAPITypeBroadcastAddress: {
                             /** 广播地址（局域网IP地址、路由地址） **/
                             address = [NSString stringWithUTF8String:inet_ntoa(((struct sockaddr_in *)temp_addr->ifa_dstaddr)->sin_addr)];
                         }
                             break;
-                        case JJCToolsNetworkAPITypeNetmaskAddress: {
+                        case JJCToolsDeviceAPITypeNetmaskAddress: {
                             /** 子网掩码地址 **/
                             address = [NSString stringWithUTF8String:inet_ntoa(((struct sockaddr_in *)temp_addr->ifa_netmask)->sin_addr)];
                         }
                             break;
-                        case JJCToolsNetworkAPITypeInterfaceAddress: {
+                        case JJCToolsDeviceAPITypeInterfaceAddress: {
                             /** 端口地址 **/
                             address = [NSString stringWithUTF8String:temp_addr->ifa_name];
                         }
@@ -103,8 +102,8 @@ typedef NS_ENUM(NSInteger, JJCToolsNetworkAPIType) {
  
  inet_ntoa(((struct sockaddr_in *)temp_addr->ifa_addr)->sin_addr)
  */
-+ (NSString *)jjc_network_getDeviceIPAddress {
-    return [self jjc_network_getDeviceIfaddrsInfoWithNetworkAPIType:JJCToolsNetworkAPITypeIPAddress];
++ (NSString *)jjc_device_getNetworkIPAddress {
+    return [self jjc_device_getNetworkIfaddrsInfoWithNetworkAPIType:JJCToolsDeviceAPITypeIPAddress];
 }
 
 
@@ -113,8 +112,8 @@ typedef NS_ENUM(NSInteger, JJCToolsNetworkAPIType) {
  
  inet_ntoa(((struct sockaddr_in *)temp_addr->ifa_dstaddr)->sin_addr)
  */
-+ (NSString *)jjc_network_getDeviceBroadcastAddress {
-    return [self jjc_network_getDeviceIfaddrsInfoWithNetworkAPIType:JJCToolsNetworkAPITypeBroadcastAddress];
++ (NSString *)jjc_device_getNetworkBroadcastAddress {
+    return [self jjc_device_getNetworkIfaddrsInfoWithNetworkAPIType:JJCToolsDeviceAPITypeBroadcastAddress];
 }
 
 
@@ -123,8 +122,8 @@ typedef NS_ENUM(NSInteger, JJCToolsNetworkAPIType) {
  
  inet_ntoa(((struct sockaddr_in *)temp_addr->ifa_netmask)->sin_addr)
  */
-+ (NSString *)jjc_network_getDeviceNetmaskAddress {
-    return [self jjc_network_getDeviceIfaddrsInfoWithNetworkAPIType:JJCToolsNetworkAPITypeNetmaskAddress];
++ (NSString *)jjc_device_getNetworkNetmaskAddress {
+    return [self jjc_device_getNetworkIfaddrsInfoWithNetworkAPIType:JJCToolsDeviceAPITypeNetmaskAddress];
 }
 
 
@@ -141,8 +140,8 @@ typedef NS_ENUM(NSInteger, JJCToolsNetworkAPIType) {
  
  参考链接：https://blog.csdn.net/ddreaming/article/details/53349753
  */
-+ (NSString *)jjc_network_getDeviceInterfaceAddress {
-    return [self jjc_network_getDeviceIfaddrsInfoWithNetworkAPIType:JJCToolsNetworkAPITypeInterfaceAddress];
++ (NSString *)jjc_device_getNetworkInterfaceAddress {
+    return [self jjc_device_getNetworkIfaddrsInfoWithNetworkAPIType:JJCToolsDeviceAPITypeInterfaceAddress];
 }
 
 
@@ -162,9 +161,9 @@ typedef NS_ENUM(NSInteger, JJCToolsNetworkAPIType) {
  如果正常返回数据，返回的数据类型为 NSValue 类型，存储的是 ifaddrs 结构体
  
  参考链接：https://blog.csdn.net/u010244140/article/details/50836422
-         https://blog.csdn.net/stubbornness1219/article/details/50253301
+ https://blog.csdn.net/stubbornness1219/article/details/50253301
  */
-+ (NSValue *)jjc_network_getDeviceIfaddrs {
++ (NSValue *)jjc_device_getNetworkIfaddrs {
     
     struct ifaddrs *interfaces = NULL;
     struct ifaddrs *temp_addr = NULL;
@@ -193,7 +192,7 @@ typedef NS_ENUM(NSInteger, JJCToolsNetworkAPIType) {
  BSSID   ：MAC 地址
  SSID    ：WI-FI 名称
  */
-+ (id)jjc_network_getDeviceNetworkInfo {
++ (id)jjc_device_getNetworkInfo {
     
     NSArray *ifs = (id)CFBridgingRelease(CNCopySupportedInterfaces());
     

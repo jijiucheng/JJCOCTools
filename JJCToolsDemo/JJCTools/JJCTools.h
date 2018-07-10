@@ -17,7 +17,7 @@
  创建：2017.09.06
  更新：2018.07.10
  
- 当前版本：v0.1.8
+ 当前版本：v0.1.9
  
  */
 
@@ -60,7 +60,7 @@
 #import "JJCToolsObject+RulesAPI.h"
 #import "JJCToolsObject+PlistAPI.h"
 #import "JJCToolsObject+AlertAPI.h"
-#import "JJCToolsObject+NetworkAPI.h"
+#import "JJCToolsObject+DeviceAPI.h"
 
 
 

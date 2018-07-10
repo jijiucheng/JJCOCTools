@@ -1,5 +1,5 @@
 //
-//  JJCToolsObject+NetworkAPI.h
+//  JJCToolsObject+DeviceAPI.h
 //  JJCToolsDemo
 //
 //  Created by 苜蓿鬼仙 on 2018/7/10.
@@ -8,16 +8,17 @@
 
 
 
+
 /********************  说明  *******************/
 /*
  
  
- JJCToolsObject+NetworkAPI
+ JJCToolsObject+DeviceAPI
  创建：2018.07.10
  更新：2018.07.10
  
  
- 1、该扩展主要用于获取手机网络信息；
+ 1、该扩展主要用于获取手机硬件设备信息，包含手机网络信息；
  
  
  参考链接：
@@ -44,8 +45,7 @@
 
 #import "JJCToolsObject.h"
 
-
-@interface JJCToolsObject (NetworkAPI)
+@interface JJCToolsObject (DeviceAPI)
 
 
 /**
@@ -53,7 +53,7 @@
  
  inet_ntoa(((struct sockaddr_in *)temp_addr->ifa_addr)->sin_addr)
  */
-+ (NSString *)jjc_network_getDeviceIPAddress;
++ (NSString *)jjc_device_getNetworkIPAddress;
 
 
 /**
@@ -61,7 +61,7 @@
  
  inet_ntoa(((struct sockaddr_in *)temp_addr->ifa_dstaddr)->sin_addr)
  */
-+ (NSString *)jjc_network_getDeviceBroadcastAddress;
++ (NSString *)jjc_device_getNetworkBroadcastAddress;
 
 
 /**
@@ -69,7 +69,7 @@
  
  inet_ntoa(((struct sockaddr_in *)temp_addr->ifa_netmask)->sin_addr)
  */
-+ (NSString *)jjc_network_getDeviceNetmaskAddress;
++ (NSString *)jjc_device_getNetworkNetmaskAddress;
 
 
 /**
@@ -85,7 +85,7 @@
  
  参考链接：https://blog.csdn.net/ddreaming/article/details/53349753
  */
-+ (NSString *)jjc_network_getDeviceInterfaceAddress;
++ (NSString *)jjc_device_getNetworkInterfaceAddress;
 
 
 
@@ -101,13 +101,13 @@
 
 /**
  获取当前设备所连接网络的  ifaddrs 原始数据
-
+ 
  如果正常返回数据，返回的数据类型为 NSValue 类型，存储的是 ifaddrs 结构体
  
  参考链接：https://blog.csdn.net/u010244140/article/details/50836422
-         https://blog.csdn.net/stubbornness1219/article/details/50253301
+ https://blog.csdn.net/stubbornness1219/article/details/50253301
  */
-+ (NSValue *)jjc_network_getDeviceIfaddrs;
++ (NSValue *)jjc_device_getNetworkIfaddrs;
 
 
 /**
@@ -118,16 +118,7 @@
  BSSID   ：MAC 地址
  SSID    ：WI-FI 名称
  */
-+ (id)jjc_network_getDeviceNetworkInfo;
-
++ (id)jjc_device_getNetworkInfo;
 
 
 @end
-
-
-
-
-
-
-
-
