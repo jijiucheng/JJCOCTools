@@ -32,7 +32,6 @@ Pod::Spec.new do |s|
 
 
     s.subspec 'JJCToolsOthers' do |ss|
-        ss.public_header_files = 'JJCToolsDemo/JJCTools/JJCToolsOthers/**/*.{h}'
         ss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsOthers/**/*.{h,m}'
     end
 
