@@ -23,9 +23,18 @@
  参考链接：
  https://www.cnblogs.com/zhanghuanan/p/5703644.html
  https://blog.csdn.net/ddreaming/article/details/53349753
+ https://blog.csdn.net/u011467458/article/details/53422411
+ https://blog.csdn.net/yanglei3kyou/article/details/50434848
+ // 获取设备信息
+ https://www.jianshu.com/p/b23016bb97af
+ https://github.com/PengfeiWang666/iOS-getClientInfo
  // struct 与 id 类型互转
  https://blog.csdn.net/u010244140/article/details/50836422
  https://blog.csdn.net/stubbornness1219/article/details/50253301
+ // 局域网 UDP 广播机制
+ https://www.jianshu.com/p/97fbeb99db20
+ https://www.cnblogs.com/qingche/p/3784451.html
+ https://blog.csdn.net/li_yangyang_li/article/details/50844256
  
  */
 /********************  说明  *******************/
@@ -105,6 +114,9 @@
  获取当前设备所连接网络的  网络信息（CNCopyCurrentNetworkInfo）
  
  如果正常放回数据，返回的数据类型为字典 NSDictionary，且包含三个字段：
+ SSIDDATA：
+ BSSID   ：MAC 地址
+ SSID    ：WI-FI 名称
  */
 + (id)jjc_network_getDeviceNetworkInfo;
 

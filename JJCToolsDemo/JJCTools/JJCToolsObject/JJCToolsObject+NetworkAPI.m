@@ -189,6 +189,9 @@ typedef NS_ENUM(NSInteger, JJCToolsNetworkAPIType) {
  获取当前设备所连接网络的  网络信息（CNCopyCurrentNetworkInfo）
  
  如果正常放回数据，返回的数据类型为字典 NSDictionary，且包含三个字段：
+ SSIDDATA：
+ BSSID   ：MAC 地址
+ SSID    ：WI-FI 名称
  */
 + (id)jjc_network_getDeviceNetworkInfo {
     
