@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		410037051FB05504000C89AA /* JJCToolsObject+RulesAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 410037041FB05504000C89AA /* JJCToolsObject+RulesAPI.m */; };
 		410037081FB05811000C89AA /* JJCToolsObject+PlistAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 410037071FB05811000C89AA /* JJCToolsObject+PlistAPI.m */; };
+		410E1FC520F47E300023E8A9 /* JJCToolsObject+NetworkAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 410E1FC420F47E300023E8A9 /* JJCToolsObject+NetworkAPI.m */; };
 		4121C5AB20C7D98E00309AF3 /* UIImage+Convert.m in Sources */ = {isa = PBXBuildFile; fileRef = 4121C5AA20C7D98E00309AF3 /* UIImage+Convert.m */; };
 		4121C5AE20C7E40700309AF3 /* UIView+Clip.m in Sources */ = {isa = PBXBuildFile; fileRef = 4121C5AD20C7E40700309AF3 /* UIView+Clip.m */; };
 		4121C5B720C92AC300309AF3 /* JJCToolsFoundationLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 4121C5B620C92AC300309AF3 /* JJCToolsFoundationLog.m */; };
@@ -39,6 +40,8 @@
 		410037041FB05504000C89AA /* JJCToolsObject+RulesAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JJCToolsObject+RulesAPI.m"; sourceTree = "<group>"; };
 		410037061FB05811000C89AA /* JJCToolsObject+PlistAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JJCToolsObject+PlistAPI.h"; sourceTree = "<group>"; };
 		410037071FB05811000C89AA /* JJCToolsObject+PlistAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JJCToolsObject+PlistAPI.m"; sourceTree = "<group>"; };
+		410E1FC320F47E300023E8A9 /* JJCToolsObject+NetworkAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JJCToolsObject+NetworkAPI.h"; sourceTree = "<group>"; };
+		410E1FC420F47E300023E8A9 /* JJCToolsObject+NetworkAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JJCToolsObject+NetworkAPI.m"; sourceTree = "<group>"; };
 		4121C5A920C7D98E00309AF3 /* UIImage+Convert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Convert.h"; sourceTree = "<group>"; };
 		4121C5AA20C7D98E00309AF3 /* UIImage+Convert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Convert.m"; sourceTree = "<group>"; };
 		4121C5AC20C7E40700309AF3 /* UIView+Clip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Clip.h"; sourceTree = "<group>"; };
@@ -179,6 +182,8 @@
 				410037071FB05811000C89AA /* JJCToolsObject+PlistAPI.m */,
 				4138FEAF1FE259CC00EBAA83 /* JJCToolsObject+AlertAPI.h */,
 				4138FEB01FE259CC00EBAA83 /* JJCToolsObject+AlertAPI.m */,
+				410E1FC320F47E300023E8A9 /* JJCToolsObject+NetworkAPI.h */,
+				410E1FC420F47E300023E8A9 /* JJCToolsObject+NetworkAPI.m */,
 			);
 			path = JJCToolsObject;
 			sourceTree = "<group>";
@@ -397,6 +402,7 @@
 				4182C41920A54B280000F32C /* UIButton+ActionBlock.m in Sources */,
 				4157D3351F62405F00A330D1 /* UIView+Frame.m in Sources */,
 				4121C5B720C92AC300309AF3 /* JJCToolsFoundationLog.m in Sources */,
+				410E1FC520F47E300023E8A9 /* JJCToolsObject+NetworkAPI.m in Sources */,
 				4152F39820C1A312005D04DA /* UIImage+Clip.m in Sources */,
 				41311AC71F5FE63F00BCC291 /* AppDelegate.m in Sources */,
 				4155728520AAD30400B6045A /* MBProgressHUD+JJC.m in Sources */,

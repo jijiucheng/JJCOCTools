@@ -15,9 +15,9 @@
  
  JJCTools
  创建：2017.09.06
- 更新：2018.06.07
+ 更新：2018.07.10
  
- 当前版本：v0.1.7
+ 当前版本：v0.1.8
  
  */
 
@@ -60,7 +60,7 @@
 #import "JJCToolsObject+RulesAPI.h"
 #import "JJCToolsObject+PlistAPI.h"
 #import "JJCToolsObject+AlertAPI.h"
-
+#import "JJCToolsObject+NetworkAPI.h"
 
 
 
