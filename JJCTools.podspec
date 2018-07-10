@@ -31,17 +31,17 @@ Pod::Spec.new do |s|
     end
 
 
+    s.subspec 'JJCToolsOthers' do |ss|
+        ss.public_header_files = 'JJCToolsDemo/JJCTools/JJCToolsOthers/**/*.{h}'
+        ss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsOthers/**/*.{h,m}'
+    end
+
+
     s.subspec 'JJCToolsObject' do |ss|
         ss.public_header_files = 'JJCToolsDemo/JJCTools/JJCToolsObject/**/*.{h}'
         ss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsObject/**/*.{h,m}'
 # pod成功的库，每个子文件夹都是对应一个子库，子库的目的是为了防止一个 kit 太大，把功能模块都分出来减少包体积；所以子库原则上是不进行相互依赖的；如果库中有必须依赖的话，可以通过该方式进行依赖；其中依赖的对应为 pod 成功后显示的库路径，非真实路径
         ss.dependency 'JJCTools/JJCToolsCategory'
-    end
-
-
-    s.subspec 'JJCToolsOthers' do |ss|
-        ss.public_header_files = 'JJCToolsDemo/JJCTools/JJCToolsOthers/**/*.{h}'
-        ss.source_files = 'JJCToolsDemo/JJCTools/JJCToolsOthers/**/*.{h,m}'
     end
 
 

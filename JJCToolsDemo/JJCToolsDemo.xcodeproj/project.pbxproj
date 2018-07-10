@@ -10,9 +10,9 @@
 		410037051FB05504000C89AA /* JJCToolsObject+RulesAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 410037041FB05504000C89AA /* JJCToolsObject+RulesAPI.m */; };
 		410037081FB05811000C89AA /* JJCToolsObject+PlistAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 410037071FB05811000C89AA /* JJCToolsObject+PlistAPI.m */; };
 		410E1FC520F47E300023E8A9 /* JJCToolsObject+NetworkAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 410E1FC420F47E300023E8A9 /* JJCToolsObject+NetworkAPI.m */; };
+		410E1FCC20F493170023E8A9 /* JJCToolsFoundationLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 410E1FCB20F493170023E8A9 /* JJCToolsFoundationLog.m */; };
 		4121C5AB20C7D98E00309AF3 /* UIImage+Convert.m in Sources */ = {isa = PBXBuildFile; fileRef = 4121C5AA20C7D98E00309AF3 /* UIImage+Convert.m */; };
 		4121C5AE20C7E40700309AF3 /* UIView+Clip.m in Sources */ = {isa = PBXBuildFile; fileRef = 4121C5AD20C7E40700309AF3 /* UIView+Clip.m */; };
-		4121C5B720C92AC300309AF3 /* JJCToolsFoundationLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 4121C5B620C92AC300309AF3 /* JJCToolsFoundationLog.m */; };
 		41311AC41F5FE63F00BCC291 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 41311AC31F5FE63F00BCC291 /* main.m */; };
 		41311AC71F5FE63F00BCC291 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 41311AC61F5FE63F00BCC291 /* AppDelegate.m */; };
 		41311ACA1F5FE63F00BCC291 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41311AC91F5FE63F00BCC291 /* ViewController.m */; };
@@ -42,12 +42,12 @@
 		410037071FB05811000C89AA /* JJCToolsObject+PlistAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JJCToolsObject+PlistAPI.m"; sourceTree = "<group>"; };
 		410E1FC320F47E300023E8A9 /* JJCToolsObject+NetworkAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JJCToolsObject+NetworkAPI.h"; sourceTree = "<group>"; };
 		410E1FC420F47E300023E8A9 /* JJCToolsObject+NetworkAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JJCToolsObject+NetworkAPI.m"; sourceTree = "<group>"; };
+		410E1FCB20F493170023E8A9 /* JJCToolsFoundationLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJCToolsFoundationLog.m; sourceTree = "<group>"; };
 		4121C5A920C7D98E00309AF3 /* UIImage+Convert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Convert.h"; sourceTree = "<group>"; };
 		4121C5AA20C7D98E00309AF3 /* UIImage+Convert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Convert.m"; sourceTree = "<group>"; };
 		4121C5AC20C7E40700309AF3 /* UIView+Clip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Clip.h"; sourceTree = "<group>"; };
 		4121C5AD20C7E40700309AF3 /* UIView+Clip.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Clip.m"; sourceTree = "<group>"; };
 		4121C5B420C8D7F900309AF3 /* JJCToolsEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJCToolsEnum.h; sourceTree = "<group>"; };
-		4121C5B620C92AC300309AF3 /* JJCToolsFoundationLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJCToolsFoundationLog.m; sourceTree = "<group>"; };
 		41311ABF1F5FE63F00BCC291 /* JJCToolsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JJCToolsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41311AC31F5FE63F00BCC291 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		41311AC51F5FE63F00BCC291 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -105,10 +105,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4121C5B520C92A9400309AF3 /* JJCToolsOthers */ = {
+		410E1FCA20F493160023E8A9 /* JJCToolsOthers */ = {
 			isa = PBXGroup;
 			children = (
-				4121C5B620C92AC300309AF3 /* JJCToolsFoundationLog.m */,
+				410E1FCB20F493170023E8A9 /* JJCToolsFoundationLog.m */,
 			);
 			path = JJCToolsOthers;
 			sourceTree = "<group>";
@@ -163,7 +163,7 @@
 				41FA3AC51F973B8800116BBF /* JJCToolsDefine */,
 				4157D32D1F62388700A330D1 /* JJCToolsCategory */,
 				41311AE61F5FEAB300BCC291 /* JJCToolsObject */,
-				4121C5B520C92A9400309AF3 /* JJCToolsOthers */,
+				410E1FCA20F493160023E8A9 /* JJCToolsOthers */,
 				4138FEDA1FE26CEB00EBAA83 /* JJCToolsResource */,
 			);
 			path = JJCTools;
@@ -401,11 +401,11 @@
 				4157D33B1F626A7500A330D1 /* UIView+Animation.m in Sources */,
 				4182C41920A54B280000F32C /* UIButton+ActionBlock.m in Sources */,
 				4157D3351F62405F00A330D1 /* UIView+Frame.m in Sources */,
-				4121C5B720C92AC300309AF3 /* JJCToolsFoundationLog.m in Sources */,
 				410E1FC520F47E300023E8A9 /* JJCToolsObject+NetworkAPI.m in Sources */,
 				4152F39820C1A312005D04DA /* UIImage+Clip.m in Sources */,
 				41311AC71F5FE63F00BCC291 /* AppDelegate.m in Sources */,
 				4155728520AAD30400B6045A /* MBProgressHUD+JJC.m in Sources */,
+				410E1FCC20F493170023E8A9 /* JJCToolsFoundationLog.m in Sources */,
 				41311AE91F5FEB0200BCC291 /* JJCToolsObject.m in Sources */,
 				41A267B31FE3B4B200D81666 /* NSBundle+JJCToolsResource.m in Sources */,
 				4157D3381F6265E500A330D1 /* UIView+TapGestureBlock.m in Sources */,
