@@ -36,6 +36,10 @@
  https://www.jianshu.com/p/97fbeb99db20
  https://www.cnblogs.com/qingche/p/3784451.html
  https://blog.csdn.net/li_yangyang_li/article/details/50844256
+ https://blog.csdn.net/qq_26075861/article/details/78361363
+ https://www.jianshu.com/p/5a19c789bd19
+ https://www.jianshu.com/p/9ccd8c8e4f3d
+ http://www.ituring.com.cn/article/472021
  
  */
 /********************  说明  *******************/
@@ -48,6 +52,30 @@
 @interface JJCToolsObject (DeviceAPI)
 
 
+#pragma mark - Hardware
+
+/**
+ 获取当前设备  唯一标识符
+ 
+ 备注：
+ UUID 是 Universally Unique Identifier 的缩写，中文意思是通用唯一识别码。它是让分布式系统中的所有元素，都能有唯一的辨识资讯，而不需要透过中央控制端来做辨识资讯的指定。这样，每个人都可以建立不与其它人冲突的 UUID。在此情况下，就不需考虑数据库建立时的名称重复问题。苹果公司建议使用UUID为应用生成唯一标识字符串。
+ */
++ (NSString *)jjc_device_getDeviceUUIDString;
+
+
+/**
+ 获取当前设备  唯一广告位标识符
+ 
+ 备注：
+ IDFA（广告位标识符）：在同一个设备上的所有App都会取到相同的值，是苹果专门给各广告提供商用来追踪用户而设的，用户可以在 设置|隐私|广告追踪里重置此id的值，或限制此id的使用，故此id有可能会取不到值，但好在Apple默认是允许追踪的，而且一般用户都不知道有这么个设置，所以基本上用来监测推广效果，是戳戳有余了
+ */
++ (NSString *)jjc_device_getDeviceIDFAString;
+
+
+
+
+#pragma mark - Network
+
 /**
  获取当前设备所连接网络的  IP 地址
  
@@ -57,7 +85,7 @@
 
 
 /**
- 获取当前设备所连接网络的  广播地址（局域网IP地址、路由地址）
+ 获取当前设备所连接网络的  广播地址
  
  inet_ntoa(((struct sockaddr_in *)temp_addr->ifa_dstaddr)->sin_addr)
  */
@@ -92,6 +120,11 @@
  获取当前设备所连接网络的  MAC 地址
  
  Key：BSSID
+ 
+ 备注：
+ ① MAC 地址是 ethernet（以太网）规定接入 internet 设备必须具备的网卡，发送端和接收端便是指网卡的地址；
+ ② 每块王凯出厂时都被烧制上世界上唯一的 MAC 地址，长度为 48 位二进制，通常由 12 位 16 进制数表示（前六位表示厂商编号，后六位表示流水线号）；
+ ③ 格式：02:88:65:3e:a1:ec
  */
 + (NSString *)jjc_device_getNetworkMACAddress;
 
