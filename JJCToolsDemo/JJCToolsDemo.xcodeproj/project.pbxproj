@@ -11,6 +11,7 @@
 		410037081FB05811000C89AA /* JJCToolsObject+PlistAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 410037071FB05811000C89AA /* JJCToolsObject+PlistAPI.m */; };
 		410E1FCC20F493170023E8A9 /* JJCToolsFoundationLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 410E1FCB20F493170023E8A9 /* JJCToolsFoundationLog.m */; };
 		410E1FCF20F4A1A50023E8A9 /* JJCToolsObject+DeviceAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 410E1FCE20F4A1A50023E8A9 /* JJCToolsObject+DeviceAPI.m */; };
+		411560D020F8508500E9EFA4 /* UIAlertController+Window.m in Sources */ = {isa = PBXBuildFile; fileRef = 411560CF20F8508500E9EFA4 /* UIAlertController+Window.m */; };
 		4121C5AB20C7D98E00309AF3 /* UIImage+Convert.m in Sources */ = {isa = PBXBuildFile; fileRef = 4121C5AA20C7D98E00309AF3 /* UIImage+Convert.m */; };
 		4121C5AE20C7E40700309AF3 /* UIView+Clip.m in Sources */ = {isa = PBXBuildFile; fileRef = 4121C5AD20C7E40700309AF3 /* UIView+Clip.m */; };
 		41311AC41F5FE63F00BCC291 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 41311AC31F5FE63F00BCC291 /* main.m */; };
@@ -43,6 +44,8 @@
 		410E1FCB20F493170023E8A9 /* JJCToolsFoundationLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJCToolsFoundationLog.m; sourceTree = "<group>"; };
 		410E1FCD20F4A1A40023E8A9 /* JJCToolsObject+DeviceAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JJCToolsObject+DeviceAPI.h"; sourceTree = "<group>"; };
 		410E1FCE20F4A1A50023E8A9 /* JJCToolsObject+DeviceAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JJCToolsObject+DeviceAPI.m"; sourceTree = "<group>"; };
+		411560CE20F8508500E9EFA4 /* UIAlertController+Window.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Window.h"; sourceTree = "<group>"; };
+		411560CF20F8508500E9EFA4 /* UIAlertController+Window.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Window.m"; sourceTree = "<group>"; };
 		4121C5A920C7D98E00309AF3 /* UIImage+Convert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Convert.h"; sourceTree = "<group>"; };
 		4121C5AA20C7D98E00309AF3 /* UIImage+Convert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Convert.m"; sourceTree = "<group>"; };
 		4121C5AC20C7E40700309AF3 /* UIView+Clip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Clip.h"; sourceTree = "<group>"; };
@@ -111,6 +114,15 @@
 				410E1FCB20F493170023E8A9 /* JJCToolsFoundationLog.m */,
 			);
 			path = JJCToolsOthers;
+			sourceTree = "<group>";
+		};
+		411560CD20F8506300E9EFA4 /* UIAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				411560CE20F8508500E9EFA4 /* UIAlertController+Window.h */,
+				411560CF20F8508500E9EFA4 /* UIAlertController+Window.m */,
+			);
+			path = UIAlertController;
 			sourceTree = "<group>";
 		};
 		41311AB61F5FE63F00BCC291 = {
@@ -222,6 +234,7 @@
 				4182C40F20A54A950000F32C /* UIImage */,
 				4182C41020A54A950000F32C /* UITextField */,
 				4182C41120A54A950000F32C /* UITextView */,
+				411560CD20F8506300E9EFA4 /* UIAlertController */,
 				4182C41320A54A950000F32C /* UIViewController */,
 				41A267AD1FE3B0C600D81666 /* NSBundle */,
 				4157D32E1F623B3A00A330D1 /* UITabBar */,
@@ -404,6 +417,7 @@
 				4152F39820C1A312005D04DA /* UIImage+Clip.m in Sources */,
 				41311AC71F5FE63F00BCC291 /* AppDelegate.m in Sources */,
 				410E1FCF20F4A1A50023E8A9 /* JJCToolsObject+DeviceAPI.m in Sources */,
+				411560D020F8508500E9EFA4 /* UIAlertController+Window.m in Sources */,
 				4155728520AAD30400B6045A /* MBProgressHUD+JJC.m in Sources */,
 				410E1FCC20F493170023E8A9 /* JJCToolsFoundationLog.m in Sources */,
 				41311AE91F5FEB0200BCC291 /* JJCToolsObject.m in Sources */,

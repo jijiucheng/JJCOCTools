@@ -15,7 +15,7 @@
  
  JJCTools
  创建：2017.09.06
- 更新：2018.07.10
+ 更新：2018.07.13
  
  当前版本：v0.1.9
  
@@ -43,6 +43,8 @@
 #import "UIImage+Convert.h"
 
 #import "MBProgressHUD+JJC.h"
+
+#import "UIAlertController+Window.h"
 
 #import "UIViewController+HUD.h"
 
