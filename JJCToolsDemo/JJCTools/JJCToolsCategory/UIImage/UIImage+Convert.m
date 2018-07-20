@@ -52,4 +52,28 @@
 }
 
 
+/**
+ 图片不渲染（使用原始图片，iOS7之后，导航栏默认渲染）
+ 
+ @param imageName 图片名称
+ @return 不渲染的图片
+ */
++ (UIImage *)jjc_image_getImageWithRenderOriginalName:(NSString *)imageName {
+    
+    UIImage *image = [UIImage imageNamed:imageName];
+    return [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+}
+
+
+/**
+ 图片不渲染（使用原始图片，iOS7之后，导航栏默认渲染）
+ 
+ @return 不渲染的图片
+ */
+- (UIImage *)jjc_image_getRenderOriginal {
+    
+    return [self imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+}
+
+
 @end

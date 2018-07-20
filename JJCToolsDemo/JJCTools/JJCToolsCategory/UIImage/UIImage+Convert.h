@@ -15,7 +15,7 @@
  
  UIImage+Convert
  创建：2018.06.06
- 更新：2018.06.06
+ 更新：2018.07.20
  
  
  1、该扩展主要用于给 UIImage 进行一些转换处理；
@@ -50,5 +50,22 @@
  @return 转换后的图片
  */
 + (UIImage *)jjc_image_getImageWithColor:(UIColor *)color;
+
+
+/**
+ 图片不渲染（使用原始图片，iOS7之后，导航栏默认渲染）
+
+ @param imageName 图片名称
+ @return 不渲染的图片
+ */
++ (UIImage *)jjc_image_getImageWithRenderOriginalName:(NSString *)imageName;
+
+
+/**
+ 图片不渲染（使用原始图片，iOS7之后，导航栏默认渲染）
+
+ @return 不渲染的图片
+ */
+- (UIImage *)jjc_image_getRenderOriginal;
 
 @end
