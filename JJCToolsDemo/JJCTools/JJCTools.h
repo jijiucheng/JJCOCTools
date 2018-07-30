@@ -47,6 +47,7 @@
 #import "UIAlertController+Window.h"
 
 #import "UIViewController+HUD.h"
+#import "UIViewController+JJCBaseAPI.h"
 
 #import "UIButton+ActionBlock.h"
 
