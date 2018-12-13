@@ -100,6 +100,7 @@
 /** 自定义相关输入输出 **/
 #define K_StringFormat(format, ...)   [NSString stringWithFormat:format, ##__VA_ARGS__]
 #define K_LocalString(String)         NSLocalizedString(String, nil)
+#define K_Font(F)                     [UIFont systemFontOfSize:F]
 
 
 /** 获取沙盒相关路径 **/

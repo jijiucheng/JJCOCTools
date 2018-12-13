@@ -16,7 +16,7 @@
  
  MBProgressHUD+JJC
  创建：2018.05.15
- 更新：2018.05.15
+ 更新：2018.12.13
  
  
  1、该扩展主要用于给 MBProgressHUD 添加不同类型的扩展方式；
@@ -33,6 +33,18 @@
 #import "MBProgressHUD.h"
 
 @interface MBProgressHUD (JJC)
+
+
+/**
+ 显示带有文字、图标到 View
+ 
+ @param text 文字信息
+ @param textColor 文字颜色
+ @param backgroundColor 背景色
+ @param icon 图标
+ @param view 指定View
+ */
++ (void)jjc_hud_showText:(NSString *)text textColor:(UIColor *)textColor backgroundColor:(UIColor *)backgroundColor icon:(NSString *)icon view:(UIView *)view;
 
 
 /**
