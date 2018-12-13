@@ -16,11 +16,12 @@
  
  @param text 文字信息
  @param textColor 文字颜色
+ @param font 字号
  @param backgroundColor 背景色
  @param icon 图标
  @param view 指定View
  */
-+ (void)jjc_hud_showText:(NSString *)text textColor:(UIColor *)textColor backgroundColor:(UIColor *)backgroundColor icon:(NSString *)icon view:(UIView *)view {
++ (void)jjc_hud_showText:(NSString *)text textColor:(UIColor *)textColor font:(UIFont *)font backgroundColor:(UIColor *)backgroundColor icon:(NSString *)icon view:(UIView *)view {
     
     if (view == nil) view = [[UIApplication sharedApplication].windows lastObject];
     
@@ -35,7 +36,10 @@
         hud.bezelView.backgroundColor = [UIColor colorWithWhite:0.15 alpha:1.0];
     }
     
-    hud.label.text = text;
+    hud.detailsLabel.text = text;
+    if (font) {
+        hud.detailsLabel.font = font;
+    }
     if (textColor) {
         hud.contentColor = textColor;
     } else {
@@ -63,7 +67,7 @@
  */
 + (void)jjc_hud_showText:(NSString *)text icon:(NSString *)icon view:(UIView *)view {
     
-    [self jjc_hud_showText:text textColor:[UIColor whiteColor] backgroundColor:[UIColor colorWithWhite:0.15 alpha:1.0] icon:icon view:view];
+    [self jjc_hud_showText:text textColor:[UIColor whiteColor] font:nil backgroundColor:[UIColor colorWithWhite:0.15 alpha:1.0] icon:icon view:view];
 }
 
 

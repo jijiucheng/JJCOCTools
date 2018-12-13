@@ -40,11 +40,12 @@
  
  @param text 文字信息
  @param textColor 文字颜色
+ @param font 字号
  @param backgroundColor 背景色
  @param icon 图标
  @param view 指定View
  */
-+ (void)jjc_hud_showText:(NSString *)text textColor:(UIColor *)textColor backgroundColor:(UIColor *)backgroundColor icon:(NSString *)icon view:(UIView *)view;
++ (void)jjc_hud_showText:(NSString *)text textColor:(UIColor *)textColor font:(UIFont *)font backgroundColor:(UIColor *)backgroundColor icon:(NSString *)icon view:(UIView *)view;
 
 
 /**
