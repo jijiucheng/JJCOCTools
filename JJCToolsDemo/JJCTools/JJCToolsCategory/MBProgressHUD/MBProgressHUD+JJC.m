@@ -70,6 +70,23 @@
  @param backgroundColor 背景色
  @param icon 图标
  @param view 指定View
+ @param isAutoHide 是否自动隐藏
+ */
++ (void)jjc_hud_showText:(NSString *)text textColor:(UIColor *)textColor font:(UIFont *)font backgroundColor:(UIColor *)backgroundColor icon:(NSString *)icon view:(UIView *)view isAutoHide:(BOOL)isAutoHide {
+    
+    [self jjc_hud_showText:text textColor:textColor font:font backgroundColor:backgroundColor icon:icon view:view isAutoHide:isAutoHide afterDelay:1.5];
+}
+
+
+/**
+ 显示带有文字、图标到 View
+ 
+ @param text 文字信息
+ @param textColor 文字颜色
+ @param font 字号
+ @param backgroundColor 背景色
+ @param icon 图标
+ @param view 指定View
  */
 + (void)jjc_hud_showText:(NSString *)text textColor:(UIColor *)textColor font:(UIFont *)font backgroundColor:(UIColor *)backgroundColor icon:(NSString *)icon view:(UIView *)view {
     
