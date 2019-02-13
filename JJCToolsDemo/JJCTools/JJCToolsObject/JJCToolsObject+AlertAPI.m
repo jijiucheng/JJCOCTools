@@ -21,24 +21,27 @@
 /**
  AlertControler 快捷显示提示语（包含按钮事件处理）
  
- @param message     提示语
- @param leftString  左侧按钮标题
- @param rightString 右侧按钮标题
- @param actionBlock 按钮点击事件
+ @param title            标题
+ @param message          提示语
+ @param leftString       左侧按钮标题
+ @param rightString      右侧按钮标题
+ @param leftActionStyle  左侧按钮类型
+ @param rightActionStyle 右侧按钮类型
+ @param actionBlock      按钮点击事件
  */
-+ (void)jjc_alert_showAlertViewWithMessage:(NSString *)message leftString:(NSString *)leftString rightString:(NSString *)rightString actionBlock:(void (^)(BOOL isRight))actionBlock {
++ (void)jjc_alert_showAlertViewWithTitle:(NSString *)title message:(NSString *)message leftString:(NSString *)leftString rightString:(NSString *)rightString leftActionStyle:(UIAlertActionStyle)leftActionStyle rightActionStyle:(UIAlertActionStyle)rightActionStyle actionBlock:(void (^)(BOOL isRight))actionBlock {
     
-    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:[NSBundle jjc_bundle_getLocalizedStringForKey:@"JJCTools_Tips"] message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
     
     if (leftString.length > 0) {
-        UIAlertAction *leftAction = [UIAlertAction actionWithTitle:leftString style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        UIAlertAction *leftAction = [UIAlertAction actionWithTitle:leftString style:leftActionStyle handler:^(UIAlertAction * _Nonnull action) {
             actionBlock(NO);
         }];
         [alertVC addAction:leftAction];
     }
     
     if (rightString.length > 0) {
-        UIAlertAction *rightAction = [UIAlertAction actionWithTitle:rightString style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        UIAlertAction *rightAction = [UIAlertAction actionWithTitle:rightString style:rightActionStyle handler:^(UIAlertAction * _Nonnull action) {
             actionBlock(YES);
         }];
         [alertVC addAction:rightAction];
@@ -46,6 +49,25 @@
     
     UIViewController *rootVC = [self jjc_base_getCurrentViewController];
     [rootVC presentViewController:alertVC animated:YES completion:nil];
+}
+
+
+/**
+ AlertControler 快捷显示提示语（包含按钮事件处理）
+ 
+ @param message     提示语
+ @param leftString  左侧按钮标题
+ @param rightString 右侧按钮标题
+ @param actionBlock 按钮点击事件
+ */
++ (void)jjc_alert_showAlertViewWithMessage:(NSString *)message leftString:(NSString *)leftString rightString:(NSString *)rightString actionBlock:(void (^)(BOOL isRight))actionBlock {
+    
+    [self jjc_alert_showAlertViewWithTitle:[NSBundle jjc_bundle_getLocalizedStringForKey:@"JJCTools_Tips"] message:message leftString:leftString rightString:rightString leftActionStyle:UIAlertActionStyleCancel rightActionStyle:UIAlertActionStyleDefault actionBlock:^(BOOL isRight) {
+        
+        if (isRight) {
+            actionBlock(YES);
+        }
+    }];
 }
 
 

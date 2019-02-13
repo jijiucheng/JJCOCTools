@@ -20,6 +20,56 @@
  @param backgroundColor 背景色
  @param icon 图标
  @param view 指定View
+ @param isAutoHide 是否自动隐藏
+ @param afterDelay 延迟隐藏时间
+ */
++ (void)jjc_hud_showText:(NSString *)text textColor:(UIColor *)textColor font:(UIFont *)font backgroundColor:(UIColor *)backgroundColor icon:(NSString *)icon view:(UIView *)view isAutoHide:(BOOL)isAutoHide afterDelay:(CGFloat)afterDelay {
+    
+    if (view == nil) view = [[UIApplication sharedApplication].windows lastObject];
+    
+    // 快速显示一个提示信息
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
+    
+    // 设置弹框背景色
+    hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;  // 此处必须这样设置
+    if (backgroundColor) {
+        hud.bezelView.backgroundColor = backgroundColor;
+    } else {
+        hud.bezelView.backgroundColor = [UIColor colorWithWhite:0.15 alpha:1.0];
+    }
+    
+    hud.detailsLabel.text = text;
+    if (font) {
+        hud.detailsLabel.font = font;
+    }
+    if (textColor) {
+        hud.contentColor = textColor;
+    } else {
+        hud.contentColor = [UIColor whiteColor];  // 设置文本颜色
+    }
+    // 设置图片
+    hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"JJCTools.bundle/%@", icon]]];
+    // 再设置模式
+    hud.mode = MBProgressHUDModeCustomView;
+    
+    if (isAutoHide) {
+        // 隐藏时候从父控件中移除
+        hud.removeFromSuperViewOnHide = YES;
+        // 1秒之后再消失
+        [hud hideAnimated:YES afterDelay:afterDelay];
+    }
+}
+
+
+/**
+ 显示带有文字、图标到 View
+ 
+ @param text 文字信息
+ @param textColor 文字颜色
+ @param font 字号
+ @param backgroundColor 背景色
+ @param icon 图标
+ @param view 指定View
  */
 + (void)jjc_hud_showText:(NSString *)text textColor:(UIColor *)textColor font:(UIFont *)font backgroundColor:(UIColor *)backgroundColor icon:(NSString *)icon view:(UIView *)view {
     

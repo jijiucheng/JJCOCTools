@@ -16,7 +16,7 @@
  
  JJCToolsObject+AlertAPI
  创建：2017.12.14
- 更新：2018.06.07
+ 更新：2019.02.13
  
  
  1、该扩展主要用于快捷显示提示语；
@@ -36,6 +36,19 @@
 
 
 /***************************  UIAlertController  ***************************/
+
+/**
+ AlertControler 快捷显示提示语（包含按钮事件处理）
+ 
+ @param title            标题
+ @param message          提示语
+ @param leftString       左侧按钮标题
+ @param rightString      右侧按钮标题
+ @param leftActionStyle  左侧按钮类型
+ @param rightActionStyle 右侧按钮类型
+ @param actionBlock      按钮点击事件
+ */
++ (void)jjc_alert_showAlertViewWithTitle:(NSString *)title message:(NSString *)message leftString:(NSString *)leftString rightString:(NSString *)rightString leftActionStyle:(UIAlertActionStyle)leftActionStyle rightActionStyle:(UIAlertActionStyle)rightActionStyle actionBlock:(void (^)(BOOL isRight))actionBlock;
 
 /**
  AlertControler 快捷显示提示语（包含按钮事件处理）
