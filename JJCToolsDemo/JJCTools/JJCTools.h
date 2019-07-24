@@ -32,7 +32,6 @@
 
 /********************  JJCToolsObject  *******************/
 
-#import "JJCToolsObject.h"
 #import "JJCToolsObject+BaseAPI.h"
 #import "JJCToolsObject+RulesAPI.h"
 #import "JJCToolsObject+PlistAPI.h"
