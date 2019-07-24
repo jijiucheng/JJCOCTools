@@ -61,7 +61,4 @@ Pod::Spec.new do |s|
     s.framework     = 'UIKit', 'Foundation', 'QuartzCore', 'CoreText', 'CoreGraphics'
 
 
-
-
-
 end

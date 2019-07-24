@@ -30,6 +30,17 @@
 #import "JJCToolsEnum.h"
 
 
+/********************  JJCToolsObject  *******************/
+
+#import "JJCToolsObject.h"
+#import "JJCToolsObject+BaseAPI.h"
+#import "JJCToolsObject+RulesAPI.h"
+#import "JJCToolsObject+PlistAPI.h"
+#import "JJCToolsObject+AlertAPI.h"
+#import "JJCToolsObject+DeviceAPI.h"
+#import "JJCToolsObject+NetworkAPI.h"
+
+
 /********************  JJCToolsCategory  *******************/
 
 #import "NSString+JJC.h"
@@ -49,17 +60,6 @@
 #import "UIViewController+JJC.h"
 #import "UIViewController+HUD.h"
 #import "UITabBar+Badge.h"
-
-
-/********************  JJCToolsObject  *******************/
-
-#import "JJCToolsObject.h"
-#import "JJCToolsObject+BaseAPI.h"
-#import "JJCToolsObject+RulesAPI.h"
-#import "JJCToolsObject+PlistAPI.h"
-#import "JJCToolsObject+AlertAPI.h"
-#import "JJCToolsObject+DeviceAPI.h"
-#import "JJCToolsObject+NetworkAPI.h"
 
 
 /********************  JJCToolsView  *******************/
