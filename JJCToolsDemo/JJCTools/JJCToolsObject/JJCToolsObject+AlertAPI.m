@@ -7,9 +7,7 @@
 //
 
 #import "JJCToolsObject+AlertAPI.h"
-
 #import "JJCToolsObject+BaseAPI.h"
-#import "NSBundle+JJCToolsResource.h"
 
 
 @implementation JJCToolsObject (AlertAPI)
@@ -144,7 +142,7 @@
                                rightString:(NSString *)rightString
                                actionBlock:(void (^)(BOOL isRight))actionBlock {
     
-    [self jjc_alert_showAlertViewWithTitle:[NSBundle jjc_bundle_getLocalizedStringForKey:@"JJCTools_Tips"] message:message leftString:leftString rightString:rightString leftActionStyle:UIAlertActionStyleDefault rightActionStyle:UIAlertActionStyleDefault actionBlock:actionBlock];
+    [self jjc_alert_showAlertViewWithTitle:[self getLocalizedStringForKey:@"JJCTools_Tips"] message:message leftString:leftString rightString:rightString leftActionStyle:UIAlertActionStyleDefault rightActionStyle:UIAlertActionStyleDefault actionBlock:actionBlock];
 }
 
 /**
@@ -186,7 +184,7 @@
 + (void)jjc_alert_showAlertViewWithMessage:(NSString *)message
                                actionBlock:(void (^)(void))actionBlock {
     
-    [self jjc_alert_showAlertViewWithMessage:message leftString:nil rightString:[NSBundle jjc_bundle_getLocalizedStringForKey:@"JJCTools_Confirm"] actionBlock:nil];
+    [self jjc_alert_showAlertViewWithMessage:message leftString:nil rightString:[self getLocalizedStringForKey:@"JJCTools_Confirm"] actionBlock:nil];
 }
 
 /**
@@ -196,6 +194,40 @@
     
     [self jjc_alert_showAlertViewWithMessage:message actionBlock:nil];
 }
+
+
+
+#pragma mark --------------------
+#pragma mark --------------------  解决 podspec 子文件夹相互引用问题  --------------------
+
+/**
+ #import "NSBundle+JJCToolsResource.h"
+ */
++ (NSString *)getLocalizedStringForKey:(NSString *)key {
+    
+    NSBundle *bundle = [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"JJCTools" ofType:@"bundle"]];
+    if (bundle == nil) {
+        // （iOS获取的语言字符串比较不稳定）目前框架只处理en、zh-Hans、zh-Hant三种情况，其他按照系统默认处理
+        NSString *language = [NSLocale preferredLanguages].firstObject;
+        if ([language hasPrefix:@"en"]) {
+            language = @"en";
+        } else if ([language hasPrefix:@"zh"]) {
+            if ([language rangeOfString:@"Hans"].location != NSNotFound) {
+                language = @"zh-Hans";      // 简体中文
+            } else {
+                language = @"zh-Hant";      // 繁體中文
+            }
+        } else {
+            language = @"en";
+        }
+        
+        // 从 JJCTools.bundle 中查找资源
+        bundle = [NSBundle bundleWithPath:[bundle pathForResource:language ofType:@"lproj"]];
+    }
+    
+    return [bundle localizedStringForKey:key value:nil table:nil];
+}
+
 
 
 
