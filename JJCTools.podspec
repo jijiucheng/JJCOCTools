@@ -53,7 +53,7 @@ Pod::Spec.new do |s|
 
 
 # 依赖第三方库文件
-    s.dependency 'MBProgressHUD', '1.1.0'
+    s.dependency 'MBProgressHUD'
 
 
 # 依赖系统静态库文件
