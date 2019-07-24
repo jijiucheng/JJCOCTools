@@ -134,25 +134,7 @@
 #define K_ImageName_F_PNG(_name_)       [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:_name_ ofType:@"png"]]
 // 先查找缓存，否则从文件系统中取（适用适用频繁文件）【该方法默认只加载PNG格式，如果需要加载其他格式，请在文件名中加入文件格式后缀，如"abc.jpg"】
 #define K_ImageName(_name_)             [UIImage imageNamed:_name_]
-
 #define K_URL(_url_)                    [NSURL URLWithString:[NSString stringWithFormat:@"%@", _url_]]
-
-
-/** 自定义弹框 **/
-// 温馨提示 - 知道了
-#define K_ShowAlert_Message(_message_)   UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"温馨提示" message:_message_ delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil]; \
-[alert show]; \
-
-// MBProgressHUD 消息提示
-#define K_ShowHUD_Message(_message_)     [MBProgressHUD showOnlyMessage:_message_]
-#define K_JJC_ShowHUD_Message(_message_) [MBProgressHUD jjc_hud_showMessage:_message_];
-#define K_JJC_ShowHUD_OnlyMsg(_message_) [MBProgressHUD jjc_hud_showOnlyMessage:_message_];
-// MBProgressHUD 成功提示
-#define K_ShowHUD_Success(_message_)     [MBProgressHUD showSuccess:_message_]
-#define K_JJC_ShowHUD_Success(_message_) [MBProgressHUD jjc_hud_showSuccess:_message_];
-// MBProgressHUD 失败提示
-#define K_ShowHUD_Error(_message_)       [MBProgressHUD showError:_message_]
-#define K_JJC_ShowHUD_Error(_message_)   [MBProgressHUD jjc_hud_showError:_message_];
 
 
 /** 圆角切割 **/
