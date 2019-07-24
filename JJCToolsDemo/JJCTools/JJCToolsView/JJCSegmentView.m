@@ -202,7 +202,7 @@ static NSInteger baseTag = 200;
 
 #pragma mark - 选中第几个
 /** 选中第几个 **/
-- (void)setupSelectIndex:(NSInteger)selectIndex {
+- (void)jjc_setupSelectIndex:(NSInteger)selectIndex {
     
     self.curSelectBtn.selected = NO;
     self.curSelectBtn.titleLabel.font = self.normalTitleFont;
@@ -226,7 +226,7 @@ static NSInteger baseTag = 200;
 }
 
 /** 获取当前选中第几个 **/
-- (NSInteger)getCurSelectedIndex:(NSInteger)index {
+- (NSInteger)jjc_getCurSelectedIndex:(NSInteger)index {
     return (self.curSelectBtn.tag - baseTag);
 }
 
