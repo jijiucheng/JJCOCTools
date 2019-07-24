@@ -19,6 +19,7 @@
  
  
  1、该控件封装了 UICollectionView 居左样式；
+ 2、该控件封装是抄录于 "UICollectionViewLeftAlignedLayout"，在此改名仅仅是为了方便自己这边使用，如果作者认为侵权，可联系删除
  
  
  */
