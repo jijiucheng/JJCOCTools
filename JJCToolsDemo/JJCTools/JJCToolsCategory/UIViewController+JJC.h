@@ -1,9 +1,9 @@
 //
-//  UIViewController+JJCBaseAPI.h
+//  UIViewController+JJC.h
 //  JJCToolsDemo
 //
-//  Created by 苜蓿鬼仙 on 2018/7/30.
-//  Copyright © 2018 苜蓿鬼仙. All rights reserved.
+//  Created by mxgx on 2019/7/19.
+//  Copyright © 2019 苜蓿鬼仙. All rights reserved.
 //
 
 
@@ -12,9 +12,9 @@
 /*
  
  
- UIViewController+JJCBaseAPI
- 创建：2018.07.30
- 更新：2018.07.30
+ UIViewController+JJC
+ 创建：2019.07.19
+ 更新：2019.07.19
  
  
  1、该扩展主要用于给 UIViewController 添加基础扩展方法；
@@ -27,16 +27,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIViewController (JJCBaseAPI)
+NS_ASSUME_NONNULL_BEGIN
 
+@interface UIViewController (JJC)
 
 /**
  返回到指定控制器
-
+ 
  @param controllerClassName 指定控制器名称
  @param animated            是否带有动画效果
  */
-- (void)popToViewController:(NSString *)controllerClassName animated:(BOOL)animated;
-
+- (void)jjc_vc_popToViewController:(NSString *)controllerClassName animated:(BOOL)animated;
 
 @end
+
+NS_ASSUME_NONNULL_END

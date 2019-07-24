@@ -1,15 +1,14 @@
 //
-//  UIViewController+JJCBaseAPI.m
+//  UIViewController+JJC.m
 //  JJCToolsDemo
 //
-//  Created by 苜蓿鬼仙 on 2018/7/30.
-//  Copyright © 2018 苜蓿鬼仙. All rights reserved.
+//  Created by mxgx on 2019/7/19.
+//  Copyright © 2019 苜蓿鬼仙. All rights reserved.
 //
 
-#import "UIViewController+JJCBaseAPI.h"
+#import "UIViewController+JJC.h"
 
-@implementation UIViewController (JJCBaseAPI)
-
+@implementation UIViewController (JJC)
 
 /**
  返回到指定控制器
@@ -17,7 +16,7 @@
  @param controllerClassName 指定控制器名称
  @param animated            是否带有动画效果
  */
-- (void)popToViewController:(NSString *)controllerClassName animated:(BOOL)animated {
+- (void)jjc_vc_popToViewController:(NSString *)controllerClassName animated:(BOOL)animated {
     
     if (self.navigationController) {
         NSArray *controllers = self.navigationController.viewControllers;
@@ -30,6 +29,5 @@
         }
     }
 }
-
 
 @end

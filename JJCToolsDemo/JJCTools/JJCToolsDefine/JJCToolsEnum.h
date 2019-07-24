@@ -48,6 +48,14 @@ typedef NS_ENUM(NSInteger, JJCRectCorner) {
 };
 
 
+typedef NS_ENUM(NSInteger, JJCRegularExpressionType) {
+    JJCRegularExpressionTypeCN = 0,              // 中文               ^[\u4e00-\u9fa5]+$
+    JJCRegularExpressionTypeEN,                  // 英文               ^[a-zA-Z]+$
+    JJCRegularExpressionTypeNumber,              // 数字               ^[0-9]+$
+    JJCRegularExpressionTypeCNENNumber,          // 中英文 + 数字       ^[\u4e00-\u9fa5a-zA-Z0-9]+$
+    JJCRegularExpressionTypeCNENNumber_          // 中英文 + 数字 + _   ^[\u4e00-\u9fa5_a-zA-Z0-9]+$
+};
+
 
 
 #endif /* JJCToolsEnum_h */

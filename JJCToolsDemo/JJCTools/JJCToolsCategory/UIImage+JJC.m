@@ -1,15 +1,16 @@
 //
-//  UIImage+Clip.m
+//  UIImage+JJC.m
 //  JJCToolsDemo
 //
-//  Created by 苜蓿鬼仙 on 2018/6/1.
-//  Copyright © 2018 苜蓿鬼仙. All rights reserved.
+//  Created by mxgx on 2019/7/19.
+//  Copyright © 2019 苜蓿鬼仙. All rights reserved.
 //
 
-#import "UIImage+Clip.h"
+#import "UIImage+JJC.h"
 
-@implementation UIImage (Clip)
+@implementation UIImage (JJC)
 
+#pragma mark - 裁剪
 
 /**
  裁剪图片（不带边框圆形与带边框圆形）
@@ -140,8 +141,72 @@
 
 
 
+#pragma mark - 转换
+
+/**
+ 颜色转图片（带透明度）
+ 
+ @param color    指定颜色
+ @param alpha    透明度
+ @return 转换后的图片
+ */
++ (UIImage *)jjc_image_getImageWithColor:(UIColor *)color alpha:(CGFloat)alpha {
+    
+    CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
+    
+    UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0);
+    CGContextRef contextRef = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(contextRef, color.CGColor);
+    if (alpha > 0 && alpha < 1) {
+        CGContextScaleCTM(contextRef, 1, -1);
+        CGContextTranslateCTM(contextRef, 0, -rect.size.height);
+        CGContextSetBlendMode(contextRef, kCGBlendModeMultiply);
+        CGContextSetAlpha(contextRef, alpha);
+    }
+    CGContextFillRect(contextRef, rect);
+    
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return newImage;
+}
+
+
+/**
+ 颜色转图片（不带透明度）
+ 
+ @param color 指定颜色
+ @return 转换后的图片
+ */
++ (UIImage *)jjc_image_getImageWithColor:(UIColor *)color {
+    
+    return [self jjc_image_getImageWithColor:color alpha:1.0f];
+}
+
+
+/**
+ 图片不渲染（使用原始图片，iOS7之后，导航栏默认渲染）
+ 
+ @param imageName 图片名称
+ @return 不渲染的图片
+ */
++ (UIImage *)jjc_image_getImageWithRenderOriginalName:(NSString *)imageName {
+    
+    UIImage *image = [UIImage imageNamed:imageName];
+    return [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+}
+
+
+/**
+ 图片不渲染（使用原始图片，iOS7之后，导航栏默认渲染）
+ 
+ @return 不渲染的图片
+ */
+- (UIImage *)jjc_image_getRenderOriginal {
+    
+    return [self imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+}
+
+
 
 @end
-
-
-

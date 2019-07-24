@@ -35,6 +35,7 @@
 
 
 /** 屏幕尺寸 **/
+#define K_Screen_Size       ([UIScreen mainScreen].bounds.size)
 #define K_Screen_W          ([UIScreen mainScreen].bounds.size.width)
 #define K_Screen_H          ([UIScreen mainScreen].bounds.size.height)
 #define K_Screen_Scale      ([UIScreen mainScreen].bounds.size.width / 375.0f)  // 以 iPhone8 作为基准
@@ -43,13 +44,21 @@
 /** 判断系统是否是iOS8及其以上系统 **/
 #define K_iOS8 ([[UIDevice currentDevice].systemVersion doubleValue] >= 8.0)
 #define K_iOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
+#define k_iOS(V)        @available(iOS V, *)
 
 
 /** 机型尺寸 **/
-#define K_iPhone5       ([UIScreen mainScreen].bounds.size.width == 320)
-#define K_iPhone8       ([UIScreen mainScreen].bounds.size.width == 375)
-#define K_iPhone8p      ([UIScreen mainScreen].bounds.size.width == 414)
-#define K_iPhoneX       ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+#define K_iPad          ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+#define K_iPhone5       ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) && !K_iPad : NO)
+#define K_iPhone8       ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) && !K_iPad : NO)
+#define K_iPhone8p      ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) && !K_iPad : NO)
+#define K_iPhoneX       ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) && !K_iPad : NO)
+#define K_iPhoneXr      ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(828, 1792), [[UIScreen mainScreen] currentMode].size) && !K_iPad : NO)
+#define K_iPhoneXs      ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) && !K_iPad : NO)
+#define K_iPhoneXsMax   ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2688), [[UIScreen mainScreen] currentMode].size) && !K_iPad : NO)
+
+// 刘海系列（iPhone X、iPhone XR、iPhone XS、iPhone XS Max）
+#define K_iPhoneXN      (K_iPhoneX || K_iPhoneXr || K_iPhoneXs || K_iPhoneXsMax)
 
 
 /** 固定控件区域尺寸 **/

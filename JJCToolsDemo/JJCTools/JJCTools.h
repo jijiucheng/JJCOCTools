@@ -15,9 +15,9 @@
  
  JJCTools
  创建：2017.09.06
- 更新：2018.07.13
+ 更新：2019.07.22
  
- 当前版本：v0.1.9
+ 当前版本：v0.2.0
  
  */
 
@@ -32,28 +32,23 @@
 
 /********************  JJCToolsCategory  *******************/
 
-#import "UITabBar+Badge.h"
-
-#import "UIView+Animation.h"
-#import "UIView+Frame.h"
-#import "UIView+TapGestureBlock.h"
-#import "UIView+Clip.h"
-
-#import "UIImage+Clip.h"
-#import "UIImage+Convert.h"
+#import "NSString+JJC.h"
+#import "NSBundle+JJCToolsResource.h"
 
 #import "MBProgressHUD+JJC.h"
-
-#import "UIAlertController+Window.h"
-
+#import "UIView+JJC.h"
+#import "UIView+Frame.h"
+#import "UIView+Animation.h"
+#import "UILabel+JJC.h"
+#import "UIButton+JJC.h"
+#import "UIImage+JJC.h"
+#import "UIImageView+JJC.h"
+#import "UITextField+JJC.h"
+#import "UITextView+JJC.h"
+#import "UITableView+JJC.h"
+#import "UIViewController+JJC.h"
 #import "UIViewController+HUD.h"
-#import "UIViewController+JJCBaseAPI.h"
-
-#import "UIButton+ActionBlock.h"
-
-#import "UILabel+AttributedString.h"
-
-#import "NSBundle+JJCToolsResource.h"
+#import "UITabBar+Badge.h"
 
 
 /********************  JJCToolsObject  *******************/
@@ -64,7 +59,17 @@
 #import "JJCToolsObject+PlistAPI.h"
 #import "JJCToolsObject+AlertAPI.h"
 #import "JJCToolsObject+DeviceAPI.h"
+#import "JJCToolsObject+NetworkAPI.h"
 
+
+/********************  JJCToolsView  *******************/
+
+#import "JJCVerifyCodeButton.h"
+#import "JJCLineVerCodeView.h"
+#import "JJCSegmentView.h"
+#import "JJCDropMemuController.h"
+#import "JJCCollectionViewWaterLayout.h"
+#import "JJCCollectionViewLeftAlignedLayout.h"
 
 
 #endif /* JJCTools_h */

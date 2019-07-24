@@ -11,9 +11,6 @@
 		410037081FB05811000C89AA /* JJCToolsObject+PlistAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 410037071FB05811000C89AA /* JJCToolsObject+PlistAPI.m */; };
 		410E1FCC20F493170023E8A9 /* JJCToolsFoundationLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 410E1FCB20F493170023E8A9 /* JJCToolsFoundationLog.m */; };
 		410E1FCF20F4A1A50023E8A9 /* JJCToolsObject+DeviceAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 410E1FCE20F4A1A50023E8A9 /* JJCToolsObject+DeviceAPI.m */; };
-		411560D020F8508500E9EFA4 /* UIAlertController+Window.m in Sources */ = {isa = PBXBuildFile; fileRef = 411560CF20F8508500E9EFA4 /* UIAlertController+Window.m */; };
-		4121C5AB20C7D98E00309AF3 /* UIImage+Convert.m in Sources */ = {isa = PBXBuildFile; fileRef = 4121C5AA20C7D98E00309AF3 /* UIImage+Convert.m */; };
-		4121C5AE20C7E40700309AF3 /* UIView+Clip.m in Sources */ = {isa = PBXBuildFile; fileRef = 4121C5AD20C7E40700309AF3 /* UIView+Clip.m */; };
 		41311AC41F5FE63F00BCC291 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 41311AC31F5FE63F00BCC291 /* main.m */; };
 		41311AC71F5FE63F00BCC291 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 41311AC61F5FE63F00BCC291 /* AppDelegate.m */; };
 		41311ACA1F5FE63F00BCC291 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41311AC91F5FE63F00BCC291 /* ViewController.m */; };
@@ -23,18 +20,31 @@
 		41311AE91F5FEB0200BCC291 /* JJCToolsObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 41311AE81F5FEB0200BCC291 /* JJCToolsObject.m */; };
 		4138FEB11FE259CC00EBAA83 /* JJCToolsObject+AlertAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4138FEB01FE259CC00EBAA83 /* JJCToolsObject+AlertAPI.m */; };
 		4138FEDC1FE26D1200EBAA83 /* JJCTools.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4138FEDB1FE26D1200EBAA83 /* JJCTools.bundle */; };
-		4152F39820C1A312005D04DA /* UIImage+Clip.m in Sources */ = {isa = PBXBuildFile; fileRef = 4152F39720C1A312005D04DA /* UIImage+Clip.m */; };
 		4155727E20AAC98700B6045A /* UIViewController+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 4155727D20AAC98700B6045A /* UIViewController+HUD.m */; };
 		4155728120AACD2100B6045A /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 4155728020AACD2100B6045A /* MBProgressHUD.m */; };
 		4155728520AAD30400B6045A /* MBProgressHUD+JJC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4155728420AAD30400B6045A /* MBProgressHUD+JJC.m */; };
 		4157D3321F623B6A00A330D1 /* UITabBar+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 4157D3311F623B6A00A330D1 /* UITabBar+Badge.m */; };
 		4157D3351F62405F00A330D1 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 4157D3341F62405F00A330D1 /* UIView+Frame.m */; };
-		4157D3381F6265E500A330D1 /* UIView+TapGestureBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 4157D3371F6265E500A330D1 /* UIView+TapGestureBlock.m */; };
 		4157D33B1F626A7500A330D1 /* UIView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4157D33A1F626A7500A330D1 /* UIView+Animation.m */; };
-		41727EF7210EA29B00E41CC0 /* UIViewController+JJCBaseAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 41727EF6210EA29B00E41CC0 /* UIViewController+JJCBaseAPI.m */; };
-		4182C41920A54B280000F32C /* UIButton+ActionBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 4182C41820A54B280000F32C /* UIButton+ActionBlock.m */; };
 		41A267B31FE3B4B200D81666 /* NSBundle+JJCToolsResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A267B21FE3B4B200D81666 /* NSBundle+JJCToolsResource.m */; };
 		41FA3AC41F97391700116BBF /* JJCToolsObject+BaseAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 41FA3AC31F97391700116BBF /* JJCToolsObject+BaseAPI.m */; };
+		7DF302C322E1A0490000F64E /* JJCToolsObject+NetworkAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF302C222E1A0490000F64E /* JJCToolsObject+NetworkAPI.m */; };
+		7DF302C922E1B71E0000F64E /* UILabel+JJC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF302C822E1B71E0000F64E /* UILabel+JJC.m */; };
+		7DF302CC22E1B7D50000F64E /* UIButton+JJC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF302CB22E1B7D50000F64E /* UIButton+JJC.m */; };
+		7DF302CF22E1B9920000F64E /* UIView+JJC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF302CE22E1B9920000F64E /* UIView+JJC.m */; };
+		7DF302D222E1BC4D0000F64E /* UIImage+JJC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF302D122E1BC4D0000F64E /* UIImage+JJC.m */; };
+		7DF302D622E1BEB60000F64E /* UITableView+JJC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF302D522E1BEB60000F64E /* UITableView+JJC.m */; };
+		7DF302D922E1C23C0000F64E /* UIImageView+JJC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF302D822E1C23C0000F64E /* UIImageView+JJC.m */; };
+		7DF302DC22E1C52E0000F64E /* UIViewController+JJC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF302DB22E1C52E0000F64E /* UIViewController+JJC.m */; };
+		7DF302DF22E1C6BE0000F64E /* UITextField+JJC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF302DE22E1C6BE0000F64E /* UITextField+JJC.m */; };
+		7DF302E222E1C6CB0000F64E /* UITextView+JJC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF302E122E1C6CB0000F64E /* UITextView+JJC.m */; };
+		7DF302E522E1C7460000F64E /* NSString+JJC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF302E422E1C7460000F64E /* NSString+JJC.m */; };
+		7DFD0DD922E55B0400FF0816 /* JJCSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFD0DD422E55B0400FF0816 /* JJCSegmentView.m */; };
+		7DFD0DDA22E55B0400FF0816 /* JJCCollectionViewWaterLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFD0DD522E55B0400FF0816 /* JJCCollectionViewWaterLayout.m */; };
+		7DFD0DDB22E55B0400FF0816 /* JJCDropMemuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFD0DD822E55B0400FF0816 /* JJCDropMemuController.m */; };
+		7DFD0DE122E55DAE00FF0816 /* JJCCollectionViewLeftAlignedLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFD0DE022E55DAE00FF0816 /* JJCCollectionViewLeftAlignedLayout.m */; };
+		7DFD0DE422E55FB300FF0816 /* JJCLineVerCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFD0DE322E55FB300FF0816 /* JJCLineVerCodeView.m */; };
+		7DFD0DE722E5635600FF0816 /* JJCVerifyCodeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFD0DE622E5635600FF0816 /* JJCVerifyCodeButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,12 +55,6 @@
 		410E1FCB20F493170023E8A9 /* JJCToolsFoundationLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJCToolsFoundationLog.m; sourceTree = "<group>"; };
 		410E1FCD20F4A1A40023E8A9 /* JJCToolsObject+DeviceAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JJCToolsObject+DeviceAPI.h"; sourceTree = "<group>"; };
 		410E1FCE20F4A1A50023E8A9 /* JJCToolsObject+DeviceAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JJCToolsObject+DeviceAPI.m"; sourceTree = "<group>"; };
-		411560CE20F8508500E9EFA4 /* UIAlertController+Window.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Window.h"; sourceTree = "<group>"; };
-		411560CF20F8508500E9EFA4 /* UIAlertController+Window.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Window.m"; sourceTree = "<group>"; };
-		4121C5A920C7D98E00309AF3 /* UIImage+Convert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Convert.h"; sourceTree = "<group>"; };
-		4121C5AA20C7D98E00309AF3 /* UIImage+Convert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Convert.m"; sourceTree = "<group>"; };
-		4121C5AC20C7E40700309AF3 /* UIView+Clip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Clip.h"; sourceTree = "<group>"; };
-		4121C5AD20C7E40700309AF3 /* UIView+Clip.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Clip.m"; sourceTree = "<group>"; };
 		4121C5B420C8D7F900309AF3 /* JJCToolsEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJCToolsEnum.h; sourceTree = "<group>"; };
 		41311ABF1F5FE63F00BCC291 /* JJCToolsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JJCToolsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41311AC31F5FE63F00BCC291 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -70,10 +74,6 @@
 		4138FEB51FE25EAF00EBAA83 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		4138FEB61FE25EAF00EBAA83 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		4138FEDB1FE26D1200EBAA83 /* JJCTools.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = JJCTools.bundle; sourceTree = "<group>"; };
-		413A42F51FB54F290064E721 /* UILabel+AttributedString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+AttributedString.h"; sourceTree = "<group>"; };
-		413A42F61FB54F290064E721 /* UILabel+AttributedString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+AttributedString.m"; sourceTree = "<group>"; };
-		4152F39620C1A312005D04DA /* UIImage+Clip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Clip.h"; sourceTree = "<group>"; };
-		4152F39720C1A312005D04DA /* UIImage+Clip.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Clip.m"; sourceTree = "<group>"; };
 		4155727C20AAC98700B6045A /* UIViewController+HUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HUD.h"; sourceTree = "<group>"; };
 		4155727D20AAC98700B6045A /* UIViewController+HUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HUD.m"; sourceTree = "<group>"; };
 		4155727F20AACD2100B6045A /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
@@ -84,20 +84,48 @@
 		4157D3311F623B6A00A330D1 /* UITabBar+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+Badge.m"; sourceTree = "<group>"; };
 		4157D3331F62405F00A330D1 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		4157D3341F62405F00A330D1 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
-		4157D3361F6265E500A330D1 /* UIView+TapGestureBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TapGestureBlock.h"; sourceTree = "<group>"; };
-		4157D3371F6265E500A330D1 /* UIView+TapGestureBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TapGestureBlock.m"; sourceTree = "<group>"; };
 		4157D3391F626A7500A330D1 /* UIView+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Animation.h"; sourceTree = "<group>"; };
 		4157D33A1F626A7500A330D1 /* UIView+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Animation.m"; sourceTree = "<group>"; };
-		41727EF5210EA29B00E41CC0 /* UIViewController+JJCBaseAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JJCBaseAPI.h"; sourceTree = "<group>"; };
-		41727EF6210EA29B00E41CC0 /* UIViewController+JJCBaseAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JJCBaseAPI.m"; sourceTree = "<group>"; };
-		4182C41720A54B280000F32C /* UIButton+ActionBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+ActionBlock.h"; sourceTree = "<group>"; };
-		4182C41820A54B280000F32C /* UIButton+ActionBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ActionBlock.m"; sourceTree = "<group>"; };
 		41A267B11FE3B4B200D81666 /* NSBundle+JJCToolsResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+JJCToolsResource.h"; sourceTree = "<group>"; };
 		41A267B21FE3B4B200D81666 /* NSBundle+JJCToolsResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+JJCToolsResource.m"; sourceTree = "<group>"; };
 		41F6635020A04C7100598C51 /* JJCToolsSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJCToolsSingleton.h; sourceTree = "<group>"; };
 		41FA3AC21F97391700116BBF /* JJCToolsObject+BaseAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JJCToolsObject+BaseAPI.h"; sourceTree = "<group>"; };
 		41FA3AC31F97391700116BBF /* JJCToolsObject+BaseAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JJCToolsObject+BaseAPI.m"; sourceTree = "<group>"; };
 		41FA3AC61F973BCE00116BBF /* JJCToolsDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJCToolsDefine.h; sourceTree = "<group>"; };
+		7DF302C122E1A0490000F64E /* JJCToolsObject+NetworkAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JJCToolsObject+NetworkAPI.h"; sourceTree = "<group>"; };
+		7DF302C222E1A0490000F64E /* JJCToolsObject+NetworkAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JJCToolsObject+NetworkAPI.m"; sourceTree = "<group>"; };
+		7DF302C722E1B71E0000F64E /* UILabel+JJC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+JJC.h"; sourceTree = "<group>"; };
+		7DF302C822E1B71E0000F64E /* UILabel+JJC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+JJC.m"; sourceTree = "<group>"; };
+		7DF302CA22E1B7D50000F64E /* UIButton+JJC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+JJC.h"; sourceTree = "<group>"; };
+		7DF302CB22E1B7D50000F64E /* UIButton+JJC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+JJC.m"; sourceTree = "<group>"; };
+		7DF302CD22E1B9920000F64E /* UIView+JJC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+JJC.h"; sourceTree = "<group>"; };
+		7DF302CE22E1B9920000F64E /* UIView+JJC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+JJC.m"; sourceTree = "<group>"; };
+		7DF302D022E1BC4D0000F64E /* UIImage+JJC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+JJC.h"; sourceTree = "<group>"; };
+		7DF302D122E1BC4D0000F64E /* UIImage+JJC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JJC.m"; sourceTree = "<group>"; };
+		7DF302D422E1BEB60000F64E /* UITableView+JJC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+JJC.h"; sourceTree = "<group>"; };
+		7DF302D522E1BEB60000F64E /* UITableView+JJC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+JJC.m"; sourceTree = "<group>"; };
+		7DF302D722E1C23C0000F64E /* UIImageView+JJC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+JJC.h"; sourceTree = "<group>"; };
+		7DF302D822E1C23C0000F64E /* UIImageView+JJC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+JJC.m"; sourceTree = "<group>"; };
+		7DF302DA22E1C52E0000F64E /* UIViewController+JJC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JJC.h"; sourceTree = "<group>"; };
+		7DF302DB22E1C52E0000F64E /* UIViewController+JJC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JJC.m"; sourceTree = "<group>"; };
+		7DF302DD22E1C6BE0000F64E /* UITextField+JJC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+JJC.h"; sourceTree = "<group>"; };
+		7DF302DE22E1C6BE0000F64E /* UITextField+JJC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+JJC.m"; sourceTree = "<group>"; };
+		7DF302E022E1C6CB0000F64E /* UITextView+JJC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+JJC.h"; sourceTree = "<group>"; };
+		7DF302E122E1C6CB0000F64E /* UITextView+JJC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+JJC.m"; sourceTree = "<group>"; };
+		7DF302E322E1C7460000F64E /* NSString+JJC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+JJC.h"; sourceTree = "<group>"; };
+		7DF302E422E1C7460000F64E /* NSString+JJC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+JJC.m"; sourceTree = "<group>"; };
+		7DFD0DD322E55B0400FF0816 /* JJCSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJCSegmentView.h; sourceTree = "<group>"; };
+		7DFD0DD422E55B0400FF0816 /* JJCSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJCSegmentView.m; sourceTree = "<group>"; };
+		7DFD0DD522E55B0400FF0816 /* JJCCollectionViewWaterLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJCCollectionViewWaterLayout.m; sourceTree = "<group>"; };
+		7DFD0DD622E55B0400FF0816 /* JJCDropMemuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJCDropMemuController.h; sourceTree = "<group>"; };
+		7DFD0DD722E55B0400FF0816 /* JJCCollectionViewWaterLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJCCollectionViewWaterLayout.h; sourceTree = "<group>"; };
+		7DFD0DD822E55B0400FF0816 /* JJCDropMemuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJCDropMemuController.m; sourceTree = "<group>"; };
+		7DFD0DDF22E55DAE00FF0816 /* JJCCollectionViewLeftAlignedLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJCCollectionViewLeftAlignedLayout.h; sourceTree = "<group>"; };
+		7DFD0DE022E55DAE00FF0816 /* JJCCollectionViewLeftAlignedLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJCCollectionViewLeftAlignedLayout.m; sourceTree = "<group>"; };
+		7DFD0DE222E55FB300FF0816 /* JJCLineVerCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJCLineVerCodeView.h; sourceTree = "<group>"; };
+		7DFD0DE322E55FB300FF0816 /* JJCLineVerCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJCLineVerCodeView.m; sourceTree = "<group>"; };
+		7DFD0DE522E5635600FF0816 /* JJCVerifyCodeButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJCVerifyCodeButton.h; sourceTree = "<group>"; };
+		7DFD0DE622E5635600FF0816 /* JJCVerifyCodeButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJCVerifyCodeButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,15 +145,6 @@
 				410E1FCB20F493170023E8A9 /* JJCToolsFoundationLog.m */,
 			);
 			path = JJCToolsOthers;
-			sourceTree = "<group>";
-		};
-		411560CD20F8506300E9EFA4 /* UIAlertController */ = {
-			isa = PBXGroup;
-			children = (
-				411560CE20F8508500E9EFA4 /* UIAlertController+Window.h */,
-				411560CF20F8508500E9EFA4 /* UIAlertController+Window.m */,
-			);
-			path = UIAlertController;
 			sourceTree = "<group>";
 		};
 		41311AB61F5FE63F00BCC291 = {
@@ -178,6 +197,7 @@
 				41FA3AC51F973B8800116BBF /* JJCToolsDefine */,
 				4157D32D1F62388700A330D1 /* JJCToolsCategory */,
 				41311AE61F5FEAB300BCC291 /* JJCToolsObject */,
+				7DFD0DD222E5591A00FF0816 /* JJCToolsView */,
 				410E1FCA20F493160023E8A9 /* JJCToolsOthers */,
 				4138FEDA1FE26CEB00EBAA83 /* JJCToolsResource */,
 			);
@@ -199,6 +219,8 @@
 				4138FEB01FE259CC00EBAA83 /* JJCToolsObject+AlertAPI.m */,
 				410E1FCD20F4A1A40023E8A9 /* JJCToolsObject+DeviceAPI.h */,
 				410E1FCE20F4A1A50023E8A9 /* JJCToolsObject+DeviceAPI.m */,
+				7DF302C122E1A0490000F64E /* JJCToolsObject+NetworkAPI.h */,
+				7DF302C222E1A0490000F64E /* JJCToolsObject+NetworkAPI.m */,
 			);
 			path = JJCToolsObject;
 			sourceTree = "<group>";
@@ -211,118 +233,43 @@
 			path = JJCToolsResource;
 			sourceTree = "<group>";
 		};
-		413A42F41FB54F290064E721 /* UILabel */ = {
-			isa = PBXGroup;
-			children = (
-				413A42F51FB54F290064E721 /* UILabel+AttributedString.h */,
-				413A42F61FB54F290064E721 /* UILabel+AttributedString.m */,
-			);
-			path = UILabel;
-			sourceTree = "<group>";
-		};
-		4155728220AAD2EB00B6045A /* MBProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				4155728320AAD30400B6045A /* MBProgressHUD+JJC.h */,
-				4155728420AAD30400B6045A /* MBProgressHUD+JJC.m */,
-			);
-			path = MBProgressHUD;
-			sourceTree = "<group>";
-		};
 		4157D32D1F62388700A330D1 /* JJCToolsCategory */ = {
 			isa = PBXGroup;
 			children = (
-				4155728220AAD2EB00B6045A /* MBProgressHUD */,
-				4182C41220A54A950000F32C /* UIButton */,
-				4182C40F20A54A950000F32C /* UIImage */,
-				4182C41020A54A950000F32C /* UITextField */,
-				4182C41120A54A950000F32C /* UITextView */,
-				411560CD20F8506300E9EFA4 /* UIAlertController */,
-				4182C41320A54A950000F32C /* UIViewController */,
-				41A267AD1FE3B0C600D81666 /* NSBundle */,
-				4157D32E1F623B3A00A330D1 /* UITabBar */,
-				4157D32F1F623B3A00A330D1 /* UIView */,
-				413A42F41FB54F290064E721 /* UILabel */,
-			);
-			path = JJCToolsCategory;
-			sourceTree = "<group>";
-		};
-		4157D32E1F623B3A00A330D1 /* UITabBar */ = {
-			isa = PBXGroup;
-			children = (
-				4157D3301F623B6A00A330D1 /* UITabBar+Badge.h */,
-				4157D3311F623B6A00A330D1 /* UITabBar+Badge.m */,
-			);
-			path = UITabBar;
-			sourceTree = "<group>";
-		};
-		4157D32F1F623B3A00A330D1 /* UIView */ = {
-			isa = PBXGroup;
-			children = (
+				7DF302E322E1C7460000F64E /* NSString+JJC.h */,
+				7DF302E422E1C7460000F64E /* NSString+JJC.m */,
+				41A267B11FE3B4B200D81666 /* NSBundle+JJCToolsResource.h */,
+				41A267B21FE3B4B200D81666 /* NSBundle+JJCToolsResource.m */,
+				4155728320AAD30400B6045A /* MBProgressHUD+JJC.h */,
+				4155728420AAD30400B6045A /* MBProgressHUD+JJC.m */,
+				7DF302CD22E1B9920000F64E /* UIView+JJC.h */,
+				7DF302CE22E1B9920000F64E /* UIView+JJC.m */,
 				4157D3331F62405F00A330D1 /* UIView+Frame.h */,
 				4157D3341F62405F00A330D1 /* UIView+Frame.m */,
 				4157D3391F626A7500A330D1 /* UIView+Animation.h */,
 				4157D33A1F626A7500A330D1 /* UIView+Animation.m */,
-				4157D3361F6265E500A330D1 /* UIView+TapGestureBlock.h */,
-				4157D3371F6265E500A330D1 /* UIView+TapGestureBlock.m */,
-				4121C5AC20C7E40700309AF3 /* UIView+Clip.h */,
-				4121C5AD20C7E40700309AF3 /* UIView+Clip.m */,
-			);
-			path = UIView;
-			sourceTree = "<group>";
-		};
-		4182C40F20A54A950000F32C /* UIImage */ = {
-			isa = PBXGroup;
-			children = (
-				4152F39620C1A312005D04DA /* UIImage+Clip.h */,
-				4152F39720C1A312005D04DA /* UIImage+Clip.m */,
-				4121C5A920C7D98E00309AF3 /* UIImage+Convert.h */,
-				4121C5AA20C7D98E00309AF3 /* UIImage+Convert.m */,
-			);
-			path = UIImage;
-			sourceTree = "<group>";
-		};
-		4182C41020A54A950000F32C /* UITextField */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UITextField;
-			sourceTree = "<group>";
-		};
-		4182C41120A54A950000F32C /* UITextView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UITextView;
-			sourceTree = "<group>";
-		};
-		4182C41220A54A950000F32C /* UIButton */ = {
-			isa = PBXGroup;
-			children = (
-				4182C41720A54B280000F32C /* UIButton+ActionBlock.h */,
-				4182C41820A54B280000F32C /* UIButton+ActionBlock.m */,
-			);
-			path = UIButton;
-			sourceTree = "<group>";
-		};
-		4182C41320A54A950000F32C /* UIViewController */ = {
-			isa = PBXGroup;
-			children = (
+				7DF302C722E1B71E0000F64E /* UILabel+JJC.h */,
+				7DF302C822E1B71E0000F64E /* UILabel+JJC.m */,
+				7DF302CA22E1B7D50000F64E /* UIButton+JJC.h */,
+				7DF302CB22E1B7D50000F64E /* UIButton+JJC.m */,
+				7DF302D022E1BC4D0000F64E /* UIImage+JJC.h */,
+				7DF302D122E1BC4D0000F64E /* UIImage+JJC.m */,
+				7DF302D722E1C23C0000F64E /* UIImageView+JJC.h */,
+				7DF302D822E1C23C0000F64E /* UIImageView+JJC.m */,
+				7DF302DD22E1C6BE0000F64E /* UITextField+JJC.h */,
+				7DF302DE22E1C6BE0000F64E /* UITextField+JJC.m */,
+				7DF302E022E1C6CB0000F64E /* UITextView+JJC.h */,
+				7DF302E122E1C6CB0000F64E /* UITextView+JJC.m */,
+				7DF302D422E1BEB60000F64E /* UITableView+JJC.h */,
+				7DF302D522E1BEB60000F64E /* UITableView+JJC.m */,
+				7DF302DA22E1C52E0000F64E /* UIViewController+JJC.h */,
+				7DF302DB22E1C52E0000F64E /* UIViewController+JJC.m */,
 				4155727C20AAC98700B6045A /* UIViewController+HUD.h */,
 				4155727D20AAC98700B6045A /* UIViewController+HUD.m */,
-				41727EF5210EA29B00E41CC0 /* UIViewController+JJCBaseAPI.h */,
-				41727EF6210EA29B00E41CC0 /* UIViewController+JJCBaseAPI.m */,
+				4157D3301F623B6A00A330D1 /* UITabBar+Badge.h */,
+				4157D3311F623B6A00A330D1 /* UITabBar+Badge.m */,
 			);
-			path = UIViewController;
-			sourceTree = "<group>";
-		};
-		41A267AD1FE3B0C600D81666 /* NSBundle */ = {
-			isa = PBXGroup;
-			children = (
-				41A267B11FE3B4B200D81666 /* NSBundle+JJCToolsResource.h */,
-				41A267B21FE3B4B200D81666 /* NSBundle+JJCToolsResource.m */,
-			);
-			path = NSBundle;
+			path = JJCToolsCategory;
 			sourceTree = "<group>";
 		};
 		41FA3AC51F973B8800116BBF /* JJCToolsDefine */ = {
@@ -333,6 +280,25 @@
 				4121C5B420C8D7F900309AF3 /* JJCToolsEnum.h */,
 			);
 			path = JJCToolsDefine;
+			sourceTree = "<group>";
+		};
+		7DFD0DD222E5591A00FF0816 /* JJCToolsView */ = {
+			isa = PBXGroup;
+			children = (
+				7DFD0DE522E5635600FF0816 /* JJCVerifyCodeButton.h */,
+				7DFD0DE622E5635600FF0816 /* JJCVerifyCodeButton.m */,
+				7DFD0DE222E55FB300FF0816 /* JJCLineVerCodeView.h */,
+				7DFD0DE322E55FB300FF0816 /* JJCLineVerCodeView.m */,
+				7DFD0DD322E55B0400FF0816 /* JJCSegmentView.h */,
+				7DFD0DD422E55B0400FF0816 /* JJCSegmentView.m */,
+				7DFD0DD622E55B0400FF0816 /* JJCDropMemuController.h */,
+				7DFD0DD822E55B0400FF0816 /* JJCDropMemuController.m */,
+				7DFD0DD722E55B0400FF0816 /* JJCCollectionViewWaterLayout.h */,
+				7DFD0DD522E55B0400FF0816 /* JJCCollectionViewWaterLayout.m */,
+				7DFD0DDF22E55DAE00FF0816 /* JJCCollectionViewLeftAlignedLayout.h */,
+				7DFD0DE022E55DAE00FF0816 /* JJCCollectionViewLeftAlignedLayout.m */,
+			);
+			path = JJCToolsView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,7 +332,7 @@
 				TargetAttributes = {
 					41311ABE1F5FE63F00BCC291 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 4E9YB2PQ89;
+						DevelopmentTeam = EYGTW25G7V;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -376,8 +342,10 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 41311AB61F5FE63F00BCC291;
 			productRefGroup = 41311AC01F5FE63F00BCC291 /* Products */;
@@ -409,26 +377,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				4155727E20AAC98700B6045A /* UIViewController+HUD.m in Sources */,
+				7DFD0DD922E55B0400FF0816 /* JJCSegmentView.m in Sources */,
 				4157D3321F623B6A00A330D1 /* UITabBar+Badge.m in Sources */,
+				7DFD0DDB22E55B0400FF0816 /* JJCDropMemuController.m in Sources */,
 				41FA3AC41F97391700116BBF /* JJCToolsObject+BaseAPI.m in Sources */,
 				41311ACA1F5FE63F00BCC291 /* ViewController.m in Sources */,
-				4121C5AE20C7E40700309AF3 /* UIView+Clip.m in Sources */,
 				410037081FB05811000C89AA /* JJCToolsObject+PlistAPI.m in Sources */,
+				7DF302C322E1A0490000F64E /* JJCToolsObject+NetworkAPI.m in Sources */,
+				7DF302DC22E1C52E0000F64E /* UIViewController+JJC.m in Sources */,
 				4138FEB11FE259CC00EBAA83 /* JJCToolsObject+AlertAPI.m in Sources */,
-				4121C5AB20C7D98E00309AF3 /* UIImage+Convert.m in Sources */,
+				7DFD0DE422E55FB300FF0816 /* JJCLineVerCodeView.m in Sources */,
+				7DF302E222E1C6CB0000F64E /* UITextView+JJC.m in Sources */,
 				4157D33B1F626A7500A330D1 /* UIView+Animation.m in Sources */,
-				4182C41920A54B280000F32C /* UIButton+ActionBlock.m in Sources */,
+				7DF302CC22E1B7D50000F64E /* UIButton+JJC.m in Sources */,
 				4157D3351F62405F00A330D1 /* UIView+Frame.m in Sources */,
-				4152F39820C1A312005D04DA /* UIImage+Clip.m in Sources */,
-				41727EF7210EA29B00E41CC0 /* UIViewController+JJCBaseAPI.m in Sources */,
+				7DF302DF22E1C6BE0000F64E /* UITextField+JJC.m in Sources */,
+				7DF302C922E1B71E0000F64E /* UILabel+JJC.m in Sources */,
 				41311AC71F5FE63F00BCC291 /* AppDelegate.m in Sources */,
 				410E1FCF20F4A1A50023E8A9 /* JJCToolsObject+DeviceAPI.m in Sources */,
-				411560D020F8508500E9EFA4 /* UIAlertController+Window.m in Sources */,
+				7DF302CF22E1B9920000F64E /* UIView+JJC.m in Sources */,
+				7DF302D222E1BC4D0000F64E /* UIImage+JJC.m in Sources */,
+				7DFD0DE722E5635600FF0816 /* JJCVerifyCodeButton.m in Sources */,
 				4155728520AAD30400B6045A /* MBProgressHUD+JJC.m in Sources */,
+				7DFD0DDA22E55B0400FF0816 /* JJCCollectionViewWaterLayout.m in Sources */,
 				410E1FCC20F493170023E8A9 /* JJCToolsFoundationLog.m in Sources */,
 				41311AE91F5FEB0200BCC291 /* JJCToolsObject.m in Sources */,
 				41A267B31FE3B4B200D81666 /* NSBundle+JJCToolsResource.m in Sources */,
-				4157D3381F6265E500A330D1 /* UIView+TapGestureBlock.m in Sources */,
+				7DF302D622E1BEB60000F64E /* UITableView+JJC.m in Sources */,
+				7DFD0DE122E55DAE00FF0816 /* JJCCollectionViewLeftAlignedLayout.m in Sources */,
+				7DF302E522E1C7460000F64E /* NSString+JJC.m in Sources */,
+				7DF302D922E1C23C0000F64E /* UIImageView+JJC.m in Sources */,
 				410037051FB05504000C89AA /* JJCToolsObject+RulesAPI.m in Sources */,
 				41311AC41F5FE63F00BCC291 /* main.m in Sources */,
 				4155728120AACD2100B6045A /* MBProgressHUD.m in Sources */,
@@ -556,7 +534,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4E9YB2PQ89;
+				DEVELOPMENT_TEAM = EYGTW25G7V;
 				INFOPLIST_FILE = JJCToolsDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -570,7 +548,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4E9YB2PQ89;
+				DEVELOPMENT_TEAM = EYGTW25G7V;
 				INFOPLIST_FILE = JJCToolsDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

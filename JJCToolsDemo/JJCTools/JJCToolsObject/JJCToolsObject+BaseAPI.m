@@ -84,94 +84,89 @@
 
 #pragma mark --------------------
 #pragma mark --------------------  获取文字尺寸  --------------------
+/*
+ 参考链接：
+ 1、IOS BUG记录 boundingRectWithSize计算内容宽度高度的问题
+ https://blog.csdn.net/gloryFlow/article/details/54311751
+ 2、段落样式 NSMutableParagraphStyle
+ https://www.jianshu.com/p/b0afc45bb642
+ */
+
 
 /**
- 根据 宽度 获取文字的 Size【非系统字体】
+ 获取文字的 Size
+ 
+ @param content         文字内容
+ @param font            文字字体
+ @param contentMaxWH    文字宽或高的最大值
+ @param isWidth         文字计算宽度或高度
+ @param drawingOptions  文字绘制属性
+ @param paragraphStyle  文字段落样式
  */
-+ (CGSize)jjc_base_getContentSize:(NSString *)content Font:(UIFont *)font ContentWidth:(CGFloat)contentWidth {
++ (CGSize)jjc_base_getContentSize:(NSString *)content font:(UIFont *)font contentMaxWH:(CGFloat)contentMaxWH isWidth:(BOOL)isWidth drawingOptions:(NSStringDrawingOptions)drawingOptions paragraphStyle:(NSMutableParagraphStyle *)paragraphStyle {
     
-    CGSize contentSize = [content boundingRectWithSize:CGSizeMake(contentWidth, MAXFLOAT)  // 用于计算文本绘制时占据的矩形块
-                                               options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading          // 文本绘制时的附加选项
-                                            attributes:@{NSFontAttributeName: font}        // 文字的属性
+    CGSize size;
+    if (isWidth) {
+        size = CGSizeMake(contentMaxWH, MAXFLOAT);
+    } else {
+        size = CGSizeMake(MAXFLOAT, contentMaxWH);
+    }
+    
+    CGSize contentSize = [content boundingRectWithSize:size
+                                               options:drawingOptions
+                                            attributes:@{NSFontAttributeName: font, NSParagraphStyleAttributeName : paragraphStyle}
                                                context:nil].size;
     return contentSize;
 }
 
 
-/**
- 根据 高度 获取文字的 Size【非系统字体】
- */
-+ (CGSize)jjc_base_getContentSize:(NSString *)content Font:(UIFont *)font ContentHeight:(CGFloat)contentHeight {
++ (CGSize)jjc_base_getContentSize:(NSString *)content font:(UIFont *)font contentWidth:(CGFloat)contentWidth paragraphStyle:(NSMutableParagraphStyle *)paragraphStyle {
     
-    CGSize contentSize = [content boundingRectWithSize:CGSizeMake(MAXFLOAT, contentHeight)
-                                               options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
-                                            attributes:@{NSFontAttributeName: font}
-                                               context:nil].size;
-    return contentSize;
+    return [self jjc_base_getContentSize:content font:font contentMaxWH:contentWidth isWidth:YES drawingOptions:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesFontLeading paragraphStyle:paragraphStyle];
 }
 
-
-/**
- 根据 宽度 获取文字的 高度 【非系统字体】
- */
-+ (CGFloat)jjc_base_getContentHeight:(NSString *)content Font:(UIFont *)font ContentWidth:(CGFloat)contentWidth {
++ (CGSize)jjc_base_getContentSize:(NSString *)content font:(UIFont *)font contentHeight:(CGFloat)contentHeight paragraphStyle:(NSMutableParagraphStyle *)paragraphStyle {
     
-    CGSize contentSize = [content boundingRectWithSize:CGSizeMake(contentWidth, MAXFLOAT)
-                                               options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
-                                            attributes:@{NSFontAttributeName: font}
-                                               context:nil].size;
-    return contentSize.height;
+    return [self jjc_base_getContentSize:content font:font contentMaxWH:contentHeight isWidth:NO drawingOptions:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesFontLeading paragraphStyle:paragraphStyle];
 }
 
-
-/**
- 根据 高度 获取文字的 宽度 【非系统字体】
- */
-+ (CGFloat)jjc_base_getContentWidth:(NSString *)content Font:(UIFont *)font ContentHeight:(CGFloat)contentHeight {
++ (CGSize)jjc_base_getContentSize:(NSString *)content font:(UIFont *)font contentWidth:(CGFloat)contentWidth {
     
-    CGSize contentSize = [content boundingRectWithSize:CGSizeMake(MAXFLOAT, contentHeight)
-                                               options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
-                                            attributes:@{NSFontAttributeName: font}
-                                               context:nil].size;
-    return contentSize.width;
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    paragraphStyle.lineBreakMode = NSLineBreakByCharWrapping;
+    paragraphStyle.alignment = NSTextAlignmentLeft;
+    
+    return [self jjc_base_getContentSize:content font:font contentWidth:contentWidth paragraphStyle:paragraphStyle];
 }
 
-
-/**
- 根据 宽度 获取文字的 Size【系统字体】
- */
-+ (CGSize)jjc_base_getContentSize:(NSString *)content FontFloat:(CGFloat)fontFloat ContentWidth:(CGFloat)contentWidth {
++ (CGSize)jjc_base_getContentSize:(NSString *)content font:(UIFont *)font contentHeight:(CGFloat)contentHeight {
     
-    return [self jjc_base_getContentSize:content Font:[UIFont systemFontOfSize:fontFloat] ContentWidth:contentWidth];
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    paragraphStyle.lineBreakMode = NSLineBreakByCharWrapping;
+    paragraphStyle.alignment = NSTextAlignmentLeft;
+    
+    return [self jjc_base_getContentSize:content font:font contentWidth:contentHeight paragraphStyle:paragraphStyle];
 }
 
-
-/**
- 根据 高度 获取文字的 Size【系统字体】
- */
-+ (CGSize)jjc_base_getContentSize:(NSString *)content FontFloat:(CGFloat)fontFloat ContentHeight:(CGFloat)contentHeight {
++ (CGFloat)jjc_base_getContentHeight:(NSString *)content font:(UIFont *)font contentWidth:(CGFloat)contentWidth {
     
-    return [self jjc_base_getContentSize:content Font:[UIFont systemFontOfSize:fontFloat] ContentHeight:contentHeight];
+    return [self jjc_base_getContentSize:content font:font contentWidth:contentWidth].width;
 }
 
-
-/**
- 根据 宽度 获取文字的 高度 【系统字体】
- */
-+ (CGFloat)jjc_base_getContentHeight:(NSString *)content FontFloat:(CGFloat)fontFloat ContentWidth:(CGFloat)contentWidth {
++ (CGFloat)jjc_base_getContentWidth:(NSString *)content font:(UIFont *)font contentHeight:(CGFloat)contentHeight {
     
-    return [self jjc_base_getContentHeight:content Font:[UIFont systemFontOfSize:fontFloat] ContentWidth:contentWidth];
+    return [self jjc_base_getContentSize:content font:font contentHeight:contentHeight].height;
 }
 
-
-/**
- 根据 高度 获取文字的 宽度 【系统字体】
- */
-+ (CGFloat)jjc_base_getContentWidth:(NSString *)content FontFloat:(CGFloat)fontFloat ContentHeight:(CGFloat)contentHeight {
++ (CGFloat)jjc_base_getContentHeight:(NSString *)content fontFloat:(CGFloat)fontFloat contentWidth:(CGFloat)contentWidth {
     
-    return [self jjc_base_getContentWidth:content Font:[UIFont systemFontOfSize:fontFloat] ContentHeight:contentHeight];
+    return [self jjc_base_getContentHeight:content font:[UIFont systemFontOfSize:fontFloat] contentWidth:contentWidth];
 }
 
++ (CGFloat)jjc_base_getContentWidth:(NSString *)content fontFloat:(CGFloat)fontFloat contentHeight:(CGFloat)contentHeight {
+    
+    return [self jjc_base_getContentWidth:content font:[UIFont systemFontOfSize:fontFloat] contentHeight:contentHeight];
+}
 
 
 
@@ -179,7 +174,7 @@
 #pragma mark --------------------  获取时间相关  --------------------
 
 /**
- 获取当前时间
+ 获取当前时间 格式：@"yyyy-MM-dd HH:mm:ss"
  */
 + (NSString *)jjc_base_getCurrentTime {
     
@@ -351,7 +346,7 @@
 /**
  压缩图片
  */
-+ (UIImage *)imageByScalingProportionallyWithImage:(UIImage*)image targetSize:(CGSize)targetSize {
++ (UIImage *)jjc_base_imageByScalingProportionallyWithImage:(UIImage*)image targetSize:(CGSize)targetSize {
     
     UIImage *sourceImage   = image;
     UIImage *newImage      = nil;

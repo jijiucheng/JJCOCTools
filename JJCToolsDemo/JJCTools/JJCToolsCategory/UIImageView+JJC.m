@@ -1,23 +1,18 @@
 //
-//  UIView+Clip.m
+//  UIImageView+JJC.m
 //  JJCToolsDemo
 //
-//  Created by 苜蓿鬼仙 on 2018/6/6.
-//  Copyright © 2018 苜蓿鬼仙. All rights reserved.
+//  Created by mxgx on 2019/7/19.
+//  Copyright © 2019 苜蓿鬼仙. All rights reserved.
 //
 
-#import "UIView+Clip.h"
+#import "UIImageView+JJC.h"
 
-@implementation UIView (Clip)
+@implementation UIImageView (JJC)
 
+#pragma mark - 裁剪
 
-/**
- View 裁剪（默认四个角）
- 
- @param rectCorner   选定四角上的某角
- @param cornerRadius 裁剪弧度
- */
-- (void)jjc_view_clipRoundWithRectCorner:(JJCRectCorner)rectCorner cornerRadius:(CGFloat)cornerRadius {
+- (void)jjc_imageV_clipRoundWithRectCorner:(JJCRectCorner)rectCorner cornerRadius:(CGFloat)cornerRadius {
     
     UIRectCorner endRectCorner;
     switch (rectCorner) {
@@ -68,16 +63,9 @@
     self.layer.mask = shapeLayer;
 }
 
-
-/**
- View 裁剪（默认四个角）
- 
- @param cornerRadius 裁剪弧度
- */
-- (void)jjc_view_clipRoundWithCornerRadius:(CGFloat)cornerRadius {
+- (void)jjc_imageV_clipRoundWithCornerRadius:(CGFloat)cornerRadius {
     
-    [self jjc_view_clipRoundWithRectCorner:JJCRectCornerAll cornerRadius:cornerRadius];
+    [self jjc_imageV_clipRoundWithRectCorner:JJCRectCornerAll cornerRadius:cornerRadius];
 }
-
 
 @end
