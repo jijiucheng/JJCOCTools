@@ -41,8 +41,10 @@ Pod::Spec.new do |s|
         ss.private_header_files = 'JJCToolsDemo/JJCTools/JJCToolsObject/**/*.{m}'
         # pod成功的库，每个子文件夹都是对应一个子库，子库的目的是为了防止一个 kit 太大，把功能模块都分出来减少包体积；所以子库原则上是不进行相互依赖的；如果库中有必须依赖的话，可以通过该方式进行依赖；其中依赖的对应为 pod 成功后显示的库路径，非真实路径
         ss.dependency 'JJCTools/JJCToolsDefine'
-        ss.dependency 'JJCTools/JJCToolsCategory/JJCToolsObject+BaseAPI.{h,m}'
-        ss.dependency 'JJCTools/JJCToolsCategory/NSBundle+JJCToolsResource.{h,m}'
+        ss.dependency 'JJCTools/JJCToolsCategory/JJCToolsObject+BaseAPI.h'
+        ss.dependency 'JJCTools/JJCToolsCategory/JJCToolsObject+BaseAPI.m'
+        ss.dependency 'JJCTools/JJCToolsCategory/NSBundle+JJCToolsResource.h'
+        ss.dependency 'JJCTools/JJCToolsCategory/NSBundle+JJCToolsResource.m'
     end
 
 
