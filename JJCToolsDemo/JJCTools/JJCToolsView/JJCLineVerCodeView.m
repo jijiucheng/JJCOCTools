@@ -25,7 +25,7 @@ static NSString *const lineVAnimation = @"lineVAnimation";
 @implementation JJCLineVerCodeView
 
 
-- (void)jjc_setupCompletion {
+- (void)jjc_setCompletion {
     
     CGFloat width = (self.frame.size.width + self.jjc_marginSpace) / self.jjc_codeNum - self.jjc_marginSpace;
     

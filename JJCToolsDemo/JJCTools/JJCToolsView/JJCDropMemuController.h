@@ -14,7 +14,7 @@
  
  JJCDropMemuController
  创建：2019.07.22
- 更新：2019.07.22
+ 更新：2019.07.25
  
  
  1、该控件封装了 输入验证码样式，仅为只有间距下划线的样式；
@@ -58,6 +58,7 @@ typedef NS_ENUM(NSInteger, JJCDropMemuType) {
 
 
 @property (nonatomic, strong) void(^jjc_dropMemuActionBlock)(NSInteger selectIndex);
+@property (nonatomic, strong) void(^jjc_dropMemuDismissBlock)(void);
 
 
 @end

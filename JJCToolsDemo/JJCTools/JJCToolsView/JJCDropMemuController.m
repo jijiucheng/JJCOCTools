@@ -80,6 +80,9 @@ static NSString *const DropMemuCellID = @"DropMemuCellID";
         self.tableView.frame = CGRectMake(self.jjc_startPoint.x, self.jjc_startPoint.y, self.jjc_maxWidth, CGFLOAT_MIN);
     } completion:^(BOOL finished) {
         if (finished) {
+            if (self.jjc_dropMemuDismissBlock) {
+                self.jjc_dropMemuDismissBlock();
+            }
             [self dismissViewControllerAnimated:YES completion:nil];
         }
     }];

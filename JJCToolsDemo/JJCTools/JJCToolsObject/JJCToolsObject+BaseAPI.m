@@ -150,12 +150,12 @@
 
 + (CGFloat)jjc_base_getContentHeight:(NSString *)content font:(UIFont *)font contentWidth:(CGFloat)contentWidth {
     
-    return [self jjc_base_getContentSize:content font:font contentWidth:contentWidth].width;
+    return [self jjc_base_getContentSize:content font:font contentWidth:contentWidth].height;
 }
 
 + (CGFloat)jjc_base_getContentWidth:(NSString *)content font:(UIFont *)font contentHeight:(CGFloat)contentHeight {
     
-    return [self jjc_base_getContentSize:content font:font contentHeight:contentHeight].height;
+    return [self jjc_base_getContentSize:content font:font contentHeight:contentHeight].width;
 }
 
 + (CGFloat)jjc_base_getContentHeight:(NSString *)content fontFloat:(CGFloat)fontFloat contentWidth:(CGFloat)contentWidth {

@@ -30,7 +30,7 @@
     return self;
 }
 
-- (void)jjc_setupTitle:(NSString *)title titleColor:(UIColor *)titleColor {
+- (void)jjc_setTitle:(NSString *)title titleColor:(UIColor *)titleColor {
     
     [self setTitle:title forState:UIControlStateNormal];
     [self setTitleColor:titleColor forState:UIControlStateNormal];
@@ -41,13 +41,13 @@
     }
 }
 
-- (void)jjc_setupCountDownTitle:(NSString *)title titleColor:(UIColor *)titleColor {
+- (void)jjc_setCountDownTitle:(NSString *)title titleColor:(UIColor *)titleColor {
     
     self.countDownTitle = title;
     self.countDownTitleColor = titleColor;
 }
 
-- (void)jjc_setupTotalTimeNum:(NSInteger)totalTimeNum {
+- (void)jjc_setTotalTimeNum:(NSInteger)totalTimeNum {
     self.totalTimeNum = totalTimeNum;
 }
 
@@ -82,14 +82,14 @@
             NSString *timeStr = [NSString stringWithFormat:@"%@ %.0fs", self.countDownTitle, interval];
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.enabled = NO;
-                [self jjc_setupTitle:timeStr titleColor:self.countDownTitleColor];
+                [self jjc_setTitle:timeStr titleColor:self.countDownTitleColor];
             });
         } else {
             // 倒计时结束，关闭
             dispatch_source_cancel(_timer);
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.enabled = YES;
-                [self jjc_setupTitle:self.normalTitle titleColor:self.normalTitleColor];
+                [self jjc_setTitle:self.normalTitle titleColor:self.normalTitleColor];
             });
         }
     });

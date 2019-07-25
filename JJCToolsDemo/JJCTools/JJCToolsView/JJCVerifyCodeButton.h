@@ -14,7 +14,7 @@
  
  JJCVerifyCodeButton
  创建：2019.07.22
- 更新：2019.07.22
+ 更新：2019.07.25
  
  
  1、该控件封装了 获取验证码按钮；
@@ -34,9 +34,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) void(^jjc_verifyCodeBtnActionBlock)(void);
 
 
-- (void)jjc_setupTitle:(NSString *)title titleColor:(UIColor *)titleColor;
-- (void)jjc_setupCountDownTitle:(NSString *)title titleColor:(UIColor *)titleColor;
-- (void)jjc_setupTotalTimeNum:(NSInteger)totalTimeNum;
+- (void)jjc_setTitle:(NSString *)title titleColor:(UIColor *)titleColor;
+- (void)jjc_setCountDownTitle:(NSString *)title titleColor:(UIColor *)titleColor;
+- (void)jjc_setTotalTimeNum:(NSInteger)totalTimeNum;
 
 /** 开始倒计时 **/
 - (void)jjc_startCountdown;

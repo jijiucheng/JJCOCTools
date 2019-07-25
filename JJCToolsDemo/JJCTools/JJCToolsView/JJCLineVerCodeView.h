@@ -14,7 +14,7 @@
  
  JJCLineVerCodeView
  创建：2019.07.22
- 更新：2019.07.22
+ 更新：2019.07.25
  
  
  1、该控件封装了 输入验证码样式，仅为只有间距下划线的样式；
@@ -40,7 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) void(^jjc_getVerCodeCompletionBlock)(NSString *verCodeString);
 
 
-- (void)jjc_setupCompletion;
+- (void)jjc_setCompletion;
 
 @end
 
