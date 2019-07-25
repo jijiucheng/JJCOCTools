@@ -26,6 +26,7 @@
 
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "JJCToolsEnum.h"
 
 
@@ -72,6 +73,43 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 - (NSURL *)jjc_string_urlScheme:(NSString *)scheme;
+
+
+
+#pragma mark - 获取文字尺寸
+
+/********************  获取文字尺寸  *******************/
+/*
+ 参考链接：
+ 1、IOS BUG记录 boundingRectWithSize计算内容宽度高度的问题
+ https://blog.csdn.net/gloryFlow/article/details/54311751
+ 2、段落样式 NSMutableParagraphStyle
+ https://www.jianshu.com/p/b0afc45bb642
+ */
+
+/**
+ 获取文字的 Size
+ 
+ @param font            文字字体
+ @param contentMaxWH    文字宽或高的最大值
+ @param isWidth         文字计算宽度或高度
+ @param drawingOptions  文字绘制属性
+ @param paragraphStyle  文字段落样式
+ */
+- (CGSize)jjc_string_getContentSizeWithFont:(UIFont *)font contentMaxWH:(CGFloat)contentMaxWH isWidth:(BOOL)isWidth drawingOptions:(NSStringDrawingOptions)drawingOptions paragraphStyle:(NSMutableParagraphStyle *)paragraphStyle;
+
+- (CGSize)jjc_string_getContentSizeWithFont:(UIFont *)font contentWidth:(CGFloat)contentWidth paragraphStyle:(NSMutableParagraphStyle *)paragraphStyle;
+- (CGSize)jjc_string_getContentSizeWithFont:(UIFont *)font contentHeight:(CGFloat)contentHeight paragraphStyle:(NSMutableParagraphStyle *)paragraphStyle;
+
+- (CGSize)jjc_string_getContentSizeWithFont:(UIFont *)font contentWidth:(CGFloat)contentWidth;
+- (CGSize)jjc_string_getContentSizeWithFont:(UIFont *)font contentHeight:(CGFloat)contentHeight;
+
+- (CGFloat)jjc_string_getContentHeightWithFont:(UIFont *)font contentWidth:(CGFloat)contentWidth;
+- (CGFloat)jjc_string_getContentWidthWithFont:(UIFont *)font contentHeight:(CGFloat)contentHeight;
+
+- (CGFloat)jjc_string_getContentHeightWithFontFloat:(CGFloat)fontFloat contentWidth:(CGFloat)contentWidth;
+- (CGFloat)jjc_string_getContentWidthWithFontFloat:(CGFloat)fontFloat contentHeight:(CGFloat)contentHeight;
+
 
 @end
 

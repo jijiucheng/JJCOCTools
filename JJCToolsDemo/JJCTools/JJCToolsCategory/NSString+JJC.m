@@ -132,5 +132,93 @@
 
 
 
+#pragma mark - 获取文字尺寸
+
+/*
+ 参考链接：
+ 1、IOS BUG记录 boundingRectWithSize计算内容宽度高度的问题
+ https://blog.csdn.net/gloryFlow/article/details/54311751
+ 2、段落样式 NSMutableParagraphStyle
+ https://www.jianshu.com/p/b0afc45bb642
+ */
+
+
+/**
+ 获取文字的 Size
+ 
+ @param font            文字字体
+ @param contentMaxWH    文字宽或高的最大值
+ @param isWidth         文字计算宽度或高度
+ @param drawingOptions  文字绘制属性
+ @param paragraphStyle  文字段落样式
+ */
+- (CGSize)jjc_string_getContentSizeWithFont:(UIFont *)font contentMaxWH:(CGFloat)contentMaxWH isWidth:(BOOL)isWidth drawingOptions:(NSStringDrawingOptions)drawingOptions paragraphStyle:(NSMutableParagraphStyle *)paragraphStyle {
+    
+    CGSize size;
+    if (isWidth) {
+        size = CGSizeMake(contentMaxWH, MAXFLOAT);
+    } else {
+        size = CGSizeMake(MAXFLOAT, contentMaxWH);
+    }
+    
+    CGSize contentSize = [self boundingRectWithSize:size
+                                            options:drawingOptions
+                                         attributes:@{NSFontAttributeName: font,
+                                                      NSParagraphStyleAttributeName : paragraphStyle}
+                                            context:nil].size;
+    return contentSize;
+}
+
+
+- (CGSize)jjc_string_getContentSizeWithFont:(UIFont *)font contentWidth:(CGFloat)contentWidth paragraphStyle:(NSMutableParagraphStyle *)paragraphStyle {
+    
+    return [self jjc_string_getContentSizeWithFont:font contentMaxWH:contentWidth isWidth:YES drawingOptions:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesFontLeading paragraphStyle:paragraphStyle];
+}
+
+- (CGSize)jjc_string_getContentSizeWithFont:(UIFont *)font contentHeight:(CGFloat)contentHeight paragraphStyle:(NSMutableParagraphStyle *)paragraphStyle {
+    
+    return [self jjc_string_getContentSizeWithFont:font contentMaxWH:contentHeight isWidth:NO drawingOptions:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesFontLeading paragraphStyle:paragraphStyle];
+}
+
+- (CGSize)jjc_string_getContentSizeWithFont:(UIFont *)font contentWidth:(CGFloat)contentWidth {
+    
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    paragraphStyle.lineBreakMode = NSLineBreakByCharWrapping;
+    paragraphStyle.alignment = NSTextAlignmentLeft;
+    
+    return [self jjc_string_getContentSizeWithFont:font contentWidth:contentWidth paragraphStyle:paragraphStyle];
+}
+
+- (CGSize)jjc_string_getContentSizeWithFont:(UIFont *)font contentHeight:(CGFloat)contentHeight {
+    
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    paragraphStyle.lineBreakMode = NSLineBreakByCharWrapping;
+    paragraphStyle.alignment = NSTextAlignmentLeft;
+    
+    return [self jjc_string_getContentSizeWithFont:font contentWidth:contentHeight paragraphStyle:paragraphStyle];
+}
+
+- (CGFloat)jjc_string_getContentHeightWithFont:(UIFont *)font contentWidth:(CGFloat)contentWidth {
+    
+    return [self jjc_string_getContentSizeWithFont:font contentWidth:contentWidth].height;
+}
+
+- (CGFloat)jjc_string_getContentWidthWithFont:(UIFont *)font contentHeight:(CGFloat)contentHeight {
+    
+    return [self jjc_string_getContentSizeWithFont:font contentHeight:contentHeight].width;
+}
+
+- (CGFloat)jjc_string_getContentHeightWithFontFloat:(CGFloat)fontFloat contentWidth:(CGFloat)contentWidth {
+    
+    return [self jjc_string_getContentHeightWithFont:[UIFont systemFontOfSize:fontFloat] contentWidth:contentWidth];
+}
+
+- (CGFloat)jjc_string_getContentWidthWithFontFloat:(CGFloat)fontFloat contentHeight:(CGFloat)contentHeight {
+    
+    return [self jjc_string_getContentWidthWithFont:[UIFont systemFontOfSize:fontFloat] contentHeight:contentHeight];
+}
+
+
+
 
 @end
