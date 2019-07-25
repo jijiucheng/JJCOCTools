@@ -14,7 +14,7 @@
  
  UIImage+JJC
  创建：2019.07.19
- 更新：2019.07.19
+ 更新：2019.07.25
  
  
  1、该扩展主要用于给 UIImage 设置一些属性；
@@ -121,6 +121,14 @@ NS_ASSUME_NONNULL_BEGIN
  @return 不渲染的图片
  */
 - (UIImage *)jjc_image_getRenderOriginal;
+
+
+/**
+ 解析 gif 图片为图片数组
+ 
+ @return 转换后的图片数组
+ */
++ (NSArray<UIImage *> *)jjc_image_getImageArrayByGIFNameInBoundle:(NSString *)gifNameInBoundle;
 
 
 @end

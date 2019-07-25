@@ -208,5 +208,34 @@
 }
 
 
+/**
+ 解析 gif 图片为图片数组
+ 
+ @return 转换后的图片数组
+ */
++ (NSArray<UIImage *> *)jjc_image_getImageArrayByGIFNameInBoundle:(NSString *)gifNameInBoundle {
+    
+    NSURL *gifUrl;
+    if ([[gifNameInBoundle lowercaseString] hasSuffix:@"gif"]) {
+        gifUrl = [[NSBundle mainBundle] URLForResource:gifNameInBoundle withExtension:nil];
+    } else {
+        gifUrl = [[NSBundle mainBundle] URLForResource:gifNameInBoundle withExtension:@"gif"];
+    }
+    
+    CGImageSourceRef gifSource = CGImageSourceCreateWithURL((CFURLRef)gifUrl, NULL);
+    size_t gifCount = CGImageSourceGetCount(gifSource);
+    
+    NSMutableArray *imageArrayM = [NSMutableArray array];
+    for (size_t i=0; i<gifCount; i++) {
+        CGImageRef imageRef = CGImageSourceCreateImageAtIndex(gifSource, i, NULL);
+        UIImage *image = [UIImage imageWithCGImage:imageRef];
+        [imageArrayM addObject:image];
+        CGImageRelease(imageRef);
+    }
+    
+    return imageArrayM;
+}
+
+
 
 @end
