@@ -606,7 +606,11 @@
             
             // 判断显示视图的下一个响应者是否为一个 UIViewController 的类对象
             if (rootVC.presentedViewController) {
-                nextResponder = rootVC.presentedViewController;
+                UIViewController *tempVC = rootVC.presentedViewController;
+                while (tempVC.presentedViewController) {
+                    tempVC = tempVC.presentedViewController;
+                }
+                nextResponder = tempVC;
             }
             if ([nextResponder isKindOfClass:[UITabBarController class]]) {
                 UITabBarController * tabbar = (UITabBarController *)nextResponder;
@@ -627,7 +631,6 @@
     
     return currentVC;
 }
-
 
 
 
