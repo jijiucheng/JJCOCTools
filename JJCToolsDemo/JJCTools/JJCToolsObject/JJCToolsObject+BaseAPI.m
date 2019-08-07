@@ -145,7 +145,7 @@
     paragraphStyle.lineBreakMode = NSLineBreakByCharWrapping;
     paragraphStyle.alignment = NSTextAlignmentLeft;
     
-    return [self jjc_base_getContentSize:content font:font contentWidth:contentHeight paragraphStyle:paragraphStyle];
+    return [self jjc_base_getContentSize:content font:font contentHeight:contentHeight paragraphStyle:paragraphStyle];
 }
 
 + (CGFloat)jjc_base_getContentHeight:(NSString *)content font:(UIFont *)font contentWidth:(CGFloat)contentWidth {
