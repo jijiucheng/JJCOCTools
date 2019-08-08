@@ -47,6 +47,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *placeholder;
 
 
+/**
+ 修正苹果原生中文输入法预输入问题（需要在 textViewDidChange 的方法里使用）
+ */
+- (void)jjc_textView_fixAppleSystemChineseInputMethodWithPreInput;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -34,7 +34,14 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  设置占位符颜色
  */
-- (void)setupPlaceholderColor:(UIColor *)color;
+- (void)jjc_textField_setPlaceholderColor:(UIColor *)color;
+
+/**
+ 修正苹果原生中文输入法预输入问题（需要在 change 的方法里使用）
+ */
+- (void)jjc_textField_fixAppleSystemChineseInputMethodWithPreInput;
+
+
 
 @end
 
