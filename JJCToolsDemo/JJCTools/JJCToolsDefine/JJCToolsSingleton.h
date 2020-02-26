@@ -38,13 +38,27 @@
 
 /***************************  宏定义单例类  ***************************/
 
-// @interface
+/*
+
+使用方法：在需要使用的地方，引入下面两句即可：
+   K_Singleton_Interface(MySingle)
+   K_Singleton_Implementation(MySingle)
+ 
+使用单例示例：MySingle *single = [MySingle sharedMySingle];
+
+**/
+
+/// interface
 #define K_Singleton_Interface(className) \
-+ (className *)shared##className;
+@interface className : NSObject \
++ (className *)shared##className; \
+@end
 
 
-// @implementation
+
+// implementation
 #define K_Singleton_Implementation(className) \
+@implementation className \
 static className *_instance; \
 + (id)allocWithZone:(NSZone *)zone \
 { \
@@ -61,14 +75,8 @@ dispatch_once(&onceToken, ^{ \
 _instance = [[self alloc] init]; \
 }); \
 return _instance; \
-}
-
-
-
-
-
-
-
+} \
+@end
 
 
 #endif /* JJCToolsSingleton_h */
